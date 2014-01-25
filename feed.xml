@@ -131,7 +131,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/ruby/sugoi-learning-way.html"/>
     <id>http://blog.url.com/articles/ruby/sugoi-learning-way.html</id>
     <published>2013-11-30T15:00:00Z</published>
-    <updated>2014-01-24T11:35:43+09:00</updated>
+    <updated>2014-01-26T07:56:25+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -164,8 +164,8 @@
 
 &lt;p&gt;Minecraftで遊びます。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="/images/uploads/2013-12-2013-04-06_19.38.55-7306b8b9.png"&gt;&lt;img src="/images/uploads/2013-12-2013-04-06_19.38.55.png" alt="2013-04-06_19.38.55" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/images/uploads/2013-12-2013-03-31_20.16.13-a4480f8c.png"&gt;&lt;img src="/images/uploads/2013-12-2013-03-31_20.16.13.png" alt="2013-03-31_20.16.13" width="854" height="480" class="full" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="/images/uploads/2013-12-2013-04-06_19.38.55-100e671f.png"&gt;&lt;img src="/images/uploads/2013-12-2013-04-06_19.38.55.png" alt="2013-04-06_19.38.55" width="854" height="480" class="full" /&gt;&lt;/a&gt;
+&lt;a href="/images/uploads/2013-12-2013-03-31_20.16.13-d0b50402.png"&gt;&lt;img src="/images/uploads/2013-12-2013-03-31_20.16.13.png" alt="2013-03-31_20.16.13" width="854" height="480" class="full" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://blog.aoisensi.info/2013/04/VAC2012-128.html"&gt;images by aoisensi&lt;/a&gt;&lt;/p&gt;
 
@@ -239,7 +239,7 @@
 
 &lt;p&gt;現在、&lt;code&gt;mckokoro&lt;/code&gt;の後続ソフトウェアである&lt;code&gt;neocloft&lt;/code&gt;というBukkitプラグインの開発が進められています。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/images/uploads/2013-12-687474703a2f2f63616368652e6779617a6f2e636f6d2f61646665346334663564363838396165396434373830623964336133313030332e706e67.png" alt="687474703a2f2f63616368652e6779617a6f2e636f6d2f61646665346334663564363838396165396434373830623964336133313030332e706e67" width="474" height="104" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/uploads/2013-12-neocloft.png" alt="neocloft" width="474" height="104" /&gt;&lt;/p&gt;
 
 &lt;p&gt;これは、誰でもご自分のBukkitサーバーに導入できるように、&lt;code&gt;neocloftコア&lt;/code&gt;と&lt;code&gt;neocloftアプリ&lt;/code&gt;（JVM言語によってBukkitの挙動を拡張する部分）の実装が疎結合になっています。また、neocloftでは、JRubyだけでなく、コードのeval機構を持った任意のJVM言語、つまりClojureやJythonなどを使って&lt;code&gt;neocloftアプリ&lt;/code&gt;を記述することが可能です。&lt;code&gt;mckokoro&lt;/code&gt;と同じく再起動を伴わない動的デプロイにも対応しているので、ClojureやPythonの勉強をしたい方にも良いのではないでしょうか。neocloftの正式リリース時には、詳細な導入解説記事を書く予定です。&lt;/p&gt;
 
