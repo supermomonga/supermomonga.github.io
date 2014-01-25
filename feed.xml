@@ -909,7 +909,7 @@ imap &amp;lt;expr&gt;&amp;lt;CR&gt; !pumvisible() ? "\&amp;lt;Plug&gt;(vimrc_cr)
     <link rel="alternate" href="http://blog.url.com/articles/vim/startdash-with-mac.html"/>
     <id>http://blog.url.com/articles/vim/startdash-with-mac.html</id>
     <published>2013-10-09T15:00:00Z</published>
-    <updated>2014-01-24T11:35:43+09:00</updated>
+    <updated>2014-01-26T08:51:37+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1081,7 +1081,7 @@ imap &amp;lt;expr&gt;&amp;lt;CR&gt; !pumvisible() ? "\&amp;lt;Plug&gt;(vimrc_cr)
 &lt;/div&gt;
 
 &lt;div style="font-size: 200%; line-height: 120%; text-align: center;"&gt;
-  MacVimです！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+  MacVimです！！！！！！！！！！！！！！！！！！！！
 &lt;/div&gt;
 
 &lt;div style="padding: 200px 0 0 0;"&gt;
