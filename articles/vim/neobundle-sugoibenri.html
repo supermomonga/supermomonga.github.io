@@ -1,0 +1,69 @@
+<!DOCTYPE html> <html> <head> <meta charset=utf-8> <meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible> <title>ももんが流NeoBundle管理術 - かなりすごいブログ</title><link href="/stylesheets/theme-93d9eda3.css" media=screen rel=stylesheet /> <link href="/stylesheets/monokai-a37e9352.css" media=screen rel=stylesheet /> </head> <body role=main> <header> <h1> <a href="/">かなりすごいブログ</a> </h1> </header> <div id=main><div class=entry> <div class=entry-header> <h1> ももんが流NeoBundle管理術 </h1> <div class=entry-tags> </div> </div> <div class=entry-share> <div class="share hatena"> <a href="//b.hatena.ne.jp/entry/" class=hatena-bookmark-button data-hatena-bookmark-layout=vertical-balloon data-hatena-bookmark-lang=ja title="このエントリーをはてなブックマークに追加"><img src="//b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width=20 height=20 style="border: none;"></a> <script src="//b.st-hatena.com/js/bookmark_button.js" charset=utf-8 async=async></script> </div> <div class="share twitter"> <a href="https://twitter.com/share" class=twitter-share-button data-count=vertical data-via=supermomonga data-lang=ja data-dnt=true>ツイート</a> </div> <div class="share facebook"> <div class=fb-like data-href="https://developers.facebook.com/docs/plugins/" data-layout=box_count data-action=like data-show-faces=false data-share=false></div> </div> <div class="share pocket"> <a data-pocket-label=pocket data-pocket-count=vertical class=pocket-btn data-lang=en></a> </div> </div> <div class=entry-body><p><a href="//atnd.org/events/33746">Vim Advent Calendar 2012</a>、268日目の記事になります。</p> <p>日本全国3億人のVimmerのみなさんこんにちは。最近.vimrcを1から書きなおしていると噂の私です。そこで、今回はももんが流NeoBundle管理術をお伝えして行きましょう。</p> <h2 id=toc_0>記事の対象</h2> <ul> <li> NeoBundleに関する基本的な知識があるかた</li> <li> <code>NeoBundleLazy</code>を利用されている方</li> </ul> <h2 id=toc_1>コンセプト</h2> <p>コンセプトは、プラグイン管理とプラグイン設定を分離させる、です。</p> <p>具体的には、<code>NeoBundle</code>及び<code>NeoBundleLazy</code>コマンドのオプションは、依存関係やビルドコマンドなどの「プラグインのインストール方法・管理方法」といったものに絞り、autoloadの設定やプラグイン読み込み時の設定は固有のセクションで管理していきます。</p> <p>これにより、プラグインリストの見通しがよくなりますし、まぁ色々便利になります。</p> <h2 id=toc_2>設定例！！！！</h2> <pre lang=vim>" Plugin list
+NeoBundleLazy 'Shougo/unite.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+" 中略
+NeoBundleLazy 'Shougo/vimshell.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+
+
+" Unite.vimの設定サンプル
+if s:bundle_tap('unite.vim')
+  call s:bundle_config({
+        \   'autoload' : {
+        \     'commands' : [
+        \       {
+        \         'name' : 'Unite',
+        \         'complete' : 'customlist,unite#complete_source'
+        \       },
+        \       'UniteWithCursorWord',
+        \       'UniteWithInput'
+        \     ]
+        \   }
+        \ })
+
+  function! s:tapped_bundle.hooks.on_source(bundle)
+    let g:unite_kind_jump_list_after_jump_scroll=0
+    let g:unite_enable_start_insert = 0
+    let g:unite_source_rec_min_cache_files = 1000
+    let g:unite_source_rec_max_cache_files = 5000
+    let g:unite_source_file_mru_long_limit = 6000
+    let g:unite_source_file_mru_limit = 300
+    let g:unite_source_directory_mru_long_limit = 6000
+    let g:unite_prompt = '❯ '
+  endfunction
+
+  nnoremap &lt;silent> &lt;space>u  :&lt;c -u>Unite -start-insert menu:unite&lt;cr>
+  " 中略
+  nnoremap &lt;silent> &lt;space>g  :&lt;c -u>Unite grep -no-quit&lt;cr>
+
+  call s:bundle_untap()
+endif
+
+</pre> <p>はい、こんなかんじで、まずプラグインのリストを記述し、その下にプラグインごとの設定を<code>s:bundle_tap</code>関数によりセクション化しています。</p> <p>ここで、オリジナルの関数が3つ登場しています。<code>s:bundle_tap</code>、<code>s:bundle_config</code>、<code>s:bundle_untap</code>の3つですね。これらの関数によって、ある程度宣言的にNeoBundleの設定を記述できるようになります。それぞれ解説して行きましょう。</p> <p>まず<code>s:bundle_tap</code>、これは、引数としてプラグイン名を渡すことで、そのプラグインがNeoBundleでインストール・管理されており、かつ有効な状態であるかどうかを返し、同時に対象のプラグインを現在の<code>設定対象プラグイン</code>として設定します。<code>設定対象プラグイン</code>は、自動的に<code>s:tapped_bundle</code>変数に格納されます。</p> <p>また、ここで言う「有効な状態である」とは、<code>NeoBundle</code>・<code>NeoBundleLazy</code>コマンドなどで呼び出され、NeoBundleによってrtpに追加されている状態を言います。つまり、一時的にプラグインを無効化したい場合は<code>NeoBundle</code>・<code>NeoBundleLazy</code>の行をコメントアウトするだけでよく、わざわざプラグイン個別の設定セクションを編集する必要はありません。</p> <p>次に<code>s:bundle_config</code>関数です。こちらに辞書を渡すと、現在の<code>設定対象プラグイン</code>に対して、<code>neobundle#config</code>関数で設定を行ってくれます。また、現在の<code>設定対象プラグイン</code>は<code>s:tapped_bundle</code>に格納されていますので、<code>s:tapped_bundle.hooks.on_source</code>関数を定義することで、プラグインの読み込みをフックとした設定も定義することができます。</p> <p>最後に<code>s:bundle_untap</code>関数ですが、こちらは単純に<code>s:tapped_bundle</code>の参照先プラグインをリセットする関数です。</p> <p>ここで、これらの関数のコードを見てみましょう。</p> <pre lang=vim>function! s:bundle_tap(bundle)
+  let s:tapped_bundle = neobundle#get(a:bundle)
+  return neobundle#is_installed(a:bundle)
+endfunction
+
+function! s:bundle_config(config)
+  if exists("s:tapped_bundle") &#038;&#038; s:tapped_bundle != {}
+    call neobundle#config(s:tapped_bundle.name, a:config)
+  endif
+endfunction
+
+function! s:bundle_untap()
+  let s:tapped_bundle = {}
+endfunction
+
+
+</pre> <p>お分かりでしょうか。実はこれら3つの関数は、<code>neobundle#is_installed</code>関数及び<code>neobundle#config</code>関数のハンドリングを抽象化したものに過ぎず、これに頼らずともそれらの関数を直接使用することでNeoBundleの設定を行うことは（当たり前ですが）可能です。</p> <p>しかし、これらの関数を利用することで、<code>s:bundle_tap</code>関数とif文により設定のセクションを明確化し、かつ閉じたスコープによりで何度もプラグイン名を記述することなくなることにより、無駄な記述を行わずプラグインの設定コードを書くことに集中することができます。結果として設定の見通しがよくなり、<code>.vimrc</code>のメンテナンスコストも当ももんが比約1/2となりました。</p> <h2 id=toc_3>まとめ</h2> <p>べんり</p> </div> <div class=entry-author> <div class=avatar> <img src="/images/kokoro-chan-da2b7132.png"> </div> <div class=profile> <h3> supermomonga </h3> <p> かなりすごいことでゆうめい。したまちでしらぬものはいない。 </p> <a href="https://twitter.com/supermomonga" class=twitter-follow-button data-show-count=false data-lang=ja data-size=large data-dnt=true>@supermomongaさんをフォロー</a> </div> </div> <div class=entry-meta> <h3> コメント一覧ですよ </h3> <div class=hatena_bookmark_comments data-uri="http://blog.supermomonga.com/articles/vim/neobundle-sugoibenri.html"></div> </div> </div> <aside> <h2> タグ一覧ですよ </h2> <ol> <li class="default label"> <i class=icon-tag></i><a href="/tags/emacs.html">Emacs</a>(5) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/java.html">Java</a>(4) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/jdee.html">JDEE</a>(5) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/swt.html">SWT</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/svn.html">svn</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/ubuntu.html">Ubuntu</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/facebook.html">facebook</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/windows.html">Windows</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/mac.html">Mac</a>(2) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/fx.html">FX</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/metatrader4.html">MetaTrader4</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/vim.html">Vim</a>(6) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/lingr.html">Lingr</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/neobundle.html">NeoBundle</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/minecraft.html">Minecraft</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/ruby.html">Ruby</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/thingspast.html">ThingsPast</a>(1) </li> </ol> </aside> </div> </body> </html> <div id=fb-root></div> <script src="/javascripts/bookmark_blogparts-b37aab8f.js" async=async defer=defer></script> <script>
+  // twitter share button
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  // pocket save button
+  !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
+  // Facebook like button
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=184200125074087";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html> <html> <head> <meta charset=utf-8> <meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible> <title>vimprocでRubyでプロセス通信・ソケット通信しよう - かなりすごいブログ</title><link href="/stylesheets/theme-93d9eda3.css" media=screen rel=stylesheet /> <link href="/stylesheets/monokai-a37e9352.css" media=screen rel=stylesheet /> </head> <body role=main> <header> <h1> <a href="/">かなりすごいブログ</a> </h1> </header> <div id=main><div class=entry> <div class=entry-header> <h1> vimprocでRubyでプロセス通信・ソケット通信しよう </h1> <div class=entry-tags> </div> </div> <div class=entry-share> <div class="share hatena"> <a href="//b.hatena.ne.jp/entry/" class=hatena-bookmark-button data-hatena-bookmark-layout=vertical-balloon data-hatena-bookmark-lang=ja title="このエントリーをはてなブックマークに追加"><img src="//b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width=20 height=20 style="border: none;"></a> <script src="//b.st-hatena.com/js/bookmark_button.js" charset=utf-8 async=async></script> </div> <div class="share twitter"> <a href="https://twitter.com/share" class=twitter-share-button data-count=vertical data-via=supermomonga data-lang=ja data-dnt=true>ツイート</a> </div> <div class="share facebook"> <div class=fb-like data-href="https://developers.facebook.com/docs/plugins/" data-layout=box_count data-action=like data-show-faces=false data-share=false></div> </div> <div class="share pocket"> <a data-pocket-label=pocket data-pocket-count=vertical class=pocket-btn data-lang=en></a> </div> </div> <div class=entry-body><p><a href="//atnd.org/events/33746">Vim Advent Calendar 2012</a> 123日目の記事になります。昨日は私のVim script家庭教師ことthincaさんの「<a href="//d.hatena.ne.jp/thinca/20130401/1364743096">Vim を起動したときに Vim Girl に会いたい！</a>」でした。Vim Girlかわいい。</p> <p>さて風邪で1週間くらい寝込んでいたのですが、布団にこもってなんとかVimで快適に画像や動画などのメディアを表示できないか考えていました。それに対する一つの提案としてあるプラグインを開発しています。残念ながら本日リリースは間に合いませんでしたが、実装にあたって色々と勉強になったので、Tipsを書いておきます。本来Advent Calendarってそういうものですし！問題ない！</p> <h2 id=toc_0>Vim scriptと外部プログラムとでソケット通信したい</h2> <p>前述の開発中プラグインでは、Vimから独立したソフトウェアを起動・操作するという仕組みを導入しています。今回は例としてvimprocを用いRubyと連携する簡単なプログラムを書いてみます。</p> <h2 id=toc_1>socket.vim &amp; socket.rb</h2> <pre lang=vim>let g:socket_test_ruby_port = 12345
+let g:socket_test_ruby_path = 'ruby'
+let g:socket_test_ruby_script_path = './socket.rb'
+
+function! g:socket_test_send(command)
+  let sock = vimproc#socket_open('localhost', g:socket_test_ruby_port)
+  call sock.write(a:command)
+  call sock.close()
+endfunction
+
+function! g:socket_test_start()
+  if !g:socket_test_is_run()
+    let g:socket_test_pid = vimproc#popen2(join([g:socket_test_ruby_path, g:socket_test_ruby_script_path, g:socket_test_ruby_port], ' '))['pid']
+  endif
+endfunction
+
+function! g:socket_test_stop()
+  if g:socket_test_is_run()
+    call vimproc#kill(g:socket_test_pid, 3)
+  endif
+endfunction
+
+function! g:socket_test_is_run()
+  if exists('g:socket_test_pid')
+    return vimproc#kill(g:socket_test_pid, 0) == 0
+  else
+    return 0
+  endif
+endfunction
+
+</pre> <pre lang=ruby>require 'socket'
+require 'thread'
+
+Signal.trap(:INT){ exit(0) }
+Signal.trap(:QUIT){ exit(0) }
+
+gs = TCPServer.open(ARGV[0])
+addr = gs.addr
+addr.shift
+printf("server is on %s\n", addr.join(":"))
+printf("my pid is on %s\n", $$)
+
+loop do
+  Thread.start(gs.accept) do |s|
+    puts s.gets
+    s.close
+  end
+end
+</pre> <p> </p> <h2 id=toc_2>解説</h2> <p>まず、start関数ではvimproc#popen2関数を使いプロセスを開始しています。popen2はプロセスオブジェクトを返してくれ、そのメンバpidにはその名の通り起動したプロセスのIDが格納されています。start関数ではこうして取得したpidをスクリプトローカル変数として保存します。popen2関数には任意のコマンドを渡すことができます。今回の例では&#8217;ruby ./socket.rb 12345&#8242;というコマンドが渡されます。</p> <p>次にstop関数では、先ほど取得したpidのプロセスがまだ終了していない場合、プロセスを終了させます。ここではvimproc#kill関数を使用します。kill関数では、任意のpidを持つプロセスにシグナルを送信することができます。ここではプロセスを終了させたいので、SIGQUITを意味する3をシグナルとしてpidに渡しています。</p> <p>また、start関数とstop関数で使用しているis_run関数についても説明します。is_run関数はstartによって保存されたpidを持つプロセスがまだ終了していないかどうかの判定を行います。先ほど説明したvimproc#kill関数では、のシグナル部分に0を指定することで生死確認を行うことができます。返り値が0の場合はプロセスが生きており、1の場合は終了してしまっています。</p> <p>最後に、send関数について説明します。この関数はvimproc#socket_open関数を使用しソケット通信を用いてrubyスクリプトに文字列（a:command）を渡しています。vimproc#socket_openの第二引数はportになります。start関数ではs:portをrubyスクリプトに渡しており、rubyスクリプトは指定されたportでsocket通信の待機を行います。</p> <p>rubyスクリプトも簡単に解説しておきます。このrubyスクリプトは、引数としてソケット通信の待機portを受け取り、ソケット通信のlistenを開始します。Vim script側から通信があるたびに、それを文字列として表示させています。</p> <p>また、Signal.trapを用い指定のSIGNALが送られた時の処理を定義しています。vim scriptのstop関数から送られるSIGQUIT命令を受け取ったらプログラムを終了する、といった形ですね。</p> <p>このように、vimprocを使用することでとても簡単にプロセスのハンドリングやソケット通信を行うことができます。Vimと外部ソフトウェアとの連携によってより高度な表現が可能になると思いますので、みなさんもぜひ活用してみてください。</p> <h2 id=toc_3>Vim Advent Calendar 2012 124日目</h2> <p>Vim Advent Calendar 2012、明日124日目は@cohamaさんです…！</p> </div> <div class=entry-author> <div class=avatar> <img src="/images/kokoro-chan-da2b7132.png"> </div> <div class=profile> <h3> supermomonga </h3> <p> かなりすごいことでゆうめい。したまちでしらぬものはいない。 </p> <a href="https://twitter.com/supermomonga" class=twitter-follow-button data-show-count=false data-lang=ja data-size=large data-dnt=true>@supermomongaさんをフォロー</a> </div> </div> <div class=entry-meta> <h3> コメント一覧ですよ </h3> <div class=hatena_bookmark_comments data-uri="http://blog.supermomonga.com/articles/vim/vimproc-process-socket.html"></div> </div> </div> <aside> <h2> タグ一覧ですよ </h2> <ol> <li class="default label"> <i class=icon-tag></i><a href="/tags/emacs.html">Emacs</a>(5) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/java.html">Java</a>(4) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/jdee.html">JDEE</a>(5) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/swt.html">SWT</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/svn.html">svn</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/ubuntu.html">Ubuntu</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/facebook.html">facebook</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/windows.html">Windows</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/mac.html">Mac</a>(2) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/fx.html">FX</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/metatrader4.html">MetaTrader4</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/vim.html">Vim</a>(6) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/lingr.html">Lingr</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/neobundle.html">NeoBundle</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/minecraft.html">Minecraft</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/ruby.html">Ruby</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/thingspast.html">ThingsPast</a>(1) </li> </ol> </aside> </div> </body> </html> <div id=fb-root></div> <script src="/javascripts/bookmark_blogparts-b37aab8f.js" async=async defer=defer></script> <script>
+  // twitter share button
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  // pocket save button
+  !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
+  // Facebook like button
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=184200125074087";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html> <html> <head> <meta charset=utf-8> <meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible> <title>新・ももんが流NeoBundle管理術（あたらしい） - かなりすごいブログ</title><link href="/stylesheets/theme-93d9eda3.css" media=screen rel=stylesheet /> <link href="/stylesheets/monokai-a37e9352.css" media=screen rel=stylesheet /> </head> <body role=main> <header> <h1> <a href="/">かなりすごいブログ</a> </h1> </header> <div id=main><div class=entry> <div class=entry-header> <h1> 新・ももんが流NeoBundle管理術（あたらしい） </h1> <div class=entry-tags> <li class="default label"> <i class=icon-tag></i><a href="/tags/neobundle.html">NeoBundle</a> </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/vim.html">Vim</a> </li> </div> </div> <div class=entry-share> <div class="share hatena"> <a href="//b.hatena.ne.jp/entry/" class=hatena-bookmark-button data-hatena-bookmark-layout=vertical-balloon data-hatena-bookmark-lang=ja title="このエントリーをはてなブックマークに追加"><img src="//b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width=20 height=20 style="border: none;"></a> <script src="//b.st-hatena.com/js/bookmark_button.js" charset=utf-8 async=async></script> </div> <div class="share twitter"> <a href="https://twitter.com/share" class=twitter-share-button data-count=vertical data-via=supermomonga data-lang=ja data-dnt=true>ツイート</a> </div> <div class="share facebook"> <div class=fb-like data-href="https://developers.facebook.com/docs/plugins/" data-layout=box_count data-action=like data-show-faces=false data-share=false></div> </div> <div class="share pocket"> <a data-pocket-label=pocket data-pocket-count=vertical class=pocket-btn data-lang=en></a> </div> </div> <div class=entry-body><p><a href="//atnd.org/events/33746">Vim Advent Calendar 2012</a>、361日目の記事になります。</p> <p>全世界3000億人の美少女Vimmerのみなさん、こんにちは。</p> <p>さて、今回は、おなじみのプラグインマネージャ<a href="https://github.com/Shougo/neobundle.vim">NeoBundle</a>に最近追加された<code>neobundle#tap</code>・<code>neobundle#untap</code>や、丁度本日追加された<code>autoload</code>の<code>on_source</code>オプションを活用した、新・ももんが流NeoBundle管理術をお伝えしていきたいと思います。</p> <h2 id=toc_0>最近追加された<code>neobundle#tap</code>・<code>neobundle#untap</code>について</h2> <p>これは、私の以前の記事「<a href="/articles/vim/neobundle-sugoibenri.html">ももんが流NeoBundle管理術</a>」にてご紹介した<code>s:bundle_tap</code>関数や<code>s:bundle_untap</code>関数などを、NeoBundle作者であるShougoさんがオフィシャルな機能として実装してくださったものです。</p> <p>NeoBundle付属の関数となったことで若干ですが必要な記述量も減り、よりいい感じになりました。ももんが流NeoBundle管理術のコンセプト・考え方は上記記事を参考にしてください。</p> <blockquote> <p>コンセプトは、プラグイン管理とプラグイン設定を分離させる、です。</p> <p>具体的には、NeoBundle及びNeoBundleLazyコマンドのオプションは、依存関係やビルドコマンドなどの「プラグインのインストール方法・管理方法」といったものに絞り、autoloadの設定やプラグイン読み込み時の設定は固有のセクションで管理していきます。</p> <p>これにより、プラグインリストの見通しがよくなりますし、まぁ色々便利になります。</p> </blockquote> <h2 id=toc_1>本日追加された<code>autoload</code>の<code>on_source</code>オプションについて</h2> <p>本日、私が出していた要望が実装されました。それが<code>autoload</code>の<code>on_source</code>オプションです。</p> <p>NeoBundleがプラグインの遅延ロードに対応していることはご存知かと思います。遅延ロード、つまりLazy化を行ったプラグインには、どういったタイミングでプラグインを読み込むのかを設定する必要があります。それが<code>autoload</code>オプションになります。</p> <p><code>filetype</code>や<code>commands</code>などを指定し、それをトリガーにしてプラグインが読み込まれるのですが、本日新たに<code>on_source</code>というオプションが加わりました。</p> <p>これは、<em><code>on_source</code>で指定したプラグインが読み込まれようとした際、その前にプラグインをロードする</em>というオプションになります。</p> <p>これによって、特定のプラグインが読み込まれていることを動作の前提としたプラグインの設定の記述がより簡潔に行えるようになります。</p> <h2 id=toc_2>具体例</h2> <p>どういうことなのか、あまりピンとこない方が多いかと思います。そこで、具体例を挙げましょう。私のお気に入りの、<a href="https://github.com/Shougo/vimshell.vim">VimShell</a>というプラグインがあります。また、VimShellの見た目や機能を拡張するプラグインとして、拙作の<a href="https://github.com/supermomonga/vimshell-pure.vim">VimShell-Pure</a>というプラグインがあります。この2つのプラグインの設定を例とします。</p> <p>まず、<code>VimShell-Pure</code>は<code>VimShell</code>のプロンプトを書き換える機能を搭載しているため、VimShellが起動する前にロード（読み込み）が完了している必要があります。そして、Lazy化された設定において、VimShellが起動するタイミングはVimShellをロードするタイミングとほぼ同じです。つまり、VimShellが<code>:VimShell</code>コマンドなどの実行によって起動されようとし、そのためにロードが行われる際、そのタイミングで割り込んで<code>VimShell-Pure</code>を先にロードする必要があります。</p> <p>この場合、<code>on_source</code>オプションを使用せずにそれを実現する設定を記述すると、以下の様になります。</p> <pre lang=vim>" Plugin list
+NeoBundleLazy 'Shougo/vimshell.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundleLazy 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
+
+" Plugin settings
+if neobundle#tap('vimshell.vim')
+  call neobundle#config({
+        \   'autoload' : {
+        \     'commands' : [ 'VimShell', 'VimShellPop' ]
+        \   }
+        \ })
+  function! neobundle#tapped.hooks.on_source(bundle)
+    if neobundle#is_installed('vimshell-pure.vim')
+      call neobundle#source('vimshell-pure.vim')
+    endif
+  endfunction
+  call neobundle#untap()
+endif
+
+if neobundle#tap('vimshell-pure.vim')
+  call neobundle#untap()
+endif
+</pre> <p>注目して欲しいのは<code>neobundle#tapped.hooks.on_source</code>関数の中身です。これは、そのプラグインがロードされようとした時に呼ばれるhook関数です。その中で、<code>neobundle#is_installed()</code>関数によって<code>VimShell-Pure</code>がインストールされているかの確認を行い、インストールされている場合は<code>neobundle#source()</code>関数によって<code>VimShell-Pure</code>を読み込むという設定が記述されています。<code>neobundle#tapped.hooks.on_source</code>の実行が完了、つまり<code>VimShell-Pure</code>のロードが完了した後、<code>VimShell</code>がロードされます。</p> <p>もちろん、この様に設定を行っても、意図した通りの動作にはなります。しかし、この設定のよくない点は、<code>neobundle#tap</code>によってスコープ化された<code>VimShell</code>の設定セクションの中で、<code>VimShell-Pure</code>の読み込みタイミングに関する設定を行っているという所です。つまり、<code>VimShell-Pure</code>がいつ・どのようなタイミングで読み込まれるべきなのかといった「VimShell-Pureのふるまい」を、「VimShellのふるまいを定義するべきセクション」の中で定義してしまっているのです。</p> <p>せっかく<code>neobundle#tap</code>を用いることでプラグインの設定セクションが明確化されたのに、複数のプラグインのふるまいに関する設定が１つのセクション内に混在している状況は精神衛生上よろしくありません。また、<code>VimShell-Pure</code>のふるまいを決める設定、特に読み込みに関するものが<code>VimShell</code>の設定セクション内に残っていると、たとえば<code>VimShell-Pure</code>プラグインの使用を一時的に中止たいと思い、<code>VimShell-Pure</code>プラグインの設定セクション（tapからuntapまで）をコメントアウトした場合も、<code>VimShell</code>の設定セクション内に<code>VimShell-Pure</code>の読み込み設定が残っており、意図せずプラグインが読み込まれてしまうといった弊害も考えられます。</p> <p>それに対して、<code>on_source</code>オプションを利用した設定は以下の通りになります。</p> <pre lang=vim>" Plugin list
+NeoBundleLazy 'Shougo/vimshell.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
+NeoBundleLazy 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
+
+" Plugin settings
+if neobundle#tap('vimshell.vim')
+  call neobundle#config({
+        \   'autoload' : {
+        \     'commands' : [ 'VimShell', 'VimShellPop' ]
+        \   }
+        \ })
+  call neobundle#untap()
+endif
+
+if neobundle#tap('vimshell-pure.vim')
+  call neobundle#config({
+        \   'autoload' : {
+        \     'on_source' : [ 'vimshell.vim' ]
+        \   }
+        \ })
+  call neobundle#untap()
+endif
+</pre> <p><code>VimShell-Pure</code>がいつ・どのようなタイミングで読み込まれるべきなのかといった「VimShell-Pureのふるまい」が、ちゃんと「VimShell-Pureのふるまいを定義するべきセクション」の中で完結して定義されていることがお分かりでしょうか。</p> <p><code>neobundle#tap</code>と<code>neobundle#untap</code>を使用しそれぞれのプラグインの設定をそれぞれのセクション内に閉じ込めるということで、どのプラグインの設定がどこに記述されているのかといった情報が明確になりvimrc管理がとても行い易くなります。<code>autoload</code>の<code>on_source</code>オプションを利用することで、読み込み順に関してもそれが行えるようになり、より見通しのよい<code>.vimrc</code>を作れるようになりました。</p> <h2 id=toc_3>まとめ</h2> <ul> <li> 「プラグインのインストール管理」と「プラグインのふるまい方の設定」の記述を分離させよう</li> <li> それぞれのプラグインのふるまいを決める設定は、<code>neobundle#tap</code>・<code>neobundle#untap</code>で作ったそれぞれのセクション内に閉じ込め、混在しないようにしよう</li> <li> プラグインの読み込みタイミング制御は、新しく実装された<code>autoload</code>の<code>on_source</code>オプションによりセクジョン内で記述できるようになった</li> <li> 「新・ももんが流NeoBundle管理術」という割には、NeoBundleの標準機能しか使っていない</li> </ul> <h2 id=toc_4>Vim Advent Calendar 2012 362日目は</h2> <p><a href="//atnd.org/events/33746">Vim Advent Calendar 2012</a> 362日目の担当は@thincaさんです。</p> <p>いよいよ、365日制覇目前です。恐らくこの記事がVim Advent Calendar 2012における私の最後の記事になるでしょう。とても感慨深く思います。</p> </div> <div class=entry-author> <div class=avatar> <img src="/images/kokoro-chan-da2b7132.png"> </div> <div class=profile> <h3> supermomonga </h3> <p> かなりすごいことでゆうめい。したまちでしらぬものはいない。 </p> <a href="https://twitter.com/supermomonga" class=twitter-follow-button data-show-count=false data-lang=ja data-size=large data-dnt=true>@supermomongaさんをフォロー</a> </div> </div> <div class=entry-meta> <h3> コメント一覧ですよ </h3> <div class=hatena_bookmark_comments data-uri="http://blog.supermomonga.com/articles/vim/neobundle-sugoi-setting.html"></div> </div> </div> <aside> <h2> タグ一覧ですよ </h2> <ol> <li class="default label"> <i class=icon-tag></i><a href="/tags/emacs.html">Emacs</a>(5) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/java.html">Java</a>(4) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/jdee.html">JDEE</a>(5) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/swt.html">SWT</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/svn.html">svn</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/ubuntu.html">Ubuntu</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/facebook.html">facebook</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/windows.html">Windows</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/mac.html">Mac</a>(2) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/fx.html">FX</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/metatrader4.html">MetaTrader4</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/vim.html">Vim</a>(6) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/lingr.html">Lingr</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/neobundle.html">NeoBundle</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/minecraft.html">Minecraft</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/ruby.html">Ruby</a>(1) </li> <li class="default label"> <i class=icon-tag></i><a href="/tags/thingspast.html">ThingsPast</a>(1) </li> </ol> </aside> </div> </body> </html> <div id=fb-root></div> <script src="/javascripts/bookmark_blogparts-b37aab8f.js" async=async defer=defer></script> <script>
+  // twitter share button
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  // pocket save button
+  !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
+  // Facebook like button
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=184200125074087";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
