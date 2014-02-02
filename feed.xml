@@ -5,10 +5,97 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-05T15:00:00Z</updated>
+  <updated>2014-02-01T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>momonga.vim #2.2 進捗のVimmer</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-2_2.html"/>
+    <id>http://blog.url.com/articles/vim/momongavim-2_2.html</id>
+    <published>2014-02-01T15:00:00Z</published>
+    <updated>2014-02-02T17:01:56+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h2 id="toc_0"&gt;momonga.vim #2.2 に参加しました&lt;/h2&gt;
+
+&lt;p&gt;momonga.vim #2.2 に参加してきましたので、レポート記事を投稿したいと思います。&lt;/p&gt;
+
+&lt;p&gt;momonga.vim #2.2 は、#2 開催から時間が経ったものの、会場の予約の都合上#3まで時間が空きすぎて、Vimもくもく会成分が欠如して生活に支障が出そうということで企画された少人数のvimもくもく会です。小数点付きの回は大体このような少人数もくもく会を指します。&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;集合&lt;/h2&gt;
+
+&lt;p&gt;12:20頃、ももんがさんの家に集合しました。私はももんがさんなのでももんがさんの家までは徒歩0分の距離であり、労せず到着することができました。&lt;/p&gt;
+
+&lt;p&gt;参加者は私を含めて以下の5人です。前回の #2.1 も同じメンツでした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@deris0126 （derisさん）&lt;/li&gt;
+&lt;li&gt;@Linda_pp （りんだんさん）&lt;/li&gt;
+&lt;li&gt;@rbtnn （rbtnnさん）&lt;/li&gt;
+&lt;li&gt;@thinca （thincaさん）&lt;/li&gt;
+&lt;li&gt;@supermomonga （ももんがさん）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="toc_2"&gt;昼食&lt;/h2&gt;
+
+&lt;p&gt;集まったので昼食です。最近糖質制限をしているのですが、誰かと一緒にごはんを食べるときは制限しないという例外を敷いているので、thincaさんの希望もありラーメンになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-01-lunch.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_3"&gt;もくもく会&lt;/h2&gt;
+
+&lt;p&gt;もくもくしました。だいぶもくもくしたので煙がすごいでたと思います。&lt;/p&gt;
+
+&lt;p&gt;VCS.vim、puyo.vimにぷよテト実装、オプションパーサ、Sidecar、duzzleアップデート、みたいによくわからないけど各々の心にプレッシャーが発生する呪文を各自が唱え合ってた気がします。&lt;/p&gt;
+
+&lt;p&gt;私の場合、その成果として、ThingsPast.vimへのシンタックスや各種Hook追加を行い大々的にリファクタリングしたメジャーバージョンアップ版のリリースや長らく構成を決めかねていたSidecar.vimの正式版リリースに加えて放置されているFAX Advent Calendar 2013のネタプラギンを颯爽と完成させものすごい進捗を叩きだしたということは一切なくてvimrcを整理して小さいプラギンを新しく1つ作っただけでした。このプラギンは&lt;a href="https://github.com/supermomonga/projectlocal.vim"&gt;projectlocal.vim&lt;/a&gt;というもので、近日中に解説記事を書きます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-01-mokumoku.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;お菓子よかった。&lt;/p&gt;
+
+&lt;h2 id="toc_4"&gt;夕食&lt;/h2&gt;
+
+&lt;p&gt;20時頃。中華料理屋さん行きました。私はレバ野菜炒めと餃子。900円。
+derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を食べていました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-01-dinner.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;ここで翌日予定のあるderisさんとはお別れしました。お疲れ様でした。&lt;/p&gt;
+
+&lt;h2 id="toc_5"&gt;vimrc読書会に参加&lt;/h2&gt;
+
+&lt;p&gt;毎週土曜日の23時からオンラインのチャットルームで開催されているvimrc読書会が始まりました。せっかくなので、みんなで参加します。というか、今回読まれたのは私のvimrcでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://vim-jp.org/reading-vimrc/archive/083.html"&gt;第83回 vimrc読書会&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_6"&gt;徹夜もくもく会&lt;/h2&gt;
+
+&lt;p&gt;徹夜でもくもく会をして、みんなでものすごい進捗を出しました。私は、アイマスクをつけて横たわり毛布を纏うという姿勢で、今後もっと日本のVimシーンを盛り上げていくにはどうすればよいのかについて、とても真剣に瞑想を行っていました。朝まで。なので寝ていたわけではないです。&lt;/p&gt;
+
+&lt;h2 id="toc_7"&gt;朝&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-02-morning.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;朝モスしました。&lt;/p&gt;
+
+&lt;p&gt;その後ちょっともくもくしたようなしなかったような感じで、昼前に解散しました。&lt;/p&gt;
+
+&lt;h2 id="toc_8"&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;最近私事によりかなり忙しく、Vim活ができていなかったので、かなりよい休日を過ごすことができました。参加者の皆さんありがとうございます。&lt;/p&gt;
+
+&lt;p&gt;momonga.vim #2.2 に来てくださった他のみなさんも、参加レポート記事を書いてくれると思うので、期待しています。&lt;/p&gt;
+
+&lt;p&gt;来月、3月には最大20人規模の&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3&lt;/a&gt;が開催予定なので、Vimに関して一日中もくもくしてみたい方は、よろしければご参加ください。&lt;/p&gt;
+
+&lt;h2 id="toc_9"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Vimによる通知センター実装、ThingsPast.vimをリリースしました</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/thingspast-vim-released.html"/>
@@ -902,194 +989,6 @@ imap &amp;lt;expr&gt;&amp;lt;CR&gt; !pumvisible() ? "\&amp;lt;Plug&gt;(vimrc_cr)
     ･▿･)つVim)‾▿◝ ),;&amp;#8217;
   &lt;/p&gt;
 &lt;/div&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Macを購入したら絶対に導入したい！私が3年間で厳選した超オススメアプリ10選！</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/startdash-with-mac.html"/>
-    <id>http://blog.url.com/articles/vim/startdash-with-mac.html</id>
-    <published>2013-10-09T15:00:00Z</published>
-    <updated>2014-01-26T08:51:37+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;さて本日は、MacBook Airを2010年に買ってから、数々のフリーソフト・シェアウェアを使い続けてきた私が、MacBookを買ったら「絶対に」導入したい、超厳選アプリをランキング形式でご紹介したいと思います！今回は無料で使えるものばかり集めてみましたので、シェアウェアに関しては後日またご紹介したいと思います（＾＾）&lt;/p&gt;
-
-&lt;p&gt;それでは、ご覧ください！&lt;/p&gt;
-
-&lt;p&gt;↓↓↓&lt;/p&gt;
-
-&lt;div style="padding: 500px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_0"&gt;第10位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 200%; line-height: 120%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;まずは定番、Vimですね。知る人ぞ知るテキストエディタです。テキストエディタの記事では無いので詳しい説明は避けますが、Vimは「モード」という概念とキーの組み合わせによるテキストの操作方法が特徴的なエディタで、日本でも根強いファンは多いです。プログラマの方はぜひ導入すべきと言えるアプリでしょう。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;ダウンロードはこちらから&lt;/a&gt;！&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_1"&gt;第9位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 240%; line-height: 124%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;Macと言えばApple、AppleといえばiPod、iPodといえば音楽です。 そう、せっかくMacを買ったからには、音楽を楽しまなければいけません。デフォルトでインストールされている「iTunes」でもよいのですが、ここはキーボードから小気味よく選曲などの操作をして音楽を聴きたいところです。そんなあなたにオススメなのが、このMacVimというアプリ！なんと&lt;a href="https://github.com/ryutorion/vim-itunes"&gt;プラグインの導入&lt;/a&gt;によってiTunesの操作をキーボードで行うことができるようになるアプリなのです！MacVimには、おまけとしてテキストエディット！を出来る機能も付いているので、テキストをエディットすることもできてかなり便利ですね（かなり）。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;ダウンロードはこちらから&lt;/a&gt;！&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_2"&gt;第8位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 280%; line-height: 128%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;さて、お次にオススメしたいのが、MacVimというアプリです。このアプリはいわゆる「テキストエディタ」で、テキストをエディットすることができます。テキストをエディットするためのなんかすごい機能があるので、テキストを効率的にエディットしていくことができます。そして、テキストを効率的にエディットしていくことができます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;ダウンロードはこちら&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_3"&gt;第7位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 320%; line-height: 132%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;さて、WindowsでもMacでも変わらない現代の必須ソフト、それは「ウェブブラウザ」ですね。WindowsだとInternetExplorer、通称IEが標準でインストールされていますが、IEは「ブラウザをダウンロードするための便利なソフト」と揶揄されていたりします（苦笑）&lt;/p&gt;
-
-&lt;p&gt;Macに標準でインストールされているブラウザであるSafariはそれほど酷評されているわけではありませんが、やはり自分の手に馴染むブラウザを選択して使っていきたいですよね。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;そこでMacVimというアプリです（＾＾）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://w3m.sourceforge.net/index.ja.html"&gt;w3m&lt;/a&gt;というやつをなんかインストールみたいなことして、MacVimに&lt;a href="https://github.com/yuratomo/w3m.vim"&gt;w3m.vim&lt;/a&gt;というプラグインを導入すれば、そう、ウェブブラウザです！&lt;/p&gt;
-
-&lt;p&gt;あとテキストをエディットすることもできます！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;ダウンロードはこちら&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_4"&gt;第6位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 360%; line-height: 136%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;えーと、MacでうごくVimですね。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;ダウンロード&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_5"&gt;第5位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 400%; line-height: 140%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;Vimです。Macの。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;DL&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_6"&gt;第4位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 420%; line-height: 142%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;Vim&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://code.google.com/p/macvim/"&gt;d&lt;/a&gt;&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_7"&gt;第3位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 460%; line-height: 146%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;第3位は「MacVim」です！世界にはEmacsとVim、2種類のエディタしかないことは有名ですが、これはVimの方です！Mac用のVimです。&lt;/p&gt;
-
-&lt;p&gt;さて、この第3位のMacVimというアプリなのですが、第4位のMacVimと、どちらを3位にしようか、最後まですっご〜〜〜〜〜く悩みました！（笑）（＾＾；） それくらい、MacVimとMacVim、どちらもすごくいいアプリなんです！&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_8"&gt;第2位&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 500%; line-height: 150%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;p&gt;さて、惜しくも1位を逃すこととなった第2位は、「MacVim」です！&lt;/p&gt;
-
-&lt;p&gt;「Vim」、中には初めて耳にした方も居るかもしれませんね。一般的に、PCを使う場合はその用途の9割がテキストエディットで残り4割がテキストエディットだと言われています。そう、つまり、Macを使うにあたってテキストエディット用ソフトウェア、通称テキストエディタ選びというのは非常に重要なのです。Macには多くのテキストエディタがありますが、あなたに合った最適なテキストエディタを選ぶということは、あなたのPCライフそのものを最適化するということに他なりません。&lt;/p&gt;
-
-&lt;p&gt;そこで私がおすすめしたいのは、やはりMacVimです。最終的に他のエディタ、例えばEmacsなどを使っていくにしても、「効率的にテキストを編集すること」を突き詰め、テキストエディタとしての新しいパラダイムを実現したとも言えるVim(Vi)を経験しておくことは非常に大切でしょう。&lt;/p&gt;
-
-&lt;div style="padding: 150px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_9"&gt;第1位&lt;/h2&gt;
-
-&lt;p&gt;そして、栄えある第一位は…&lt;/p&gt;
-
-&lt;div style="padding: 500px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-10-macvim.png" alt="macvim" width="256" height="256" class="aligncenter size-full wp-image-881" /&gt;&lt;/p&gt;
-
-&lt;div style="font-size: 700%; line-height: 170%; text-align: center;"&gt;
-  MacVim
-&lt;/div&gt;
-
-&lt;div style="font-size: 200%; line-height: 120%; text-align: center;"&gt;
-  MacVimです！！！！！！！！！！！！！！！！！！！！
-&lt;/div&gt;
-
-&lt;div style="padding: 200px 0 0 0;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_10"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://atnd.org/events/33746"&gt;Vim Advent Calendar 2012&lt;/a&gt;、314日目の記事でした。&lt;/p&gt;
 </content>
   </entry>
 </feed>
