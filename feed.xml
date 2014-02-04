@@ -5,10 +5,114 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-02-01T15:00:00Z</updated>
+  <updated>2014-02-04T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>プロジェクトのハンドリングを効率化するプラグイン、ProjectLocal.vimをリリースしました。</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/projectlocal-vim-released.html"/>
+    <id>http://blog.url.com/articles/vim/projectlocal-vim-released.html</id>
+    <published>2014-02-04T15:00:00Z</published>
+    <updated>2014-02-05T00:49:55+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、66日目の記事になります。&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;ProjectLocal.vimをリリースしました&lt;/h2&gt;
+
+&lt;p&gt;プロジェクトのハンドリングを効率化する薄い機能を提供するプラグイン、ProjectLocal.vimをリリースしましたのでご紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/supermomonga/projectlocal.vim"&gt;https://github.com/supermomonga/projectlocal.vim&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;ProjectLocal.vimの機能&lt;/h2&gt;
+
+&lt;p&gt;プロジェクトのルートディレクトリに&lt;code&gt;Projectfile&lt;/code&gt;という名前のファイルを配置すると、そのディレクトリは1つのプロジェクトとして扱われるようになり、ディレクトリ以下のファイルを開いた時に以下の2つの機能が発動します。&lt;/p&gt;
+
+&lt;h3 id="toc_2"&gt;1. プロジェクトルートディレクトリの設定&lt;/h3&gt;
+
+&lt;p&gt;ProjectLocal.vimは、現在開いているファイルのプロジェクトのルートディレクトリを、ファイル（バッファ）のローカル変数に自動でセットします。これにより、プロジェクト内のどのファイルを開いた時も、常にバッファがプロジェクトルートの位置を知ることができます。具体的には、&lt;code&gt;b:projectlocal_root_dir&lt;/code&gt;というバッファローカル変数にパスがセットされます。&lt;/p&gt;
+
+&lt;h3 id="toc_3"&gt;2. プロジェクト用filetypeの自動設定&lt;/h3&gt;
+
+&lt;p&gt;プロジェクト内のファイルを開いた時、そのファイルのfiletypeに、予め設定したfiletypeを付加することができます。たとえば、&lt;code&gt;.rb&lt;/code&gt;ファイルを開いた時、通常は&lt;code&gt;ruby&lt;/code&gt;というfiletypeが設定されますが、自動で&lt;code&gt;rails&lt;/code&gt;というfiletypeが付加されるように設定することが可能になります。ちなみに、Vimにおいて1つのバッファに複数のfiletypeを割り当てたい時は、それらを&lt;code&gt;.&lt;/code&gt;（ドット記号）で連結します。この場合は&lt;code&gt;ruby.rails&lt;/code&gt;になるわけですね。&lt;/p&gt;
+
+&lt;p&gt;この設定はプロジェクト毎に変えることができます。方法は簡単で、&lt;code&gt;Projectfile&lt;/code&gt;の中に、設定したいfiletypeをカンマ区切りもしくは改行区切りで記載するだけです。&lt;/p&gt;
+
+&lt;h2 id="toc_4"&gt;ProjectLocal.vimの利用例&lt;/h2&gt;
+
+&lt;p&gt;ProjectLocal.vimは、それ単体では利便性に直接影響することはない、薄い機能を持った低レイヤプラグインです。ここでは、ProjectLocalの便利な利用例をご紹介します。&lt;/p&gt;
+
+&lt;h3 id="toc_5"&gt;プロジェクト内のファイルのみ検索するUniteコマンドを呼び出す&lt;/h3&gt;
+
+&lt;p&gt;特定のプロジェクトに関するプログラミングを行っている時、そのプロジェクトに関係するファイルのみを対象に検索したいことがあると思います。そのような場合、gitなどのVCSで管理されているディレクトリはUnite.vimの標準機能で検索を行うことができますが、すべてのプロジェクトが必ずしもVCSで管理されているとは限りませんし、プロジェクト内でも更に細かくスコープを分けたいなどの要望があると思います。&lt;/p&gt;
+
+&lt;p&gt;そういった場合、ProjectLocal.vimにて任意の場所に&lt;code&gt;Projectfile&lt;/code&gt;を配置することで、簡単にプロジェクト、もしくはプロジェクトの一部のファイルを検索することができるようになります。&lt;/p&gt;
+
+&lt;h4 id="toc_6"&gt;.vimrc&lt;/h4&gt;
+&lt;pre class="highlight viml"&gt;nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;p&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;call&lt;/span&gt; Unite_project_files&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'-start-insert'&lt;/span&gt;&lt;span class="p"&gt;)&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; Unite_project_files&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;options&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; exists&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'b:projectlocal_root_dir'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    execute &lt;span class="s1"&gt;':Unite file_rec/async:'&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;b:projectlocal_root_dir&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;a:options&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt;
+    echo &lt;span class="s2"&gt;"You are not in any project."&lt;/span&gt;
+  &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Unite.vimのfire&lt;em&gt;rec/asyncというソースは、引数として検索対象のディレクトリを取ることができます。これを利用して、`b:projectlocal&lt;/em&gt;root_dir`が存在する場合はその値を引数として渡す関数を実装し、キーバインドに割り当てています。&lt;/p&gt;
+
+&lt;h3 id="toc_7"&gt;プロジェクト毎に最適なUniteコマンドを呼び出す&lt;/h3&gt;
+
+&lt;p&gt;同じキーバインドでも、状況によって最適な内容を実行してくれたら素敵です。ここでは、Unite.vimを例に、普段はディスク全体を対象にファイルを列挙するが、railsプロジェクトを開いている時には&lt;code&gt;unite-rails&lt;/code&gt;というRails用のUnite sourceを呼び出すといった設定を行ってみます。&lt;/p&gt;
+
+&lt;h4 id="toc_8"&gt;Projectfile&lt;/h4&gt;
+&lt;pre class="highlight plaintext"&gt;rails
+&lt;/pre&gt;
+&lt;h4 id="toc_9"&gt;.vimrc&lt;/h4&gt;
+&lt;pre class="highlight viml"&gt;nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Unite file_mru&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nv"&gt;s:my&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;unite_rails_init&lt;span class="p"&gt;()&lt;/span&gt;
+  nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;buffer&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Unite rails&lt;span class="sr"&gt;/model rails/&lt;/span&gt;controller rails&lt;span class="sr"&gt;/view rails/&lt;/span&gt;db rails&lt;span class="sr"&gt;/config rails/&lt;/span&gt;javascript rails&lt;span class="sr"&gt;/stylesheet rails/&lt;/span&gt;helper rails/mailer&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+
+aug MyAutoCmd
+  &lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; *rails* &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="nv"&gt;g:My&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;unite_rails_init&lt;span class="p"&gt;()&lt;/span&gt;
+aug END
+&lt;/pre&gt;
+&lt;p&gt;このように、&lt;code&gt;&amp;lt;Space&amp;gt;j&lt;/code&gt;というキーバインドに対して、普段は&lt;code&gt;file_mru&lt;/code&gt;ソースを呼び出すものの、railsのプロジェクトでは&lt;code&gt;unite-rails&lt;/code&gt;のソースを呼び出すといった設定を完結に記載することができました。AutoCmdのパターンは完全一致なので、&lt;code&gt;*&lt;/code&gt;で囲むことで&lt;code&gt;ruby.rails&lt;/code&gt;などといったfiletypeにもマッチする様な工夫を行っています。&lt;/p&gt;
+
+&lt;h2 id="toc_10"&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;ProjectLocal.vimを利用することで、現在どのプロジェクトのファイルを開いているのか、プロジェクトの種類はなんなのか、プロジェクトのルートディレクトリはどこなのか、といった情報が提供されるようになり、プロジェクトに依存する固有の設定が格段に行い易くなりました。小さい実装ながらも強力なプラグインですので、皆さんもぜひお試し頂ければと思います。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>人間のよさについて</title>
+    <link rel="alternate" href="http://blog.url.com/articles/others/hai.html"/>
+    <id>http://blog.url.com/articles/others/hai.html</id>
+    <published>2014-02-01T15:00:00Z</published>
+    <updated>2014-02-02T21:57:17+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;おれはじぶんの「嫌いだ」といふ印象を信用しないことにしてゐる。その「嫌いだ」といふのは、たいていは相手の一部だけについて感じたり言ったりしてゐるので、相手の全人格のほうへ関心をのばせば考慮や納得のする根拠があるのがほとんどだ。さういふただ部分についてだけで「嫌いだ」といふ判断をするのは、間違ってゐるとおもふ。そんな判断の仕方は無くなるのが理想だとおもってゐる。常不軽菩薩のやうな超人になれといふのは言ひ過ぎで、「嫌い」なのは「嫌い」でいいんだ。だがそれには、全人格と全現在をかんがへなければならない。それを放棄したときにおれは死ぬ。ひとつずつ進んでゆくしかないのだとおもふ。
+&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2014/02/02/081234"&gt;http://c4se.hatenablog.com/entry/2014/02/02/081234&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- --&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;私は、自分のことを省みてみろ、自分の子供だったころのことを考えてみろよ、という事で尽きますし、あとは吉本隆明さんが言っているのに付け加えることもないので、黙っています。
+&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2012/07/05/200405"&gt;http://c4se.hatenablog.com/entry/2012/07/05/200405&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;この点について私は恐らく、概ね同じような考えを持っていて、誰かと接する時、その相手が過去に何をやったであるとか、どういう欠点があるのだとか、そういった事柄で相手の人格を判断しないように、極力している。欠点があることや間違いを犯すのはあたりまえのことで、その点だけで相手を判断して交流を行う、もしくは行わないということをやっていると、なにか人間の「よさ」のようなものに対する感度が次第に鈍っていってしまう様に思える。そんな考えに至るのは自分の欠点に対する免罪符であると言われてしまえば完全には否定できない。そうかもしれない、と思う。でも、とにかくこの考え方が私にはしっくりくるし、合っているのだと思う。&lt;/p&gt;
+
+&lt;p&gt;これは私の生き方の指針であり自分の中で完結している問題であるので他人は関係なく、また広く同意を得られる様な考え方ではないと思っている。なので、私がこういった考え方をしているということを誰かに言ったり、文章にしたりすることはなかった。ところが、意外に身近な所からこういった文章が出てきたので、そういった価値観の人も少なくはないのかもしれない、と思い、つい文章にしてしまった。普段あまり文章を書かない人間なので考えや意図が正確に伝わる文章かはわからない。おわり。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>momonga.vim #2.2 進捗のVimmer</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-2_2.html"/>
@@ -94,32 +198,6 @@ derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を
 &lt;h2 id="toc_9"&gt;おわり&lt;/h2&gt;
 
 &lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>人間のよさについて</title>
-    <link rel="alternate" href="http://blog.url.com/articles/others/hai.html"/>
-    <id>http://blog.url.com/articles/others/hai.html</id>
-    <published>2014-02-01T15:00:00Z</published>
-    <updated>2014-02-02T21:57:17+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;おれはじぶんの「嫌いだ」といふ印象を信用しないことにしてゐる。その「嫌いだ」といふのは、たいていは相手の一部だけについて感じたり言ったりしてゐるので、相手の全人格のほうへ関心をのばせば考慮や納得のする根拠があるのがほとんどだ。さういふただ部分についてだけで「嫌いだ」といふ判断をするのは、間違ってゐるとおもふ。そんな判断の仕方は無くなるのが理想だとおもってゐる。常不軽菩薩のやうな超人になれといふのは言ひ過ぎで、「嫌い」なのは「嫌い」でいいんだ。だがそれには、全人格と全現在をかんがへなければならない。それを放棄したときにおれは死ぬ。ひとつずつ進んでゆくしかないのだとおもふ。
-&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2014/02/02/081234"&gt;http://c4se.hatenablog.com/entry/2014/02/02/081234&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;!-- --&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;私は、自分のことを省みてみろ、自分の子供だったころのことを考えてみろよ、という事で尽きますし、あとは吉本隆明さんが言っているのに付け加えることもないので、黙っています。
-&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2012/07/05/200405"&gt;http://c4se.hatenablog.com/entry/2012/07/05/200405&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;この点について私は恐らく、概ね同じような考えを持っていて、誰かと接する時、その相手が過去に何をやったであるとか、どういう欠点があるのだとか、そういった事柄で相手の人格を判断しないように、極力している。欠点があることや間違いを犯すのはあたりまえのことで、その点だけで相手を判断して交流を行う、もしくは行わないということをやっていると、なにか人間の「よさ」のようなものに対する感度が次第に鈍っていってしまう様に思える。そんな考えに至るのは自分の欠点に対する免罪符であると言われてしまえば完全には否定できない。そうかもしれない、と思う。でも、とにかくこの考え方が私にはしっくりくるし、合っているのだと思う。&lt;/p&gt;
-
-&lt;p&gt;これは私の生き方の指針であり自分の中で完結している問題であるので他人は関係なく、また広く同意を得られる様な考え方ではないと思っている。なので、私がこういった考え方をしているということを誰かに言ったり、文章にしたりすることはなかった。ところが、意外に身近な所からこういった文章が出てきたので、そういった価値観の人も少なくはないのかもしれない、と思い、つい文章にしてしまった。普段あまり文章を書かない人間なので考えや意図が正確に伝わる文章かはわからない。おわり。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -486,91 +564,6 @@ endif
 &lt;p&gt;&lt;a href="http://atnd.org/events/33746"&gt;Vim Advent Calendar 2012&lt;/a&gt; 362日目の担当は@thincaさんです。&lt;/p&gt;
 
 &lt;p&gt;いよいよ、365日制覇目前です。恐らくこの記事がVim Advent Calendar 2012における私の最後の記事になるでしょう。とても感慨深く思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>neosnippetとsmartinputで&amp;lt;CR&amp;gt;キーのマッピングを共存させる</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/share-cr-map-with-multiple-plugins.html"/>
-    <id>http://blog.url.com/articles/vim/share-cr-map-with-multiple-plugins.html</id>
-    <published>2013-11-19T15:00:00Z</published>
-    <updated>2014-01-24T11:35:43+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/33746"&gt;Vim Advent Calendar 2012&lt;/a&gt;、355日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="toc_0"&gt;&lt;code&gt;&amp;lt;cr&amp;gt;&lt;/code&gt;のマッピングについて&lt;/h2&gt;
-
-&lt;p&gt;本日は、&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;のマッピングを複数のプラグイン間で共有する設定について記事にしたいと思います。&lt;/p&gt;
-
-&lt;p&gt;例として、&lt;a href="https://github.com/Shougo/neosnippet.vim"&gt;neosnippet&lt;/a&gt;及び&lt;a href="https://github.com/Shougo/neocomplete.vim"&gt;neocomplete&lt;/a&gt;と&lt;a href="https://github.com/kana/vim-smartinput/"&gt;smartinput&lt;/a&gt;及び&lt;a href="https://github.com/cohama/vim-smartinput-endwise/"&gt;smartinput-endwise&lt;/a&gt;の設定を共存させる方法をお伝えします。&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;行いたい動作&lt;/h2&gt;
-
-&lt;p&gt;まず、私は&lt;code&gt;neocomplete&lt;/code&gt;で&lt;code&gt;neosnippet&lt;/code&gt;の候補を補完し、さらに候補にフォーカスが当たっている状態で&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;を押下することにより、スニペットを展開したいと考えています。&lt;/p&gt;
-
-&lt;p&gt;更に、補完ポップアップメニューが表示されていない状態で&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;を押下した際には、&lt;code&gt;smartinput-endwise&lt;/code&gt;により、関数定義の閉じendなどを文脈から判断じて自動挿入したいと思います。&lt;/p&gt;
-
-&lt;h2 id="toc_2"&gt;設定&lt;/h2&gt;
-
-&lt;p&gt;前提として、以下のプラグインを&lt;a href="https://github.com/Shougo/neobundle.vim"&gt;neobundle&lt;/a&gt;で管理しているものとします。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  &lt;a href="https://github.com/Shougo/neocomplete.vim"&gt;neocomplete&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;  &lt;a href="https://github.com/Shougo/neosnippet.vim"&gt;neosnippet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;  &lt;a href="https://github.com/kana/vim-smartinput/"&gt;smartinput&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;  &lt;a href="https://github.com/cohama/vim-smartinput-endwise/"&gt;smartinput-endwise&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre lang="vim"&gt;if neobundle#tap('vim-smartinput')
-  call neobundle#config({
-        \   'autoload' : {
-        \     'insert' : 1
-        \   }
-        \ })
-
-  function! neobundle#tapped.hooks.on_post_source(bundle)
-    call smartinput_endwise#define_default_rules()
-  endfunction
-
-  call neobundle#untap()
-endif
-
-if neobundle#tap('vim-smartinput-endwise')
-  function! neobundle#tapped.hooks.on_post_source(bundle)
-    " neosnippet and neocomplete compatible
-    call smartinput#map_to_trigger('i', '&amp;lt;Plug&gt;(vimrc_cr)', '&amp;lt;Enter&gt;', '&amp;lt;Enter&gt;')
-    imap &amp;lt;expr&gt;&amp;lt;CR&gt; !pumvisible() ? "\&amp;lt;Plug&gt;(vimrc_cr)" :
-          \ neosnippet#expandable() ? "\&amp;lt;Plug&gt;(neosnippet_expand)" :
-          \ neocomplete#close_popup()
-  endfunction
-  call neobundle#untap()
-endif
-
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;smartinput_endwise#define_default_rules()&lt;/code&gt;を実行した時点で、&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;のマップが&lt;code&gt;smartinput&lt;/code&gt;によって上書きされてしまいます。ですので、&lt;code&gt;neobundle#tapped.hooks.on_post_source(bundle)&lt;/code&gt;によって、その後に再度&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;をオリジナルの設定でマッピングします。&lt;/p&gt;
-
-&lt;pre lang="vim"&gt;call smartinput#map_to_trigger('i', '&amp;lt;Plug&gt;(vimrc_cr)', '&amp;lt;Enter&gt;', '&amp;lt;Enter&gt;')
-imap &amp;lt;expr&gt;&amp;lt;CR&gt; !pumvisible() ? "\&amp;lt;Plug&gt;(vimrc_cr)" :
-      \ neosnippet#expandable() ? "\&amp;lt;Plug&gt;(neosnippet_expand)" :
-      \ neocomplete#close_popup()
-&lt;/pre&gt;
-
-&lt;p&gt;こちらについて解説します。 まず、&lt;code&gt;smartinput#map_to_trigger&lt;/code&gt;によって、&lt;code&gt;&amp;lt;Plug&amp;gt;(vimrc_cr)&lt;/code&gt;が押下された時に&lt;code&gt;smartinput-endwise&lt;/code&gt;が動作するように設定します。 次に&lt;code&gt;imap&lt;/code&gt;によって&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;のマッピングを上書きします。&lt;code&gt;imap &amp;lt;expr&amp;gt;&amp;lt;CR&amp;gt;&lt;/code&gt;といった様に、&lt;code&gt;&amp;lt;expr&amp;gt;&lt;/code&gt;を使うことでマップ内容に式を書くことができます。&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;が押下されるたびに設定した式が評価されます。&lt;/p&gt;
-
-&lt;p&gt;式の内容を見て行きましょう。まず、&lt;code&gt;!pumvisible()&lt;/code&gt;は&lt;code&gt;pumvisible()&lt;/code&gt;が偽である時、つまり補完ポップアップメニューが開いていない時を意味します。補完を行っていない時は&lt;code&gt;smartinput&lt;/code&gt;に処理を渡したいので、先ほど設定した&lt;code&gt;&amp;lt;Plug&amp;gt;(vimrc_cr)&lt;/code&gt;を呼び出しています。次に&lt;code&gt;pumvisible()&lt;/code&gt;が真である場合ですが、ここで三項演算子がネストしています。こちらは、&lt;code&gt;neosnippet#expandable()&lt;/code&gt;が真（現在選択されている補完候補が&lt;code&gt;neosnippet&lt;/code&gt;のものであり、スニペットが展開できる状態）であればスニペットを展開し、そうでなければ補完ポップアップメニューを閉じるという式になっています。&lt;/p&gt;
-
-&lt;p&gt;これにより、&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;を押下した時の動作を、以下のように定義することができました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  分岐1：補完ポップアップメニューが表示されていれば分岐2へ、そうでなければ&lt;code&gt;smartinput&lt;/code&gt;にて&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;を押下時に呼び出される関数を呼び出す&lt;/li&gt;
-&lt;li&gt;  分岐2：スニペット候補が展開されていればスニペットを展開し、そうでなければ補完ポップアップメニューを閉じる&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_3"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;かなりべんり（かなり）&lt;/p&gt;
 </content>
   </entry>
 </feed>
