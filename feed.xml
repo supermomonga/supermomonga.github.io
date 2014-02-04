@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/vim/projectlocal-vim-released.html"/>
     <id>http://blog.url.com/articles/vim/projectlocal-vim-released.html</id>
     <published>2014-02-04T15:00:00Z</published>
-    <updated>2014-02-05T00:49:55+09:00</updated>
+    <updated>2014-02-05T01:57:16+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -72,12 +72,12 @@
 &lt;h4 id="toc_9"&gt;.vimrc&lt;/h4&gt;
 &lt;pre class="highlight viml"&gt;nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Unite file_mru&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nv"&gt;s:my&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;unite_rails_init&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nv"&gt;s:unite_rails_init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
   nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;buffer&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Unite rails&lt;span class="sr"&gt;/model rails/&lt;/span&gt;controller rails&lt;span class="sr"&gt;/view rails/&lt;/span&gt;db rails&lt;span class="sr"&gt;/config rails/&lt;/span&gt;javascript rails&lt;span class="sr"&gt;/stylesheet rails/&lt;/span&gt;helper rails/mailer&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 
 aug MyAutoCmd
-  &lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; *rails* &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="nv"&gt;g:My&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;unite_rails_init&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; *rails* &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="nv"&gt;s:unite_rails_init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 aug END
 &lt;/pre&gt;
 &lt;p&gt;このように、&lt;code&gt;&amp;lt;Space&amp;gt;j&lt;/code&gt;というキーバインドに対して、普段は&lt;code&gt;file_mru&lt;/code&gt;ソースを呼び出すものの、railsのプロジェクトでは&lt;code&gt;unite-rails&lt;/code&gt;のソースを呼び出すといった設定を完結に記載することができました。AutoCmdのパターンは完全一致なので、&lt;code&gt;*&lt;/code&gt;で囲むことで&lt;code&gt;ruby.rails&lt;/code&gt;などといったfiletypeにもマッチする様な工夫を行っています。&lt;/p&gt;
