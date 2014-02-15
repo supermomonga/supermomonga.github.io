@@ -5,10 +5,59 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-02-04T15:00:00Z</updated>
+  <updated>2014-02-15T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ansuzのやつ</title>
+    <link rel="alternate" href="http://blog.url.com/articles/ruby/ansuz.html"/>
+    <id>http://blog.url.com/articles/ruby/ansuz.html</id>
+    <published>2014-02-15T15:00:00Z</published>
+    <updated>2014-02-16T08:17:17+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://funisaya-ac2013.herokuapp.com/"&gt;ansuz&lt;/a&gt;4番目の担当でした。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;担当の二週間の、前半一週間で、「これは自分のものとしてともかくやるんだ」というものを制作してください。「これは自分のものとしてともかくやるんだ」ということだけが重要です。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;はい。私はコードを書くしかないと思っているので、コードを書きました。そして音ができます。&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;書きます&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-16-7.56.26.png" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;プログラムのソースコードを食べて音をつくるものができます。
+ごく基本的な音楽の知識しかないので、コード進行がいい感じになるくらいのかしこさしかないです。&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;食べさせる&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-16-7.56.52.png" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;自分自身を食べさせます。自分を音楽にします。quineみたいですね、と思ったけどよく考えたら全然quineみたいではないです。&lt;/p&gt;
+
+&lt;p&gt;midiができます。&lt;/p&gt;
+
+&lt;h2 id="toc_2"&gt;調整&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-02-16-7.58.02.png" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;GarageBandで調整しましょう&lt;/p&gt;
+
+&lt;h2 id="toc_3"&gt;できる&lt;/h2&gt;
+
+&lt;iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/135025481&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;visual=true"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;できた。&lt;/p&gt;
+
+&lt;h2 id="toc_4"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>プロジェクトのハンドリングを効率化するプラグイン、ProjectLocal.vimをリリースしました。</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/projectlocal-vim-released.html"/>
@@ -85,32 +134,6 @@ aug END
 &lt;h2 id="toc_10"&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;ProjectLocal.vimを利用することで、現在どのプロジェクトのファイルを開いているのか、プロジェクトの種類はなんなのか、プロジェクトのルートディレクトリはどこなのか、といった情報が提供されるようになり、プロジェクトに依存する固有の設定が格段に行い易くなりました。小さい実装ながらも強力なプラグインですので、皆さんもぜひお試し頂ければと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>人間のよさについて</title>
-    <link rel="alternate" href="http://blog.url.com/articles/others/hai.html"/>
-    <id>http://blog.url.com/articles/others/hai.html</id>
-    <published>2014-02-01T15:00:00Z</published>
-    <updated>2014-02-02T21:57:17+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;おれはじぶんの「嫌いだ」といふ印象を信用しないことにしてゐる。その「嫌いだ」といふのは、たいていは相手の一部だけについて感じたり言ったりしてゐるので、相手の全人格のほうへ関心をのばせば考慮や納得のする根拠があるのがほとんどだ。さういふただ部分についてだけで「嫌いだ」といふ判断をするのは、間違ってゐるとおもふ。そんな判断の仕方は無くなるのが理想だとおもってゐる。常不軽菩薩のやうな超人になれといふのは言ひ過ぎで、「嫌い」なのは「嫌い」でいいんだ。だがそれには、全人格と全現在をかんがへなければならない。それを放棄したときにおれは死ぬ。ひとつずつ進んでゆくしかないのだとおもふ。
-&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2014/02/02/081234"&gt;http://c4se.hatenablog.com/entry/2014/02/02/081234&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;!-- --&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;私は、自分のことを省みてみろ、自分の子供だったころのことを考えてみろよ、という事で尽きますし、あとは吉本隆明さんが言っているのに付け加えることもないので、黙っています。
-&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2012/07/05/200405"&gt;http://c4se.hatenablog.com/entry/2012/07/05/200405&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;この点について私は恐らく、概ね同じような考えを持っていて、誰かと接する時、その相手が過去に何をやったであるとか、どういう欠点があるのだとか、そういった事柄で相手の人格を判断しないように、極力している。欠点があることや間違いを犯すのはあたりまえのことで、その点だけで相手を判断して交流を行う、もしくは行わないということをやっていると、なにか人間の「よさ」のようなものに対する感度が次第に鈍っていってしまう様に思える。そんな考えに至るのは自分の欠点に対する免罪符であると言われてしまえば完全には否定できない。そうかもしれない、と思う。でも、とにかくこの考え方が私にはしっくりくるし、合っているのだと思う。&lt;/p&gt;
-
-&lt;p&gt;これは私の生き方の指針であり自分の中で完結している問題であるので他人は関係なく、また広く同意を得られる様な考え方ではないと思っている。なので、私がこういった考え方をしているということを誰かに言ったり、文章にしたりすることはなかった。ところが、意外に身近な所からこういった文章が出てきたので、そういった価値観の人も少なくはないのかもしれない、と思い、つい文章にしてしまった。普段あまり文章を書かない人間なので考えや意図が正確に伝わる文章かはわからない。おわり。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -198,6 +221,32 @@ derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を
 &lt;h2 id="toc_9"&gt;おわり&lt;/h2&gt;
 
 &lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>人間のよさについて</title>
+    <link rel="alternate" href="http://blog.url.com/articles/others/hai.html"/>
+    <id>http://blog.url.com/articles/others/hai.html</id>
+    <published>2014-02-01T15:00:00Z</published>
+    <updated>2014-02-02T21:57:17+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;おれはじぶんの「嫌いだ」といふ印象を信用しないことにしてゐる。その「嫌いだ」といふのは、たいていは相手の一部だけについて感じたり言ったりしてゐるので、相手の全人格のほうへ関心をのばせば考慮や納得のする根拠があるのがほとんどだ。さういふただ部分についてだけで「嫌いだ」といふ判断をするのは、間違ってゐるとおもふ。そんな判断の仕方は無くなるのが理想だとおもってゐる。常不軽菩薩のやうな超人になれといふのは言ひ過ぎで、「嫌い」なのは「嫌い」でいいんだ。だがそれには、全人格と全現在をかんがへなければならない。それを放棄したときにおれは死ぬ。ひとつずつ進んでゆくしかないのだとおもふ。
+&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2014/02/02/081234"&gt;http://c4se.hatenablog.com/entry/2014/02/02/081234&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- --&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;私は、自分のことを省みてみろ、自分の子供だったころのことを考えてみろよ、という事で尽きますし、あとは吉本隆明さんが言っているのに付け加えることもないので、黙っています。
+&lt;cite&gt;&lt;a href="http://c4se.hatenablog.com/entry/2012/07/05/200405"&gt;http://c4se.hatenablog.com/entry/2012/07/05/200405&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;この点について私は恐らく、概ね同じような考えを持っていて、誰かと接する時、その相手が過去に何をやったであるとか、どういう欠点があるのだとか、そういった事柄で相手の人格を判断しないように、極力している。欠点があることや間違いを犯すのはあたりまえのことで、その点だけで相手を判断して交流を行う、もしくは行わないということをやっていると、なにか人間の「よさ」のようなものに対する感度が次第に鈍っていってしまう様に思える。そんな考えに至るのは自分の欠点に対する免罪符であると言われてしまえば完全には否定できない。そうかもしれない、と思う。でも、とにかくこの考え方が私にはしっくりくるし、合っているのだと思う。&lt;/p&gt;
+
+&lt;p&gt;これは私の生き方の指針であり自分の中で完結している問題であるので他人は関係なく、また広く同意を得られる様な考え方ではないと思っている。なので、私がこういった考え方をしているということを誰かに言ったり、文章にしたりすることはなかった。ところが、意外に身近な所からこういった文章が出てきたので、そういった価値観の人も少なくはないのかもしれない、と思い、つい文章にしてしまった。普段あまり文章を書かない人間なので考えや意図が正確に伝わる文章かはわからない。おわり。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -439,131 +488,6 @@ derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を
 &lt;p&gt;いかがでしたでしょうか。この記事があなたがRubyを学習するためのきっかけになれば幸いです。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://qiita.com/advent-calendar/2013/ruby"&gt;Ruby Advent Calendar 2013&lt;/a&gt;、2日目の担当はanoworlさんです。内容は「最高のWeb API開発」との事らしいので、明日は多分真面目な記事が読めるのではないかと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>新・ももんが流NeoBundle管理術（あたらしい）</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/neobundle-sugoi-setting.html"/>
-    <id>http://blog.url.com/articles/vim/neobundle-sugoi-setting.html</id>
-    <published>2013-11-25T15:00:00Z</published>
-    <updated>2014-01-24T11:35:43+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/33746"&gt;Vim Advent Calendar 2012&lt;/a&gt;、361日目の記事になります。&lt;/p&gt;
-
-&lt;p&gt;全世界3000億人の美少女Vimmerのみなさん、こんにちは。&lt;/p&gt;
-
-&lt;p&gt;さて、今回は、おなじみのプラグインマネージャ&lt;a href="https://github.com/Shougo/neobundle.vim"&gt;NeoBundle&lt;/a&gt;に最近追加された&lt;code&gt;neobundle#tap&lt;/code&gt;・&lt;code&gt;neobundle#untap&lt;/code&gt;や、丁度本日追加された&lt;code&gt;autoload&lt;/code&gt;の&lt;code&gt;on_source&lt;/code&gt;オプションを活用した、新・ももんが流NeoBundle管理術をお伝えしていきたいと思います。&lt;/p&gt;
-
-&lt;h2 id="toc_0"&gt;最近追加された&lt;code&gt;neobundle#tap&lt;/code&gt;・&lt;code&gt;neobundle#untap&lt;/code&gt;について&lt;/h2&gt;
-
-&lt;p&gt;これは、私の以前の記事「&lt;a href="/articles/vim/neobundle-sugoibenri.html"&gt;ももんが流NeoBundle管理術&lt;/a&gt;」にてご紹介した&lt;code&gt;s:bundle_tap&lt;/code&gt;関数や&lt;code&gt;s:bundle_untap&lt;/code&gt;関数などを、NeoBundle作者であるShougoさんがオフィシャルな機能として実装してくださったものです。&lt;/p&gt;
-
-&lt;p&gt;NeoBundle付属の関数となったことで若干ですが必要な記述量も減り、よりいい感じになりました。ももんが流NeoBundle管理術のコンセプト・考え方は上記記事を参考にしてください。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;コンセプトは、プラグイン管理とプラグイン設定を分離させる、です。&lt;/p&gt;
-
-&lt;p&gt;具体的には、NeoBundle及びNeoBundleLazyコマンドのオプションは、依存関係やビルドコマンドなどの「プラグインのインストール方法・管理方法」といったものに絞り、autoloadの設定やプラグイン読み込み時の設定は固有のセクションで管理していきます。&lt;/p&gt;
-
-&lt;p&gt;これにより、プラグインリストの見通しがよくなりますし、まぁ色々便利になります。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="toc_1"&gt;本日追加された&lt;code&gt;autoload&lt;/code&gt;の&lt;code&gt;on_source&lt;/code&gt;オプションについて&lt;/h2&gt;
-
-&lt;p&gt;本日、私が出していた要望が実装されました。それが&lt;code&gt;autoload&lt;/code&gt;の&lt;code&gt;on_source&lt;/code&gt;オプションです。&lt;/p&gt;
-
-&lt;p&gt;NeoBundleがプラグインの遅延ロードに対応していることはご存知かと思います。遅延ロード、つまりLazy化を行ったプラグインには、どういったタイミングでプラグインを読み込むのかを設定する必要があります。それが&lt;code&gt;autoload&lt;/code&gt;オプションになります。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;filetype&lt;/code&gt;や&lt;code&gt;commands&lt;/code&gt;などを指定し、それをトリガーにしてプラグインが読み込まれるのですが、本日新たに&lt;code&gt;on_source&lt;/code&gt;というオプションが加わりました。&lt;/p&gt;
-
-&lt;p&gt;これは、&lt;em&gt;&lt;code&gt;on_source&lt;/code&gt;で指定したプラグインが読み込まれようとした際、その前にプラグインをロードする&lt;/em&gt;というオプションになります。&lt;/p&gt;
-
-&lt;p&gt;これによって、特定のプラグインが読み込まれていることを動作の前提としたプラグインの設定の記述がより簡潔に行えるようになります。&lt;/p&gt;
-
-&lt;h2 id="toc_2"&gt;具体例&lt;/h2&gt;
-
-&lt;p&gt;どういうことなのか、あまりピンとこない方が多いかと思います。そこで、具体例を挙げましょう。私のお気に入りの、&lt;a href="https://github.com/Shougo/vimshell.vim"&gt;VimShell&lt;/a&gt;というプラグインがあります。また、VimShellの見た目や機能を拡張するプラグインとして、拙作の&lt;a href="https://github.com/supermomonga/vimshell-pure.vim"&gt;VimShell-Pure&lt;/a&gt;というプラグインがあります。この2つのプラグインの設定を例とします。&lt;/p&gt;
-
-&lt;p&gt;まず、&lt;code&gt;VimShell-Pure&lt;/code&gt;は&lt;code&gt;VimShell&lt;/code&gt;のプロンプトを書き換える機能を搭載しているため、VimShellが起動する前にロード（読み込み）が完了している必要があります。そして、Lazy化された設定において、VimShellが起動するタイミングはVimShellをロードするタイミングとほぼ同じです。つまり、VimShellが&lt;code&gt;:VimShell&lt;/code&gt;コマンドなどの実行によって起動されようとし、そのためにロードが行われる際、そのタイミングで割り込んで&lt;code&gt;VimShell-Pure&lt;/code&gt;を先にロードする必要があります。&lt;/p&gt;
-
-&lt;p&gt;この場合、&lt;code&gt;on_source&lt;/code&gt;オプションを使用せずにそれを実現する設定を記述すると、以下の様になります。&lt;/p&gt;
-
-&lt;pre lang="vim"&gt;" Plugin list
-NeoBundleLazy 'Shougo/vimshell.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
-NeoBundleLazy 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
-
-" Plugin settings
-if neobundle#tap('vimshell.vim')
-  call neobundle#config({
-        \   'autoload' : {
-        \     'commands' : [ 'VimShell', 'VimShellPop' ]
-        \   }
-        \ })
-  function! neobundle#tapped.hooks.on_source(bundle)
-    if neobundle#is_installed('vimshell-pure.vim')
-      call neobundle#source('vimshell-pure.vim')
-    endif
-  endfunction
-  call neobundle#untap()
-endif
-
-if neobundle#tap('vimshell-pure.vim')
-  call neobundle#untap()
-endif
-&lt;/pre&gt;
-
-&lt;p&gt;注目して欲しいのは&lt;code&gt;neobundle#tapped.hooks.on_source&lt;/code&gt;関数の中身です。これは、そのプラグインがロードされようとした時に呼ばれるhook関数です。その中で、&lt;code&gt;neobundle#is_installed()&lt;/code&gt;関数によって&lt;code&gt;VimShell-Pure&lt;/code&gt;がインストールされているかの確認を行い、インストールされている場合は&lt;code&gt;neobundle#source()&lt;/code&gt;関数によって&lt;code&gt;VimShell-Pure&lt;/code&gt;を読み込むという設定が記述されています。&lt;code&gt;neobundle#tapped.hooks.on_source&lt;/code&gt;の実行が完了、つまり&lt;code&gt;VimShell-Pure&lt;/code&gt;のロードが完了した後、&lt;code&gt;VimShell&lt;/code&gt;がロードされます。&lt;/p&gt;
-
-&lt;p&gt;もちろん、この様に設定を行っても、意図した通りの動作にはなります。しかし、この設定のよくない点は、&lt;code&gt;neobundle#tap&lt;/code&gt;によってスコープ化された&lt;code&gt;VimShell&lt;/code&gt;の設定セクションの中で、&lt;code&gt;VimShell-Pure&lt;/code&gt;の読み込みタイミングに関する設定を行っているという所です。つまり、&lt;code&gt;VimShell-Pure&lt;/code&gt;がいつ・どのようなタイミングで読み込まれるべきなのかといった「VimShell-Pureのふるまい」を、「VimShellのふるまいを定義するべきセクション」の中で定義してしまっているのです。&lt;/p&gt;
-
-&lt;p&gt;せっかく&lt;code&gt;neobundle#tap&lt;/code&gt;を用いることでプラグインの設定セクションが明確化されたのに、複数のプラグインのふるまいに関する設定が１つのセクション内に混在している状況は精神衛生上よろしくありません。また、&lt;code&gt;VimShell-Pure&lt;/code&gt;のふるまいを決める設定、特に読み込みに関するものが&lt;code&gt;VimShell&lt;/code&gt;の設定セクション内に残っていると、たとえば&lt;code&gt;VimShell-Pure&lt;/code&gt;プラグインの使用を一時的に中止たいと思い、&lt;code&gt;VimShell-Pure&lt;/code&gt;プラグインの設定セクション（tapからuntapまで）をコメントアウトした場合も、&lt;code&gt;VimShell&lt;/code&gt;の設定セクション内に&lt;code&gt;VimShell-Pure&lt;/code&gt;の読み込み設定が残っており、意図せずプラグインが読み込まれてしまうといった弊害も考えられます。&lt;/p&gt;
-
-&lt;p&gt;それに対して、&lt;code&gt;on_source&lt;/code&gt;オプションを利用した設定は以下の通りになります。&lt;/p&gt;
-
-&lt;pre lang="vim"&gt;" Plugin list
-NeoBundleLazy 'Shougo/vimshell.vim', { 'depends' : [ 'Shougo/vimproc.vim' ] }
-NeoBundleLazy 'supermomonga/vimshell-pure.vim', { 'depends' : [ 'Shougo/vimshell.vim' ] }
-
-" Plugin settings
-if neobundle#tap('vimshell.vim')
-  call neobundle#config({
-        \   'autoload' : {
-        \     'commands' : [ 'VimShell', 'VimShellPop' ]
-        \   }
-        \ })
-  call neobundle#untap()
-endif
-
-if neobundle#tap('vimshell-pure.vim')
-  call neobundle#config({
-        \   'autoload' : {
-        \     'on_source' : [ 'vimshell.vim' ]
-        \   }
-        \ })
-  call neobundle#untap()
-endif
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;VimShell-Pure&lt;/code&gt;がいつ・どのようなタイミングで読み込まれるべきなのかといった「VimShell-Pureのふるまい」が、ちゃんと「VimShell-Pureのふるまいを定義するべきセクション」の中で完結して定義されていることがお分かりでしょうか。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;neobundle#tap&lt;/code&gt;と&lt;code&gt;neobundle#untap&lt;/code&gt;を使用しそれぞれのプラグインの設定をそれぞれのセクション内に閉じ込めるということで、どのプラグインの設定がどこに記述されているのかといった情報が明確になりvimrc管理がとても行い易くなります。&lt;code&gt;autoload&lt;/code&gt;の&lt;code&gt;on_source&lt;/code&gt;オプションを利用することで、読み込み順に関してもそれが行えるようになり、より見通しのよい&lt;code&gt;.vimrc&lt;/code&gt;を作れるようになりました。&lt;/p&gt;
-
-&lt;h2 id="toc_3"&gt;まとめ&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  「プラグインのインストール管理」と「プラグインのふるまい方の設定」の記述を分離させよう&lt;/li&gt;
-&lt;li&gt;  それぞれのプラグインのふるまいを決める設定は、&lt;code&gt;neobundle#tap&lt;/code&gt;・&lt;code&gt;neobundle#untap&lt;/code&gt;で作ったそれぞれのセクション内に閉じ込め、混在しないようにしよう&lt;/li&gt;
-&lt;li&gt;  プラグインの読み込みタイミング制御は、新しく実装された&lt;code&gt;autoload&lt;/code&gt;の&lt;code&gt;on_source&lt;/code&gt;オプションによりセクジョン内で記述できるようになった&lt;/li&gt;
-&lt;li&gt;  「新・ももんが流NeoBundle管理術」という割には、NeoBundleの標準機能しか使っていない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_4"&gt;Vim Advent Calendar 2012 362日目は&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://atnd.org/events/33746"&gt;Vim Advent Calendar 2012&lt;/a&gt; 362日目の担当は@thincaさんです。&lt;/p&gt;
-
-&lt;p&gt;いよいよ、365日制覇目前です。恐らくこの記事がVim Advent Calendar 2012における私の最後の記事になるでしょう。とても感慨深く思います。&lt;/p&gt;
 </content>
   </entry>
 </feed>
