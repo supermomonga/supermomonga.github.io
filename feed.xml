@@ -5,10 +5,51 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-02-15T15:00:00Z</updated>
+  <updated>2014-03-05T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>3/21日に東京でVim勉強会を開催します</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-3.html"/>
+    <id>http://blog.url.com/articles/vim/momongavim-3.html</id>
+    <published>2014-03-05T15:00:00Z</published>
+    <updated>2014-03-07T00:51:11+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、96日目の記事になります。&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;3/21日に東京でVim勉強会を開催します&lt;/h2&gt;
+
+&lt;p&gt;今日はtips記事でもプラグインリリース記事でもなく、Vim勉強会のお知らせです。&lt;/p&gt;
+
+&lt;p&gt;私が主催しているVimの勉強会、momonga.vimの第三回が今月の21日に開催されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;勉強会と書きましたが、実質はもくもく会で、各々がVimに関して好きなことをただひたすらやるみたいな会です。&lt;/p&gt;
+
+&lt;p&gt;第二回では十数人規模の会場で大体5時間くらいやったのですが、予想以上に申し込みがあり、何人かの方が残念ながら参加できないということがありました。
+そのため高まった私が今回は20人規模の会場を押さえ、かつほぼ丸一日貸しきるみたいな感じになっています。&lt;/p&gt;
+
+&lt;p&gt;3月6日現時点で申込数は13人で、まだあと7人の空きがあります。
+会場は一日貸し切りですが、途中参加・途中離脱OKなゆるふわ会ですので、数時間だけ参加してみようかなという方もぜひ来てみてください。&lt;/p&gt;
+
+&lt;p&gt;場所は&lt;a href="http://www.musashino.or.jp/place/_1150.html"&gt;武蔵野プレイスのスペースE&lt;/a&gt;です。おしゃれ！&lt;/p&gt;
+
+&lt;p&gt;参加費は1人500円で、飲み物やお菓子などが適当に用意されます。
+昼食や夕食を食べる場合や、二次会に参加する場合はそのお金は別途各々が払うみたいな感じです。&lt;/p&gt;
+
+&lt;p&gt;タイムスケジュールや場所などのより詳しい情報や、参加の申し込みは&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3のPARTAKEページ&lt;/a&gt;からお願いします。&lt;/p&gt;
+
+&lt;p&gt;momonga.vim は初心者歓迎ですし、実際に今回&lt;code&gt;sudo yum install vim&lt;/code&gt;から始めるみたいな人も来る模様です。むしろ俺はEvilの設定を弄るみたいな人でも大丈夫だと思いますので、よろしければぜひお気軽に。&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ansuzのやつ</title>
     <link rel="alternate" href="http://blog.url.com/articles/ruby/ansuz.html"/>
@@ -364,130 +405,6 @@ derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を
 &lt;h2 id="toc_6"&gt;Vim Advent Calendar 2013 6日目は&lt;/h2&gt;
 
 &lt;p&gt;明日、というか今日ですが、の担当は@kaoriyaさんです。よろしくお願いします！&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>今年こそRubyを始めたいあなたに！ももんが流・最強のRuby学習法</title>
-    <link rel="alternate" href="http://blog.url.com/articles/ruby/sugoi-learning-way.html"/>
-    <id>http://blog.url.com/articles/ruby/sugoi-learning-way.html</id>
-    <published>2013-11-30T15:00:00Z</published>
-    <updated>2014-01-26T07:56:25+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;h2 id="toc_0"&gt;Ruby Advent Calendar 2013 1日目&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://qiita.com/advent-calendar/2013/ruby"&gt;Ruby Advent Calendar 2013&lt;/a&gt;、1日目の記事になります。&lt;/p&gt;
-
-&lt;p&gt;こんにちは。1日目の記事ということでかなり緊張しています。&lt;/p&gt;
-
-&lt;p&gt;さて、いつもネタ記事ばかり書いている私ですが、さすがに1日目ということで、入門的な内容、つまり、これからRubyを始めたい方のための記事を書いてみたいと思います。真面目に。&lt;/p&gt;
-
-&lt;p&gt;実は、私もRubyを使い始めてから1年も経っていないのですが、ある学習法を取り入れることで、飛躍的にRuby力を向上させることに成功しました。今回はその方法をお伝えします。&lt;/p&gt;
-
-&lt;div style="height: 400px;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_1"&gt;ステップバイステップ、ももんが流Ruby学習方法&lt;/h2&gt;
-
-&lt;h3 id="toc_2"&gt;ステップ１&lt;/h3&gt;
-
-&lt;div style="font-size: 300%; line-height: 2.0;"&gt;
-  まず、&lt;br /&gt;Minecraftを購入します。
-&lt;/div&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-12-Minecraft-logo-1024x373.png" alt="Minecraft-logo" width="1024" height="373" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://minecraft.net/"&gt;Minecraft&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id="toc_3"&gt;ステップ２&lt;/h3&gt;
-
-&lt;p&gt;Minecraftで遊びます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="/images/uploads/2013-12-2013-04-06_19.38.55-100e671f.png"&gt;&lt;img src="/images/uploads/2013-12-2013-04-06_19.38.55.png" alt="2013-04-06_19.38.55" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/images/uploads/2013-12-2013-03-31_20.16.13-d0b50402.png"&gt;&lt;img src="/images/uploads/2013-12-2013-03-31_20.16.13.png" alt="2013-03-31_20.16.13" width="854" height="480" class="full" /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://blog.aoisensi.info/2013/04/VAC2012-128.html"&gt;images by aoisensi&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id="toc_4"&gt;ステップ３&lt;/h3&gt;
-
-&lt;p&gt;「そろそろマルチプレイやるかー」と言ってマルチサーバーを立てて遊びます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="/wp-content/uploads/2013-12-tumblr_miolg2ceuM1s6y1aoo1_1280.png"&gt;&lt;img src="/images/uploads/2013-12-tumblr_miolg2ceuM1s6y1aoo1_1280.png" alt="tumblr_miolg2ceuM1s6y1aoo1_1280" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/wp-content/uploads/2013-12-tumblr_mipit1mkUU1s6y1aoo1_1280.png"&gt;&lt;img src="/images/uploads/2013-12-tumblr_mipit1mkUU1s6y1aoo1_1280.png" alt="tumblr_mipit1mkUU1s6y1aoo1_1280" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/wp-content/uploads/2013-12-tumblr_mirok2luZZ1s6y1aoo1_1280.png"&gt;&lt;img src="/images/uploads/2013-12-tumblr_mirok2luZZ1s6y1aoo1_1280.png" alt="tumblr_mirok2luZZ1s6y1aoo1_1280" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/wp-content/uploads/2013-12-tumblr_mirojz6AJQ1s6y1aoo1_1280.png"&gt;&lt;img src="/images/uploads/2013-12-tumblr_mirojz6AJQ1s6y1aoo1_1280.png" alt="tumblr_mirojz6AJQ1s6y1aoo1_1280" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/wp-content/uploads/2013-12-tumblr_mirok4G3Ik1s6y1aoo1_1280.png"&gt;&lt;img src="/images/uploads/2013-12-tumblr_mirok4G3Ik1s6y1aoo1_1280.png" alt="tumblr_mirok4G3Ik1s6y1aoo1_1280" width="854" height="480" class="full" /&gt;&lt;/a&gt;
-&lt;a href="/wp-content/uploads/2013-12-tumblr_mirojxWtUQ1s6y1aoo1_1280.png"&gt;&lt;img src="/images/uploads/2013-12-tumblr_mirojxWtUQ1s6y1aoo1_1280.png" alt="tumblr_mirojxWtUQ1s6y1aoo1_1280" width="854" height="480" class="full" /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://sixeight.supermomonga.com/"&gt;photos by sixeight&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id="toc_5"&gt;ステップ４&lt;/h3&gt;
-
-&lt;p&gt;「ほうほう、&lt;a href="http://dl.bukkit.org/downloads/craftbukkit/"&gt;CraftBukkit&lt;/a&gt;という非公式サーバー実装があって、ユーザーが開発したBukkitプラグインを追加することにより色々な機能を追加することができるのかー」と言ってマルチサーバーを公式のものでなくCraftBukkitに移行します。&lt;/p&gt;
-
-&lt;h3 id="toc_6"&gt;ステップ５&lt;/h3&gt;
-
-&lt;p&gt;「MinecraftはJava製なので、オリジナルのBukkitプラグインを作るにはJavaを書く必要があるのかー。&lt;strong&gt;どうせならJRubyで書きたいなぁ&lt;/strong&gt;」と思います。&lt;/p&gt;
-
-&lt;h3 id="toc_7"&gt;ステップ６&lt;/h3&gt;
-
-&lt;p&gt;「おお、&lt;a href="http://dev.bukkit.org/bukkit-plugins/purugin/"&gt;&lt;code&gt;Purugin&lt;/code&gt;というBukkitプラグイン&lt;/a&gt;を使えば、JRubyでBukkitの挙動を拡張できるのか！」と思い、Puruginをインストールします。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="/wp-content/uploads/2013-12-purugin_logo_big.png"&gt;&lt;img src="/images/uploads/2013-12-purugin_logo_big.png" alt="purugin_logo_big" width="646" height="226" /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id="toc_8"&gt;ステップ７&lt;/h3&gt;
-
-&lt;p&gt;Minecraftで遊びながらJRubyによるプログラミングを行うことで、Ruby力がメキメキと上昇します。&lt;/p&gt;
-
-&lt;p&gt;また、&lt;strong style="font-size: 120%;"&gt;普通人間は毎日18時間Minecraftをプレイします&lt;/strong&gt;が、これは、Minecraftで遊ぶ時間の1/3をPuruginによる開発に費やすことで、&lt;strong&gt;毎日6時間Rubyの学習を無理なく続けられる&lt;/strong&gt;ことを意味します。&lt;/p&gt;
-
-&lt;h3 id="toc_9"&gt;ステップ８&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong style="font-size: 200%;"&gt;気付いたらRuby力が向上していた&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div style="height: 200px;"&gt;
-&lt;/div&gt;
-
-&lt;h2 id="toc_10"&gt;真面目な解説&lt;/h2&gt;
-
-&lt;p&gt;はい、ということですごい真面目にステップバイステップでのRuby学習方法をお伝えしました。嘘です、不真面目でした。&lt;/p&gt;
-
-&lt;p&gt;しかし、上に書いた内容は全くのネタというわけではなく、私が実際にRuby力を向上させた方法でもあります。&lt;/p&gt;
-
-&lt;p&gt;この方法には、プログラミングを学習する上でのすごく大事な要素が詰まっています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  楽しみながら学べること&lt;/li&gt;
-&lt;li&gt;  複数人での開発によって、他の人の良いコード学び、自分の悪いコードを改めることができること&lt;/li&gt;
-&lt;li&gt;  ゲームの動作速度に影響を与えないために、非効率的すぎるコードの書き方を改められること&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;プログラマ同士で集まりマルチサーバーの挙動をJRubyで拡張していく、という遊び方をすることで、自然にお互いがコードレビューを行っていく形になりますし、他のプレイヤーが書いた良いコードを読むことでRubyへの理解力が深まります。特に、私にとってのujihisaさんの様な、レベルの高いプログラマと一緒に遊ぶことができれば、その成長は顕著でしょう。&lt;/p&gt;
-
-&lt;p&gt;また、今回は&lt;code&gt;Purugin&lt;/code&gt;というBukkitプラグインをご紹介しましたが、私の場合、私の友人でありプログラミングの師匠でもある&lt;a href="https://twitter.com/ujm/"&gt;ujihisaさん&lt;/a&gt;が開発した&lt;code&gt;mckokoro&lt;/code&gt;という同類のプラグインにてJRubyによるBukkitの拡張を行っていました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/akechi/mckokoro"&gt;https://github.com/akechi/mckokoro&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;mckokoro&lt;/code&gt;が&lt;code&gt;Purugin&lt;/code&gt;より優れている点として、CraftBukkitサーバーの再起動を伴わずに機能の追加などを行える、動的デプロイ機能が挙げられます。これは、githubのwebhookを起点として&lt;code&gt;mckokoro&lt;/code&gt;が&lt;code&gt;sinatra&lt;/code&gt;を用いて用意しているAPIを叩くことで、&lt;code&gt;mckokoro&lt;/code&gt;がgithubから最新のコードを取得し、JRubyコードをそのまま評価することで実現されています。&lt;/p&gt;
-
-&lt;p&gt;これにより、再起動を行わず素早くMinecraftの機能拡張を行っていけるので、特に複数人で遊ぶ際にとても重宝します。&lt;/p&gt;
-
-&lt;p&gt;あなたに&lt;code&gt;mckokoro&lt;/code&gt;でなく&lt;code&gt;Purugin&lt;/code&gt;をご紹介したのは、&lt;code&gt;mckokoro&lt;/code&gt;は配布を前提として作られていないので、コアの実装と&lt;code&gt;mckokoroプラグイン&lt;/code&gt;（JRubyによってBukkitの挙動を拡張する部分）の実装が分離されておらず、全てがひとつのgitリポジトリにまとまってしまっているためです。&lt;/p&gt;
-
-&lt;p&gt;そういった事情から、&lt;code&gt;mckokoro&lt;/code&gt;を導入すると、私やujihisaさんが遊んでいるBukkitサーバーの機能拡張が全て付属してきてしまうのですが、それでも良いので試してみたいという方は私が書いた「&lt;a href="https://github.com/akechi/mckokoro/wiki/LOCAL_SETUP"&gt;CraftBukkitからmckokoroまでの導入手順&lt;/a&gt;」を参考にして頂ければと思います。&lt;/p&gt;
-
-&lt;p&gt;現在、&lt;code&gt;mckokoro&lt;/code&gt;の後続ソフトウェアである&lt;code&gt;neocloft&lt;/code&gt;というBukkitプラグインの開発が進められています。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-12-neocloft.png" alt="neocloft" width="474" height="104" /&gt;&lt;/p&gt;
-
-&lt;p&gt;これは、誰でもご自分のBukkitサーバーに導入できるように、&lt;code&gt;neocloftコア&lt;/code&gt;と&lt;code&gt;neocloftアプリ&lt;/code&gt;（JVM言語によってBukkitの挙動を拡張する部分）の実装が疎結合になっています。また、neocloftでは、JRubyだけでなく、コードのeval機構を持った任意のJVM言語、つまりClojureやJythonなどを使って&lt;code&gt;neocloftアプリ&lt;/code&gt;を記述することが可能です。&lt;code&gt;mckokoro&lt;/code&gt;と同じく再起動を伴わない動的デプロイにも対応しているので、ClojureやPythonの勉強をしたい方にも良いのではないでしょうか。neocloftの正式リリース時には、詳細な導入解説記事を書く予定です。&lt;/p&gt;
-
-&lt;h2 id="toc_11"&gt;おわりに&lt;/h2&gt;
-
-&lt;p&gt;いかがでしたでしょうか。この記事があなたがRubyを学習するためのきっかけになれば幸いです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://qiita.com/advent-calendar/2013/ruby"&gt;Ruby Advent Calendar 2013&lt;/a&gt;、2日目の担当はanoworlさんです。内容は「最高のWeb API開発」との事らしいので、明日は多分真面目な記事が読めるのではないかと思います。&lt;/p&gt;
 </content>
   </entry>
 </feed>
