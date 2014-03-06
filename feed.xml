@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-3.html"/>
     <id>http://blog.url.com/articles/vim/momongavim-3.html</id>
     <published>2014-03-05T15:00:00Z</published>
-    <updated>2014-03-07T00:51:11+09:00</updated>
+    <updated>2014-03-07T00:54:42+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -43,7 +43,7 @@
 
 &lt;p&gt;タイムスケジュールや場所などのより詳しい情報や、参加の申し込みは&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3のPARTAKEページ&lt;/a&gt;からお願いします。&lt;/p&gt;
 
-&lt;p&gt;momonga.vim は初心者歓迎ですし、実際に今回&lt;code&gt;sudo yum install vim&lt;/code&gt;から始めるみたいな人も来る模様です。むしろ俺はEvilの設定を弄るみたいな人でも大丈夫だと思いますので、よろしければぜひお気軽に。&lt;/p&gt;
+&lt;p&gt;momonga.vim は初心者歓迎ですし、実際に今回&lt;code&gt;sudo yum install vim&lt;/code&gt;から始めるみたいな人も来る模様です。むしろ俺は&lt;a href="http://d.hatena.ne.jp/tarao/20130303/evil_intro"&gt;Evil&lt;/a&gt;の設定を弄るみたいな人でも大丈夫だと思いますので、よろしければぜひお気軽に。&lt;/p&gt;
 
 &lt;h2 id="toc_1"&gt;おわり&lt;/h2&gt;
 
