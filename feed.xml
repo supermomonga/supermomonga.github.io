@@ -5,10 +5,66 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-03-05T15:00:00Z</updated>
+  <updated>2014-03-10T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ベータ版 ビムの選び方フローチャート</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/beta-flowchart.html"/>
+    <id>http://blog.url.com/articles/vim/beta-flowchart.html</id>
+    <published>2014-03-10T15:00:00Z</published>
+    <updated>2014-03-11T09:51:50+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h2 id="toc_0"&gt;ベータ版 ビムの選び方フローチャート&lt;/h2&gt;
+
+&lt;p&gt;「ビムの選び方」ベータ版に掲載されていたことはないフローチャートです。&lt;/p&gt;
+
+&lt;div class="drawio"&gt;
+
+&lt;div class="mxgraph" style="position:relative;overflow:hidden;width:632px;height:782px;"&gt;&lt;div style="width:1px;height:1px;overflow:hidden;"&gt;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&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;h3 id="toc_1"&gt;補足&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Q. 日本ビムクラブとは？
+
+&lt;ul&gt;
+&lt;li&gt;A. わかりません&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Q. VIM.exe patch for VAIOとは？
+
+&lt;ul&gt;
+&lt;li&gt;A. &lt;a href="https://www.google.co.jp/search?q=&amp;amp;quot;VIM.exe+patch+for+VAIO+Improvement+and+VAIO+Control+Center&amp;amp;quot;"&gt;VIM.exe patch for VAIO Improvement and VAIO Control Center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Q. Vimclipとは？
+
+&lt;ul&gt;
+&lt;li&gt;A. &lt;a href="http://vimclip.jp/"&gt;Vimclip OFFICIAL SITE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Q. Evilとは？
+
+&lt;ul&gt;
+&lt;li&gt;A. &lt;a href="http://www.emacswiki.org/emacs/Evil"&gt;EmacsWiki: Evil&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_2"&gt;元ネタ&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://www.kmc.gr.jp/guidance/2014/pc/beta-flowchart.html"&gt;ベータ版 パソコンの選び方フローチャート&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_3"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、101日目の記事でした。&lt;/p&gt;
+
+&lt;script type="text/javascript" src="https://www.draw.io/embed.js"&gt;&lt;/script&gt;
+</content>
+  </entry>
   <entry>
     <title>3/21日に東京でVim勉強会を開催します</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-3.html"/>
@@ -288,123 +344,6 @@ derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を
 &lt;p&gt;この点について私は恐らく、概ね同じような考えを持っていて、誰かと接する時、その相手が過去に何をやったであるとか、どういう欠点があるのだとか、そういった事柄で相手の人格を判断しないように、極力している。欠点があることや間違いを犯すのはあたりまえのことで、その点だけで相手を判断して交流を行う、もしくは行わないということをやっていると、なにか人間の「よさ」のようなものに対する感度が次第に鈍っていってしまう様に思える。そんな考えに至るのは自分の欠点に対する免罪符であると言われてしまえば完全には否定できない。そうかもしれない、と思う。でも、とにかくこの考え方が私にはしっくりくるし、合っているのだと思う。&lt;/p&gt;
 
 &lt;p&gt;これは私の生き方の指針であり自分の中で完結している問題であるので他人は関係なく、また広く同意を得られる様な考え方ではないと思っている。なので、私がこういった考え方をしているということを誰かに言ったり、文章にしたりすることはなかった。ところが、意外に身近な所からこういった文章が出てきたので、そういった価値観の人も少なくはないのかもしれない、と思い、つい文章にしてしまった。普段あまり文章を書かない人間なので考えや意図が正確に伝わる文章かはわからない。おわり。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Vimによる通知センター実装、ThingsPast.vimをリリースしました</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/thingspast-vim-released.html"/>
-    <id>http://blog.url.com/articles/vim/thingspast-vim-released.html</id>
-    <published>2013-12-05T15:00:00Z</published>
-    <updated>2014-01-24T11:35:37+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、5日目の記事になります。プラグインの完成が遅れ、遅刻力を発揮してしまいました…。&lt;/p&gt;
-
-&lt;h2 id="toc_0"&gt;ThingsPast.vimをリリースしました&lt;/h2&gt;
-
-&lt;p&gt;ThingsPast.vimというプラグインをリリースしました。 これは、Mac OS Xの通知センターのようなものをVim内で実装したものです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/supermomonga/thingspast.vim"&gt;https://github.com/supermomonga/thingspast.vim&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Macをお持ちでない方のために簡単に説明すると、通知センターは各アプリケーションによるユーザーへの「通知」をハンドリングする機能です。Twitterの新着リプライや新着受信メールなどといった通知の一覧表示や、通知一覧からの選択によってアプリケーションを適切な状態で起動、たとえば通知された新着メールをクリックするとそのメールが選択された状態でメーラーを起動するなど、を行うことができます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-12-notifcenter.png" alt="notifcenter" width="314" height="350" class="aligncenter size-full wp-image-978" /&gt;&lt;/p&gt;
-
-&lt;p&gt;ThingsPast.vimは、これをVim内で再実装したものです。&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;ThingsPast.vimのメリット&lt;/h2&gt;
-
-&lt;p&gt;Vimで動作するTwitterクライアントやメーラー、Lingrクライアントなど、Vimをプラットフォームとして動作するアプリケーションがあります。これらの新着通知をハンドリングする手段としては、今までGrowlなどのOSレベルの通知アプリケーションと連携して通知を行われるのが一般的でした。&lt;/p&gt;
-
-&lt;p&gt;ですが、この方法には欠点があります。それは、OSから見て、通知元のアプリケーションは単にVimでしかなく、Vimで動作しているどのアプリケーションからの通知であるのかといった情報のハンドリングが難しいことです。&lt;/p&gt;
-
-&lt;p&gt;たとえば、TweetVimというVimで動作するTwitterクライアントがありますが、TweetVimからの「新着リプライ」通知をMac OS Xの通知センターに表示すること自体は可能なものの、それを通知一覧から選択した際にVimを起動し、その中でTweetVimを起動し、該当のリプライや会話を表示する、といった動作を行わせることはかなり難しいのです。&lt;/p&gt;
-
-&lt;p&gt;ThingsPast.vimは、Vim内に独立した通知管理システムを構築することで、こういった問題を解決しました。&lt;/p&gt;
-
-&lt;h2 id="toc_2"&gt;ThingsPast.vimの動作風景&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2013-12-Screen-Shot-2013-12-06-at-01.05.07.png" alt="Screen Shot 2013-12-06 at 01.05.07" width="784" height="560" class="aligncenter size-full wp-image-979" /&gt;&lt;/p&gt;
-
-&lt;p&gt;ThingsPast.vimをインストールし、&lt;code&gt;&amp;lt;Space&amp;gt;n&lt;/code&gt;を打鍵すると、Vimのウィンドウが縦に分割され、右側にプラグインごとの通知一覧が表示されます。&lt;code&gt;j&lt;/code&gt;,&lt;code&gt;k&lt;/code&gt;で通知を選択でき、選択した状態で&lt;code&gt;&amp;lt;CR&amp;gt;&lt;/code&gt;（Enter）を打鍵すると、プラグインごとに最適な処理が実行され、その後通知一覧から通知は消えます。&lt;/p&gt;
-
-&lt;h2 id="toc_3"&gt;ThingsPast.vimの想定利用シーン&lt;/h2&gt;
-
-&lt;p&gt;ThingsPast.vimの想定している利用シーンとして、以下の様なものがあります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  &lt;a href="https://github.com/basyura/TweetVim"&gt;TweetVim&lt;/a&gt;（Twitterクライアント） 
-
-&lt;ul&gt;
-&lt;li&gt;  新着リプライ通知&lt;/li&gt;
-&lt;li&gt;  新着DM通知&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  &lt;a href="https://github.com/basyura/J6uil.vim"&gt;J6uil.vim&lt;/a&gt;（Lingrクライアント） 
-
-&lt;ul&gt;
-&lt;li&gt;  新着メッセージ通知&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  &lt;a href="https://github.com/yuratomo/gmail.vim"&gt;Gmail.vim&lt;/a&gt;（Gmailクライアント） 
-
-&lt;ul&gt;
-&lt;li&gt;  新着メール通知&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  &lt;a href="https://github.com/Shougo/vimshell.vim"&gt;VimShell.vim&lt;/a&gt;（ターミナルエミュレータ） 
-
-&lt;ul&gt;
-&lt;li&gt;  時間がかかった処理が終了した際、VimShellがアクティブバッファでない場合、通知をする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ThingsPast.vimで通知を受け取るには、それぞれのプラグインからThingsPast.vimが提供しているAPI関数をコールする必要があります。ですので、hookの仕組みが実装されているプラグインとの連携を、vimrcの設定で記述することができます。この辺りについて、詳しくはヘルプドキュメントの方をご覧ください。&lt;/p&gt;
-
-&lt;p&gt;実際には、上記のプラグインにはhook機能が不足しておりThingsPast.vimとの連携ができないものが多いのが現状です。&lt;/p&gt;
-
-&lt;p&gt;ThingsPast.vimが一応のリリースに漕ぎ着けましたので、それらプラグインにhook機能を実装しPull Requestを送りたいなと考えています。&lt;/p&gt;
-
-&lt;h2 id="toc_4"&gt;今後の実装予定と課題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  設定例の充実化 
-
-&lt;ul&gt;
-&lt;li&gt;  そのためにはまず、Hook追加のPull Requestを送りまくることになりそうです&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  シンタックスハイライトの実装 
-
-&lt;ul&gt;
-&lt;li&gt;  もっと見栄えをかっこよくしたいです&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  アニメーションの自走 
-
-&lt;ul&gt;
-&lt;li&gt;  選択中の通知は、省略されたメッセージが右から左に流れて全文を読めるようにしたいです&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  Hookの実装 
-
-&lt;ul&gt;
-&lt;li&gt;  これにより、通知が追加された際に&lt;a href="https://github.com/supermomonga/shaberu.vim"&gt;Shaberu.vim&lt;/a&gt;で音声通知を行う、といったことができるようになります&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  新着通知が追加されたプラグインを上に表示する用に、並び順を改善&lt;/li&gt;
-&lt;li&gt;  ステータスラインに通知数を表示することなどができるように、外部からの利用を想定した便利関数の実装&lt;/li&gt;
-&lt;li&gt;  コードのリファクタリング 
-
-&lt;ul&gt;
-&lt;li&gt;  VimAdventCalendarに間に合わせるために、所々に妥協した面が見えます…&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;  ユニットテストの充実化&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;12月7日に開催されるTokyoVimでは、ThingsPast.vimのリファクタリングや機能追加など、重点的に行いたいと思います。&lt;/p&gt;
-
-&lt;h2 id="toc_5"&gt;謝辞&lt;/h2&gt;
-
-&lt;p&gt;ThingsPast.vimは私にとって初めての独自バッファを作成するプラグインであり、Vim scriptプログラミングの経験が浅い私にとって、かなり手探りでの実装となりました。プラグインを作成するにあたってLingrのVim部屋にて多数の方から様々なアドバイスを頂戴し、なんとか完成に至ったという次第です。 アドバイスをくださった皆さまに、この場を借りてお礼申し上げます。&lt;/p&gt;
-
-&lt;h2 id="toc_6"&gt;Vim Advent Calendar 2013 6日目は&lt;/h2&gt;
-
-&lt;p&gt;明日、というか今日ですが、の担当は@kaoriyaさんです。よろしくお願いします！&lt;/p&gt;
 </content>
   </entry>
 </feed>
