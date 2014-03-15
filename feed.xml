@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/javascript/hatena-js-peropero.html"/>
     <id>http://blog.url.com/articles/javascript/hatena-js-peropero.html</id>
     <published>2014-03-14T15:00:00Z</published>
-    <updated>2014-03-15T10:26:16+09:00</updated>
+    <updated>2014-03-15T10:35:02+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -24,7 +24,7 @@
 
 &lt;h2 id="toc_1"&gt;はてなブックマークブログパーツとは&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="http://b.hatena.ne.jp/guide/blogpats"&gt;はてなブックマークブログパーツ&lt;/a&gt;とは、あなたがお持ちのブログにはてなブックマークの各種情報を貼り付けることができるブログパーツです。はてなが提供しているHTMLタグとjavascriptの読み込みコードを貼り付けることで設置することができます。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://b.hatena.ne.jp/guide/blogparts"&gt;はてなブックマークブログパーツ&lt;/a&gt;とは、あなたがお持ちのブログにはてなブックマークの各種情報を貼り付けることができるブログパーツです。はてなが提供しているHTMLタグとjavascriptの読み込みコードを貼り付けることで設置することができます。&lt;/p&gt;
 
 &lt;p&gt;ブログパーツは複数種類あるのですが、今回はこのブログに貼ろうとした「ブックマークのコメントを表示」というパーツのコードを読んでみます。&lt;/p&gt;
 
