@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/javascript/hatena-js-peropero.html"/>
     <id>http://blog.url.com/articles/javascript/hatena-js-peropero.html</id>
     <published>2014-03-14T15:00:00Z</published>
-    <updated>2014-03-15T10:39:00+09:00</updated>
+    <updated>2014-03-15T10:40:03+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -44,7 +44,7 @@
 &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkAttribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'href'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
-&lt;p&gt;1行目では&lt;a href="http://b.hatena.ne.jp/js/bookmark_blogparts.js"&gt;http://b.hatena.ne.jp/js/bookmark_blogparts.js&lt;/a&gt;を読み込むscriptタグ、2行目以降ではどうもオプションの設定を行っている様です。&lt;/p&gt;
+&lt;p&gt;1行目では&lt;a href="http://b.hatena.ne.jp/js/bookmark_blogparts.js"&gt;http://b.hatena.ne.jp/js/bookmark_blogparts.js&lt;/a&gt;を読み込み、2行目以降ではどうもオプションの設定を行っている様です。&lt;/p&gt;
 
 &lt;h3 id="toc_4"&gt;ブックマークコメント一覧を表示したい位置にdivタグを設置&lt;/h3&gt;
 &lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"hatena-bookmark-marker"&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;"display:none;"&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"※"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
@@ -140,7 +140,7 @@
 
 &lt;h2 id="toc_9"&gt;まとめ&lt;/h2&gt;
 
-&lt;p&gt;なんかはてなさんがやる気になってるっぽいですし、なんか直接報告しても反応ないという噂なので、便乗して公にしてブログパーツウィジェットのJSも改善してもらおうという記事でした。ブコメ一覧ウィジェット使いたいです。よろしくお願いします。&lt;/p&gt;
+&lt;p&gt;はてなさんがやる気になってるっぽいですし、なんか直接報告しても反応ないという噂なので、便乗して公にしてブログパーツウィジェットのJSも改善してもらおうという記事でした。ブコメ一覧ウィジェット使いたいです。よろしくお願いします。&lt;/p&gt;
 
 &lt;p&gt;あと、私は普段Rubyばかり書いていてjavascriptにはあまり詳しくはないので、もし間違いがあれば訂正してお詫びします。という予防線を張っておきます。&lt;/p&gt;
 </content>
