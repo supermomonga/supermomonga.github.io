@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/javascript/hatena-js-peropero.html"/>
     <id>http://blog.url.com/articles/javascript/hatena-js-peropero.html</id>
     <published>2014-03-14T15:00:00Z</published>
-    <updated>2014-03-15T10:35:02+09:00</updated>
+    <updated>2014-03-15T10:39:00+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -32,7 +32,7 @@
 
 &lt;h2 id="toc_2"&gt;ブログパーツの設置方法&lt;/h2&gt;
 
-&lt;p&gt;さて、ブログパーツの設置方法解説ページには、以下の2ステップでブログパーツを貼り付けできると解説されています。&lt;/p&gt;
+&lt;p&gt;さて、&lt;a href="http://b.hatena.ne.jp/guide/blogparts.select?type=blogparts"&gt;ブログパーツの設置方法解説ページ&lt;/a&gt;には、以下の2ステップでブログパーツを貼り付けできると解説されています。&lt;/p&gt;
 
 &lt;h3 id="toc_3"&gt;javascriptの読み込みとデフォルト設定の記述&lt;/h3&gt;
 &lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"text/javascript"&lt;/span&gt; &lt;span class="na"&gt;charset=&lt;/span&gt;&lt;span class="s"&gt;"utf-8"&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;"http://b.hatena.ne.jp/js/bookmark_blogparts.js"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
