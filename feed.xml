@@ -5,10 +5,69 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-03-10T15:00:00Z</updated>
+  <updated>2014-03-14T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Rubyistが始めるElixir - フィボナッチ編</title>
+    <link rel="alternate" href="http://blog.url.com/articles/elixir/elixir-fibonacci.html"/>
+    <id>http://blog.url.com/articles/elixir/elixir-fibonacci.html</id>
+    <published>2014-03-14T15:00:00Z</published>
+    <updated>2014-03-15T10:20:20+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h2 id="toc_0"&gt;Ruby版&lt;/h2&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Fib&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nc"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fib&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;Float&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;INFINITY&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="no"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'n'&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fib&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fib&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fib&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Rubyのcaseによるパターンマッチは強力ですね。&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;Elixir版&lt;/h2&gt;
+&lt;pre class="highlight elixir"&gt;&lt;span class="k"&gt;defmodule&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;when&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;is_integer&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;
+&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;13&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;メソッド引数のパターンマッチ・ガードがいい感じですね。&lt;/p&gt;
+
+&lt;p&gt;ただ、パターンガードで型制約はどうなんでしょう。ここは&lt;code&gt;dialyzer&lt;/code&gt;を使いアノテーションで型制約をつけるべきでしょうか。&lt;/p&gt;
+&lt;pre class="highlight elixir"&gt;&lt;span class="k"&gt;defmodule&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="nv"&gt;@type&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;non_neg_integer&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;
+&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;13&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;ずいぶんと見通しがよくなりましたね。&lt;code&gt;non_neg_integer&lt;/code&gt;を用いることで、nは整数であり、かつ負値でないとしています。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ベータ版 ビムの選び方フローチャート</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/beta-flowchart.html"/>
@@ -236,93 +295,6 @@ aug END
 &lt;h2 id="toc_10"&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;ProjectLocal.vimを利用することで、現在どのプロジェクトのファイルを開いているのか、プロジェクトの種類はなんなのか、プロジェクトのルートディレクトリはどこなのか、といった情報が提供されるようになり、プロジェクトに依存する固有の設定が格段に行い易くなりました。小さい実装ながらも強力なプラグインですので、皆さんもぜひお試し頂ければと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>momonga.vim #2.2 進捗のVimmer</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-2_2.html"/>
-    <id>http://blog.url.com/articles/vim/momongavim-2_2.html</id>
-    <published>2014-02-01T15:00:00Z</published>
-    <updated>2014-02-02T17:01:56+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;h2 id="toc_0"&gt;momonga.vim #2.2 に参加しました&lt;/h2&gt;
-
-&lt;p&gt;momonga.vim #2.2 に参加してきましたので、レポート記事を投稿したいと思います。&lt;/p&gt;
-
-&lt;p&gt;momonga.vim #2.2 は、#2 開催から時間が経ったものの、会場の予約の都合上#3まで時間が空きすぎて、Vimもくもく会成分が欠如して生活に支障が出そうということで企画された少人数のvimもくもく会です。小数点付きの回は大体このような少人数もくもく会を指します。&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;集合&lt;/h2&gt;
-
-&lt;p&gt;12:20頃、ももんがさんの家に集合しました。私はももんがさんなのでももんがさんの家までは徒歩0分の距離であり、労せず到着することができました。&lt;/p&gt;
-
-&lt;p&gt;参加者は私を含めて以下の5人です。前回の #2.1 も同じメンツでした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;@deris0126 （derisさん）&lt;/li&gt;
-&lt;li&gt;@Linda_pp （りんだんさん）&lt;/li&gt;
-&lt;li&gt;@rbtnn （rbtnnさん）&lt;/li&gt;
-&lt;li&gt;@thinca （thincaさん）&lt;/li&gt;
-&lt;li&gt;@supermomonga （ももんがさん）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="toc_2"&gt;昼食&lt;/h2&gt;
-
-&lt;p&gt;集まったので昼食です。最近糖質制限をしているのですが、誰かと一緒にごはんを食べるときは制限しないという例外を敷いているので、thincaさんの希望もありラーメンになりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-01-lunch.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;h2 id="toc_3"&gt;もくもく会&lt;/h2&gt;
-
-&lt;p&gt;もくもくしました。だいぶもくもくしたので煙がすごいでたと思います。&lt;/p&gt;
-
-&lt;p&gt;VCS.vim、puyo.vimにぷよテト実装、オプションパーサ、Sidecar、duzzleアップデート、みたいによくわからないけど各々の心にプレッシャーが発生する呪文を各自が唱え合ってた気がします。&lt;/p&gt;
-
-&lt;p&gt;私の場合、その成果として、ThingsPast.vimへのシンタックスや各種Hook追加を行い大々的にリファクタリングしたメジャーバージョンアップ版のリリースや長らく構成を決めかねていたSidecar.vimの正式版リリースに加えて放置されているFAX Advent Calendar 2013のネタプラギンを颯爽と完成させものすごい進捗を叩きだしたということは一切なくてvimrcを整理して小さいプラギンを新しく1つ作っただけでした。このプラギンは&lt;a href="https://github.com/supermomonga/projectlocal.vim"&gt;projectlocal.vim&lt;/a&gt;というもので、近日中に解説記事を書きます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-01-mokumoku.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;お菓子よかった。&lt;/p&gt;
-
-&lt;h2 id="toc_4"&gt;夕食&lt;/h2&gt;
-
-&lt;p&gt;20時頃。中華料理屋さん行きました。私はレバ野菜炒めと餃子。900円。
-derisさんとthincaさんはお昼にラーメン食べたのにまた麺類を食べていました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-01-dinner.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;ここで翌日予定のあるderisさんとはお別れしました。お疲れ様でした。&lt;/p&gt;
-
-&lt;h2 id="toc_5"&gt;vimrc読書会に参加&lt;/h2&gt;
-
-&lt;p&gt;毎週土曜日の23時からオンラインのチャットルームで開催されているvimrc読書会が始まりました。せっかくなので、みんなで参加します。というか、今回読まれたのは私のvimrcでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://vim-jp.org/reading-vimrc/archive/083.html"&gt;第83回 vimrc読書会&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id="toc_6"&gt;徹夜もくもく会&lt;/h2&gt;
-
-&lt;p&gt;徹夜でもくもく会をして、みんなでものすごい進捗を出しました。私は、アイマスクをつけて横たわり毛布を纏うという姿勢で、今後もっと日本のVimシーンを盛り上げていくにはどうすればよいのかについて、とても真剣に瞑想を行っていました。朝まで。なので寝ていたわけではないです。&lt;/p&gt;
-
-&lt;h2 id="toc_7"&gt;朝&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-02-morning.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;朝モスしました。&lt;/p&gt;
-
-&lt;p&gt;その後ちょっともくもくしたようなしなかったような感じで、昼前に解散しました。&lt;/p&gt;
-
-&lt;h2 id="toc_8"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;最近私事によりかなり忙しく、Vim活ができていなかったので、かなりよい休日を過ごすことができました。参加者の皆さんありがとうございます。&lt;/p&gt;
-
-&lt;p&gt;momonga.vim #2.2 に来てくださった他のみなさんも、参加レポート記事を書いてくれると思うので、期待しています。&lt;/p&gt;
-
-&lt;p&gt;来月、3月には最大20人規模の&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3&lt;/a&gt;が開催予定なので、Vimに関して一日中もくもくしてみたい方は、よろしければご参加ください。&lt;/p&gt;
-
-&lt;h2 id="toc_9"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
 </content>
   </entry>
   <entry>
