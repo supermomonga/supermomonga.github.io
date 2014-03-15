@@ -150,7 +150,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/elixir/elixir-fibonacci.html"/>
     <id>http://blog.url.com/articles/elixir/elixir-fibonacci.html</id>
     <published>2014-03-14T15:00:00Z</published>
-    <updated>2014-03-15T10:20:20+09:00</updated>
+    <updated>2014-03-15T18:43:40+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -187,21 +187,7 @@
 &lt;/pre&gt;
 &lt;p&gt;メソッド引数のパターンマッチ・ガードがいい感じですね。&lt;/p&gt;
 
-&lt;p&gt;ただ、パターンガードで型制約はどうなんでしょう。ここは&lt;code&gt;dialyzer&lt;/code&gt;を使いアノテーションで型制約をつけるべきでしょうか。&lt;/p&gt;
-&lt;pre class="highlight elixir"&gt;&lt;span class="k"&gt;defmodule&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-  &lt;span class="nv"&gt;@type&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;non_neg_integer&lt;/span&gt;
-  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;
-  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt;
-  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-    &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-
-&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
-&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;
-&lt;span class="no"&gt;IO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;puts&lt;/span&gt; &lt;span class="no"&gt;Fib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt; &lt;span class="m"&gt;13&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;ずいぶんと見通しがよくなりましたね。&lt;code&gt;non_neg_integer&lt;/code&gt;を用いることで、nは整数であり、かつ負値でないとしています。&lt;/p&gt;
+&lt;p&gt;ただ、パターンガードで型制約はちょっと見栄えが微妙な感じもしますね。&lt;/p&gt;
 </content>
   </entry>
   <entry>
