@@ -5,10 +5,60 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-03-14T15:00:00Z</updated>
+  <updated>2014-03-31T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>momonga.vim #3 に行ってきた</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-3.html"/>
+    <id>http://blog.url.com/articles/vim/momongavim-3.html</id>
+    <published>2014-03-31T15:00:00Z</published>
+    <updated>2014-04-01T08:26:00+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、122日目の記事になります。&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;momonga.vim #3 に行ってきました&lt;/h2&gt;
+
+&lt;p&gt;momonga.vim #3 に参加してきましたので、レポート記事を投稿したいと思います。&lt;/p&gt;
+
+&lt;p&gt;momonga.vim #3 は、なんと朝10時から夜10時までの12時間、かつ20人規模での開催という、今までで一番大きな規模の momonga.vim となりました。#1が5人、#2が13人、今回が20人なので、このペースだとあと10回くらい開催で武道館行くことになると思います。&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;写真&lt;/h2&gt;
+
+&lt;h3 id="toc_2"&gt;プロジェクタによる成果発表&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-04-01-1.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_3"&gt;ルービックキューブでVimを操作しています（嘘）&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-04-01-2.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;h3 id="toc_4"&gt;22時まで生き残った面々&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-04-01-3.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_5"&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;かなり長時間の開催なので今回は途中参加・途中退室自由にしたのですが、開始1時間ほどで20人全員が集うという事態に。Vimmerのバイタリティすごいですね。それから皆夕方あたりまでもくもくして、成果発表など交えつつ夕方頃に約半数の方が帰宅。大変お疲れ様でした。&lt;/p&gt;
+
+&lt;h2 id="toc_6"&gt;二次会&lt;/h2&gt;
+
+&lt;p&gt;その後二次会としてカラオケ店に入って、朝まで徹夜Vimでした。メンツはdictavさん、さっちゃんさん、ぼくさん、thincaさん、meirakaさん、ももんがさんの6人でした。私とthincaさんが微妙に歌ったり、rubyの黒魔術をやろうとしたり、ごはんたべたり、寝たりしました。半分寝てた。&lt;/p&gt;
+
+&lt;h2 id="toc_7"&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;大変楽しい一日を過ごせました。参加して下さった皆さんありがとうございます。&lt;/p&gt;
+
+&lt;p&gt;今後も定期的に momonga.vim を開催していきたいと思います。momonga.vim は初心者歓迎なので、この記事を読んで興味が沸いたという方は、ぜひ momonga.vim #4 への参加をご検討ください。&lt;/p&gt;
+
+&lt;h2 id="toc_8"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>実際に読んで分かった、はてなJSのダメなコード</title>
     <link rel="alternate" href="http://blog.url.com/articles/javascript/hatena-js-peropero.html"/>
@@ -339,84 +389,6 @@
 &lt;h2 id="toc_4"&gt;おわり&lt;/h2&gt;
 
 &lt;p&gt;おわり。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>プロジェクトのハンドリングを効率化するプラグイン、ProjectLocal.vimをリリースしました。</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/projectlocal-vim-released.html"/>
-    <id>http://blog.url.com/articles/vim/projectlocal-vim-released.html</id>
-    <published>2014-02-04T15:00:00Z</published>
-    <updated>2014-02-05T01:57:16+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、66日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="toc_0"&gt;ProjectLocal.vimをリリースしました&lt;/h2&gt;
-
-&lt;p&gt;プロジェクトのハンドリングを効率化する薄い機能を提供するプラグイン、ProjectLocal.vimをリリースしましたのでご紹介します。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/supermomonga/projectlocal.vim"&gt;https://github.com/supermomonga/projectlocal.vim&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;ProjectLocal.vimの機能&lt;/h2&gt;
-
-&lt;p&gt;プロジェクトのルートディレクトリに&lt;code&gt;Projectfile&lt;/code&gt;という名前のファイルを配置すると、そのディレクトリは1つのプロジェクトとして扱われるようになり、ディレクトリ以下のファイルを開いた時に以下の2つの機能が発動します。&lt;/p&gt;
-
-&lt;h3 id="toc_2"&gt;1. プロジェクトルートディレクトリの設定&lt;/h3&gt;
-
-&lt;p&gt;ProjectLocal.vimは、現在開いているファイルのプロジェクトのルートディレクトリを、ファイル（バッファ）のローカル変数に自動でセットします。これにより、プロジェクト内のどのファイルを開いた時も、常にバッファがプロジェクトルートの位置を知ることができます。具体的には、&lt;code&gt;b:projectlocal_root_dir&lt;/code&gt;というバッファローカル変数にパスがセットされます。&lt;/p&gt;
-
-&lt;h3 id="toc_3"&gt;2. プロジェクト用filetypeの自動設定&lt;/h3&gt;
-
-&lt;p&gt;プロジェクト内のファイルを開いた時、そのファイルのfiletypeに、予め設定したfiletypeを付加することができます。たとえば、&lt;code&gt;.rb&lt;/code&gt;ファイルを開いた時、通常は&lt;code&gt;ruby&lt;/code&gt;というfiletypeが設定されますが、自動で&lt;code&gt;rails&lt;/code&gt;というfiletypeが付加されるように設定することが可能になります。ちなみに、Vimにおいて1つのバッファに複数のfiletypeを割り当てたい時は、それらを&lt;code&gt;.&lt;/code&gt;（ドット記号）で連結します。この場合は&lt;code&gt;ruby.rails&lt;/code&gt;になるわけですね。&lt;/p&gt;
-
-&lt;p&gt;この設定はプロジェクト毎に変えることができます。方法は簡単で、&lt;code&gt;Projectfile&lt;/code&gt;の中に、設定したいfiletypeをカンマ区切りもしくは改行区切りで記載するだけです。&lt;/p&gt;
-
-&lt;h2 id="toc_4"&gt;ProjectLocal.vimの利用例&lt;/h2&gt;
-
-&lt;p&gt;ProjectLocal.vimは、それ単体では利便性に直接影響することはない、薄い機能を持った低レイヤプラグインです。ここでは、ProjectLocalの便利な利用例をご紹介します。&lt;/p&gt;
-
-&lt;h3 id="toc_5"&gt;プロジェクト内のファイルのみ検索するUniteコマンドを呼び出す&lt;/h3&gt;
-
-&lt;p&gt;特定のプロジェクトに関するプログラミングを行っている時、そのプロジェクトに関係するファイルのみを対象に検索したいことがあると思います。そのような場合、gitなどのVCSで管理されているディレクトリはUnite.vimの標準機能で検索を行うことができますが、すべてのプロジェクトが必ずしもVCSで管理されているとは限りませんし、プロジェクト内でも更に細かくスコープを分けたいなどの要望があると思います。&lt;/p&gt;
-
-&lt;p&gt;そういった場合、ProjectLocal.vimにて任意の場所に&lt;code&gt;Projectfile&lt;/code&gt;を配置することで、簡単にプロジェクト、もしくはプロジェクトの一部のファイルを検索することができるようになります。&lt;/p&gt;
-
-&lt;h4 id="toc_6"&gt;.vimrc&lt;/h4&gt;
-&lt;pre class="highlight viml"&gt;nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;p&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;call&lt;/span&gt; Unite_project_files&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'-start-insert'&lt;/span&gt;&lt;span class="p"&gt;)&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; Unite_project_files&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;options&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="k"&gt;if&lt;/span&gt; exists&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'b:projectlocal_root_dir'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    execute &lt;span class="s1"&gt;':Unite file_rec/async:'&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;b:projectlocal_root_dir&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;a:options&lt;/span&gt;
-  &lt;span class="k"&gt;else&lt;/span&gt;
-    echo &lt;span class="s2"&gt;"You are not in any project."&lt;/span&gt;
-  &lt;span class="k"&gt;endif&lt;/span&gt;
-&lt;span class="k"&gt;endfunction&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;Unite.vimのfire&lt;em&gt;rec/asyncというソースは、引数として検索対象のディレクトリを取ることができます。これを利用して、`b:projectlocal&lt;/em&gt;root_dir`が存在する場合はその値を引数として渡す関数を実装し、キーバインドに割り当てています。&lt;/p&gt;
-
-&lt;h3 id="toc_7"&gt;プロジェクト毎に最適なUniteコマンドを呼び出す&lt;/h3&gt;
-
-&lt;p&gt;同じキーバインドでも、状況によって最適な内容を実行してくれたら素敵です。ここでは、Unite.vimを例に、普段はディスク全体を対象にファイルを列挙するが、railsプロジェクトを開いている時には&lt;code&gt;unite-rails&lt;/code&gt;というRails用のUnite sourceを呼び出すといった設定を行ってみます。&lt;/p&gt;
-
-&lt;h4 id="toc_8"&gt;Projectfile&lt;/h4&gt;
-&lt;pre class="highlight plaintext"&gt;rails
-&lt;/pre&gt;
-&lt;h4 id="toc_9"&gt;.vimrc&lt;/h4&gt;
-&lt;pre class="highlight viml"&gt;nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Unite file_mru&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nv"&gt;s:unite_rails_init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-  nnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;buffer&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;:&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;u&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Unite rails&lt;span class="sr"&gt;/model rails/&lt;/span&gt;controller rails&lt;span class="sr"&gt;/view rails/&lt;/span&gt;db rails&lt;span class="sr"&gt;/config rails/&lt;/span&gt;javascript rails&lt;span class="sr"&gt;/stylesheet rails/&lt;/span&gt;helper rails/mailer&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;endfunction&lt;/span&gt;
-
-aug MyAutoCmd
-  &lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; *rails* &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="nv"&gt;s:unite_rails_init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-aug END
-&lt;/pre&gt;
-&lt;p&gt;このように、&lt;code&gt;&amp;lt;Space&amp;gt;j&lt;/code&gt;というキーバインドに対して、普段は&lt;code&gt;file_mru&lt;/code&gt;ソースを呼び出すものの、railsのプロジェクトでは&lt;code&gt;unite-rails&lt;/code&gt;のソースを呼び出すといった設定を完結に記載することができました。AutoCmdのパターンは完全一致なので、&lt;code&gt;*&lt;/code&gt;で囲むことで&lt;code&gt;ruby.rails&lt;/code&gt;などといったfiletypeにもマッチする様な工夫を行っています。&lt;/p&gt;
-
-&lt;h2 id="toc_10"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;ProjectLocal.vimを利用することで、現在どのプロジェクトのファイルを開いているのか、プロジェクトの種類はなんなのか、プロジェクトのルートディレクトリはどこなのか、といった情報が提供されるようになり、プロジェクトに依存する固有の設定が格段に行い易くなりました。小さい実装ながらも強力なプラグインですので、皆さんもぜひお試し頂ければと思います。&lt;/p&gt;
 </content>
   </entry>
 </feed>
