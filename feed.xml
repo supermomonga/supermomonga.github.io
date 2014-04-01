@@ -60,6 +60,24 @@
 </content>
   </entry>
   <entry>
+    <title>hiはスポーツ</title>
+    <link rel="alternate" href="http://blog.url.com/articles/neta/hi-is-sports.html"/>
+    <id>http://blog.url.com/articles/neta/hi-is-sports.html</id>
+    <published>2014-03-31T15:00:00Z</published>
+    <updated>2014-04-01T14:03:36+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://lingr.com/room/momonga/archives/2014/03/30#message-18686883"&gt;http://lingr.com/room/momonga/archives/2014/03/30#message-18686883&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-04-01-hi_is_sports.png" /&gt;&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>実際に読んで分かった、はてなJSのダメなコード</title>
     <link rel="alternate" href="http://blog.url.com/articles/javascript/hatena-js-peropero.html"/>
     <id>http://blog.url.com/articles/javascript/hatena-js-peropero.html</id>
@@ -340,55 +358,6 @@
 &lt;h2 id="toc_1"&gt;おわり&lt;/h2&gt;
 
 &lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>ansuzのやつ</title>
-    <link rel="alternate" href="http://blog.url.com/articles/ruby/ansuz.html"/>
-    <id>http://blog.url.com/articles/ruby/ansuz.html</id>
-    <published>2014-02-15T15:00:00Z</published>
-    <updated>2014-02-16T08:17:17+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://funisaya-ac2013.herokuapp.com/"&gt;ansuz&lt;/a&gt;4番目の担当でした。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;担当の二週間の、前半一週間で、「これは自分のものとしてともかくやるんだ」というものを制作してください。「これは自分のものとしてともかくやるんだ」ということだけが重要です。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;はい。私はコードを書くしかないと思っているので、コードを書きました。そして音ができます。&lt;/p&gt;
-
-&lt;h2 id="toc_0"&gt;書きます&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-16-7.56.26.png" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;プログラムのソースコードを食べて音をつくるものができます。
-ごく基本的な音楽の知識しかないので、コード進行がいい感じになるくらいのかしこさしかないです。&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;食べさせる&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-16-7.56.52.png" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;自分自身を食べさせます。自分を音楽にします。quineみたいですね、と思ったけどよく考えたら全然quineみたいではないです。&lt;/p&gt;
-
-&lt;p&gt;midiができます。&lt;/p&gt;
-
-&lt;h2 id="toc_2"&gt;調整&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-02-16-7.58.02.png" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;GarageBandで調整しましょう&lt;/p&gt;
-
-&lt;h2 id="toc_3"&gt;できる&lt;/h2&gt;
-
-&lt;iframe class="soundcloud" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/135025481&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;visual=true"&gt;&lt;/iframe&gt;
-
-&lt;p&gt;できた。&lt;/p&gt;
-
-&lt;h2 id="toc_4"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり。&lt;/p&gt;
 </content>
   </entry>
 </feed>
