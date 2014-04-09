@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/vim/jazzradio-vim-released.html"/>
     <id>http://blog.url.com/articles/vim/jazzradio-vim-released.html</id>
     <published>2014-04-08T15:00:00Z</published>
-    <updated>2014-04-10T01:31:37+09:00</updated>
+    <updated>2014-04-10T01:42:10+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -28,7 +28,7 @@
 
 &lt;p&gt;私は集中して作業を行いたい時はこのサイトを大いに活用しています。無料ですし、大変良い。&lt;/p&gt;
 
-&lt;p&gt;ですが、ひとつだけ大きな欠点がありました。そう、たかだか音楽を聴くために、ウェブブラウザを立ち上げておく必要があるのです。ただでさえメモリを食いつくすGoogleChrome、タブのひとつも増やしたくありません。そこでどうするかというと、お察しの通り、Vimです。&lt;/p&gt;
+&lt;p&gt;ですが、ひとつだけ大きな欠点がありました。そう、たかだか音源をストリーミング再生するためだけに、ウェブブラウザを立ち上げておく必要があるのです。ただでさえメモリを食いつくすGoogleChrome、タブのひとつも増やしたくありません。そこでどうするかというと、お察しの通り、Vimです。&lt;/p&gt;
 
 &lt;p&gt;というわけで、VimからJAZZRADIO.comの音楽を聴く事ができるプラグイン&lt;a href="https://github.com/supermomonga/jazzradio.vim"&gt;jazzradio.vim&lt;/a&gt;をリリースしました。&lt;/p&gt;
 
