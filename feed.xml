@@ -5,10 +5,86 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-03-31T15:00:00Z</updated>
+  <updated>2014-04-08T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ジャズだって聴ける。そう、Vimならね。</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/jazzradio-vim-released.html"/>
+    <id>http://blog.url.com/articles/vim/jazzradio-vim-released.html</id>
+    <published>2014-04-08T15:00:00Z</published>
+    <updated>2014-04-10T01:31:37+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、130日目の記事になります。&lt;/p&gt;
+
+&lt;h2 id="toc_0"&gt;jazzradio.vimをリリースしました&lt;/h2&gt;
+
+&lt;p&gt;さて、私達が人間らしく生活していく上で最低限必要なものといえばなんでしょうか？ そう、Vimとジャズですね。ところでジャズといえば、&lt;a href="http://www.jazzradio.com/"&gt;JAZZRADIO.com&lt;/a&gt;という便利サイトをご存知でしょうか。こちらは、様々なジャンルのジャズをストリーミングで聴ける、オンラインのラジオサイトです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-04-09-jazzradio.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;私は集中して作業を行いたい時はこのサイトを大いに活用しています。無料ですし、大変良い。&lt;/p&gt;
+
+&lt;p&gt;ですが、ひとつだけ大きな欠点がありました。そう、たかだか音楽を聴くために、ウェブブラウザを立ち上げておく必要があるのです。ただでさえメモリを食いつくすGoogleChrome、タブのひとつも増やしたくありません。そこでどうするかというと、お察しの通り、Vimです。&lt;/p&gt;
+
+&lt;p&gt;というわけで、VimからJAZZRADIO.comの音楽を聴く事ができるプラグイン&lt;a href="https://github.com/supermomonga/jazzradio.vim"&gt;jazzradio.vim&lt;/a&gt;をリリースしました。&lt;/p&gt;
+
+&lt;h2 id="toc_1"&gt;インストール方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/supermomonga/jazzradio.vim"&gt;jazzradio.vim&lt;/a&gt;は音楽のストリーミング再生部分に関して、&lt;code&gt;mplayer&lt;/code&gt;に依存しています。まずは、&lt;code&gt;mplayer&lt;/code&gt;をインストールしてください。&lt;code&gt;brew install mplayer&lt;/code&gt;、&lt;code&gt;sudo apt-get install -y mplayer&lt;/code&gt;など、お使いのOSに合わせてご自由にどうぞ。Windows版のバイナリ配布もされている様ですが、手元にWindows機が無いため動作は確認できませんでした。Windows対応のPull Requestなどお待ちしています。&lt;/p&gt;
+
+&lt;p&gt;次に、プラグインをインストールします。おなじみ&lt;code&gt;NeoBundle&lt;/code&gt;の設定を記載しておきますので、&lt;code&gt;.vimrc&lt;/code&gt;に追加して&lt;code&gt;:Unite neobundle/install&lt;/code&gt;を行ってください。&lt;/p&gt;
+&lt;pre class="highlight viml"&gt;NeoBundleLazy &lt;span class="s1"&gt;'supermomonga/jazzradio.vim'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s1"&gt;'depends'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s1"&gt;'Shougo/unite.vim'&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; neobundle#tap&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'jazzradio.vim'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;call&lt;/span&gt; neobundle#config&lt;span class="p"&gt;({&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;   &lt;span class="s1"&gt;'autoload'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;     &lt;span class="s1"&gt;'unite_sources'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;       &lt;span class="s1"&gt;'jazzradio'&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;     &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;     &lt;span class="s1"&gt;'commands'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;       &lt;span class="s1"&gt;'JazzradioUpdateChannels'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;       &lt;span class="s1"&gt;'JazzradioStop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;       &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;         &lt;span class="s1"&gt;'name'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'JazzradioPlay'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;         &lt;span class="s1"&gt;'complete'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'customlist,jazzradio#channel_id_complete'&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;       &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;     &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;     &lt;span class="s1"&gt;'function_prefix'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'jazzradio'&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt;   &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="se"&gt;        \&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;以上でインストールは完了です。&lt;/p&gt;
+
+&lt;h2 id="toc_2"&gt;使用方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/supermomonga/jazzradio.vim"&gt;jazzradio.vim&lt;/a&gt;をインストールしたら、まずはチャンネル一覧の情報を取得しましょう。&lt;code&gt;:JazzradioUpdateChannels&lt;/code&gt;コマンドを実行することで、チャンネル一覧の情報を取得しローカルにキャッシュします。このコマンドの実行には少し時間がかかります。&lt;/p&gt;
+
+&lt;p&gt;以上で準備は完了です。&lt;code&gt;:Unite jazzradio&lt;/code&gt;コマンドを実行すればジャンルごとのチャンネル一覧が表示されますので、お好きなチャンネルを選択してください。バックグラウンドで再生が始まります。&lt;code&gt;mplayer&lt;/code&gt;経由で再生したほうがブラウザ経由よりも音質が良い感じがしますね。&lt;/p&gt;
+
+&lt;p&gt;Unite.vimを経由せず、&lt;code&gt;:JazzradioPlay [channel_id]&lt;/code&gt;コマンドで直接再生を開始することもできます。また、再生をストップしたい時は&lt;code&gt;:JazzradioStop&lt;/code&gt;コマンドを実行してください。&lt;/p&gt;
+
+&lt;h2 id="toc_3"&gt;今後の予定&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ドキュメント書いてないので書く（ドキュメントないのひどい…）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:JazzradioUpdateChannels&lt;/code&gt;コマンドを非同期で実行、Unite.vimのインターフェイスで取得状況をリアルタイム表示するようにする&lt;/li&gt;
+&lt;li&gt;ボリューム操作、一時停止機能などを実装&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mplayer&lt;/code&gt;操作部分を外部ライブラリとして分離&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="toc_4"&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;ジャンルがジャズに該当するかどうかは置いておくとして、&lt;code&gt;小島麻由美&lt;/code&gt;とか&lt;code&gt;EGO-WRAPPIN&amp;#39;&lt;/code&gt;とか&lt;code&gt;SWING HOLIC&lt;/code&gt;とか好きです。&lt;/p&gt;
+
+&lt;h2 id="toc_5"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>momonga.vim #3 に行ってきた</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-3-report.html"/>
@@ -317,47 +393,6 @@
 &lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、101日目の記事でした。&lt;/p&gt;
 
 &lt;script type="text/javascript" src="https://www.draw.io/embed.js"&gt;&lt;/script&gt;
-</content>
-  </entry>
-  <entry>
-    <title>3/21日に東京でVim勉強会を開催します</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-3.html"/>
-    <id>http://blog.url.com/articles/vim/momongavim-3.html</id>
-    <published>2014-03-05T15:00:00Z</published>
-    <updated>2014-03-07T00:54:42+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、96日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="toc_0"&gt;3/21日に東京でVim勉強会を開催します&lt;/h2&gt;
-
-&lt;p&gt;今日はtips記事でもプラグインリリース記事でもなく、Vim勉強会のお知らせです。&lt;/p&gt;
-
-&lt;p&gt;私が主催しているVimの勉強会、momonga.vimの第三回が今月の21日に開催されます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;勉強会と書きましたが、実質はもくもく会で、各々がVimに関して好きなことをただひたすらやるみたいな会です。&lt;/p&gt;
-
-&lt;p&gt;第二回では十数人規模の会場で大体5時間くらいやったのですが、予想以上に申し込みがあり、何人かの方が残念ながら参加できないということがありました。
-そのため高まった私が今回は20人規模の会場を押さえ、かつほぼ丸一日貸しきるみたいな感じになっています。&lt;/p&gt;
-
-&lt;p&gt;3月6日現時点で申込数は13人で、まだあと7人の空きがあります。
-会場は一日貸し切りですが、途中参加・途中離脱OKなゆるふわ会ですので、数時間だけ参加してみようかなという方もぜひ来てみてください。&lt;/p&gt;
-
-&lt;p&gt;場所は&lt;a href="http://www.musashino.or.jp/place/_1150.html"&gt;武蔵野プレイスのスペースE&lt;/a&gt;です。おしゃれ！&lt;/p&gt;
-
-&lt;p&gt;参加費は1人500円で、飲み物やお菓子などが適当に用意されます。
-昼食や夕食を食べる場合や、二次会に参加する場合はそのお金は別途各々が払うみたいな感じです。&lt;/p&gt;
-
-&lt;p&gt;タイムスケジュールや場所などのより詳しい情報や、参加の申し込みは&lt;a href="http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5"&gt;momonga.vim #3のPARTAKEページ&lt;/a&gt;からお願いします。&lt;/p&gt;
-
-&lt;p&gt;momonga.vim は初心者歓迎ですし、実際に今回&lt;code&gt;sudo yum install vim&lt;/code&gt;から始めるみたいな人も来る模様です。むしろ俺は&lt;a href="http://d.hatena.ne.jp/tarao/20130303/evil_intro"&gt;Evil&lt;/a&gt;の設定を弄るみたいな人でも大丈夫だと思いますので、よろしければぜひお気軽に。&lt;/p&gt;
-
-&lt;h2 id="toc_1"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
 </content>
   </entry>
 </feed>
