@@ -5,10 +5,22 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-04-08T15:00:00Z</updated>
+  <updated>2014-04-11T15:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>友達ほしい</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/tomodachihoshii.html"/>
+    <id>http://blog.url.com/articles/vim/tomodachihoshii.html</id>
+    <published>2014-04-11T15:00:00Z</published>
+    <updated>2014-04-12T02:51:37+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;かなり（すごく）&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ジャズだって聴ける。そう、Vimならね。</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/jazzradio-vim-released.html"/>
@@ -332,67 +344,6 @@
 &lt;p&gt;メソッド引数のパターンマッチ・ガードがいい感じですね。&lt;/p&gt;
 
 &lt;p&gt;ただ、パターンガードで型制約はちょっと見栄えが微妙な感じもしますね。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>ベータ版 ビムの選び方フローチャート</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/beta-flowchart.html"/>
-    <id>http://blog.url.com/articles/vim/beta-flowchart.html</id>
-    <published>2014-03-10T15:00:00Z</published>
-    <updated>2014-03-11T10:07:37+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;h2 id="toc_0"&gt;ベータ版 ビムの選び方フローチャート&lt;/h2&gt;
-
-&lt;p&gt;「ビムの選び方」ベータ版に掲載されていたことはないフローチャートです。&lt;/p&gt;
-
-&lt;div class="drawio"&gt;
-
-&lt;div class="mxgraph" style="position:relative;overflow:hidden;width:632px;height:782px;"&gt;&lt;div style="width:1px;height:1px;overflow:hidden;"&gt;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&lt;/div&gt;&lt;/div&gt;
-
-
-&lt;/div&gt;
-
-&lt;h3 id="toc_1"&gt;補足&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Q. 日本ビムクラブとは？
-
-&lt;ul&gt;
-&lt;li&gt;A. わかりません&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Q. VIM.exe patch for VAIOとは？
-
-&lt;ul&gt;
-&lt;li&gt;A. &lt;a href="https://www.google.co.jp/search?q=VIM.exe+patch+for+VAIO+Improvement+and+VAIO+Control+Center"&gt;VIM.exe patch for VAIO Improvement and VAIO Control Center&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Q. Vimclipとは？
-
-&lt;ul&gt;
-&lt;li&gt;A. &lt;a href="http://vimclip.jp/"&gt;Vimclip OFFICIAL SITE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Q. FULLVIMとは？
-
-&lt;ul&gt;
-&lt;li&gt;A. &lt;a href="http://www.youtube.com/watch?v=fK1szQ_YahE"&gt;Mista Silva - Full Vim EP Launch&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Q. Evilとは？
-
-&lt;ul&gt;
-&lt;li&gt;A. &lt;a href="http://www.emacswiki.org/emacs/Evil"&gt;EmacsWiki: Evil&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id="toc_2"&gt;元ネタ&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="http://www.kmc.gr.jp/guidance/2014/pc/beta-flowchart.html"&gt;ベータ版 パソコンの選び方フローチャート&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id="toc_3"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、101日目の記事でした。&lt;/p&gt;
-
-&lt;script type="text/javascript" src="https://www.draw.io/embed.js"&gt;&lt;/script&gt;
 </content>
   </entry>
 </feed>
