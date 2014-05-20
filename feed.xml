@@ -5,10 +5,26 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-05-14T00:00:00+09:00</updated>
+  <updated>2014-05-20T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>プログラミングの生産性を上げるには</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/say-son-say.html"/>
+    <id>http://blog.url.com/articles/vim/say-son-say.html</id>
+    <published>2014-05-20T00:00:00+09:00</published>
+    <updated>2014-05-20T12:59:40+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/uploads/2014-05-20-vim.png" /&gt;&lt;/p&gt;
+
+&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Vimで離れた複数の行に対する一括操作を行う</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/qfreplace-benri.html"/>
@@ -234,147 +250,6 @@
 &lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
 
 &lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>実際に読んで分かった、はてなJSのダメなコード</title>
-    <link rel="alternate" href="http://blog.url.com/articles/javascript/hatena-js-peropero.html"/>
-    <id>http://blog.url.com/articles/javascript/hatena-js-peropero.html</id>
-    <published>2014-03-15T00:00:00+09:00</published>
-    <updated>2014-03-15T10:40:03+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;h2 id="はてなブログjsについて"&gt;はてなブログJSについて&lt;/h2&gt;
-
-&lt;p&gt;最近話題になってるはてなブログのjavascriptですが、このブログをMiddlemanで構築した時に「はてなブックマークブログパーツ」のjavascriptコードを読んでげんなりしたのを思い出したので、この際ついでにこっちも公にしておこうかと思って記事にします。はてなブログのJSではないという意味でタイトルは釣りです。&lt;/p&gt;
-
-&lt;h2 id="はてなブックマークブログパーツとは"&gt;はてなブックマークブログパーツとは&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://b.hatena.ne.jp/guide/blogparts"&gt;はてなブックマークブログパーツ&lt;/a&gt;とは、あなたがお持ちのブログにはてなブックマークの各種情報を貼り付けることができるブログパーツです。はてなが提供しているHTMLタグとjavascriptの読み込みコードを貼り付けることで設置することができます。&lt;/p&gt;
-
-&lt;p&gt;ブログパーツは複数種類あるのですが、今回はこのブログに貼ろうとした「ブックマークのコメントを表示」というパーツのコードを読んでみます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-03-15-blogparts.png" class="full" /&gt;&lt;/p&gt;
-
-&lt;h2 id="ブログパーツの設置方法"&gt;ブログパーツの設置方法&lt;/h2&gt;
-
-&lt;p&gt;さて、&lt;a href="http://b.hatena.ne.jp/guide/blogparts.select?type=blogparts"&gt;ブログパーツの設置方法解説ページ&lt;/a&gt;には、以下の2ステップでブログパーツを貼り付けできると解説されています。&lt;/p&gt;
-
-&lt;h3 id="javascriptの読み込みとデフォルト設定の記述"&gt;javascriptの読み込みとデフォルト設定の記述&lt;/h3&gt;
-&lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"text/javascript"&lt;/span&gt; &lt;span class="na"&gt;charset=&lt;/span&gt;&lt;span class="s"&gt;"utf-8"&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;"http://b.hatena.ne.jp/js/bookmark_blogparts.js"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"text/javascript"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;commentInsertSelector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s1"&gt;'div.hatena-bookmark-marker'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'div.article-body-inner'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'div.blogbody div.mainmore'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'div.blogbody div.main'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'div.entry-body-main'&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertPosition&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'after'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkSelector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s1"&gt;'div.hatena-bookmark-marker a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'div h3 a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'h2.title a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'h2.entry-title a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'.posted a'&lt;/span&gt; &lt;span class="p"&gt;];&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkPathRegexp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sr"&gt;/\/archives\/\d+\.html$/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkAttribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'href'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;1行目では&lt;a href="http://b.hatena.ne.jp/js/bookmark_blogparts.js"&gt;http://b.hatena.ne.jp/js/bookmark_blogparts.js&lt;/a&gt;を読み込み、2行目以降ではどうもオプションの設定を行っている様です。&lt;/p&gt;
-
-&lt;h3 id="ブックマークコメント一覧を表示したい位置にdivタグを設置"&gt;ブックマークコメント一覧を表示したい位置にdivタグを設置&lt;/h3&gt;
-&lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"hatena-bookmark-marker"&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;"display:none;"&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"※"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;※）設置ブログ記事ページのURL&lt;/p&gt;
-
-&lt;p&gt;どうやら、&lt;code&gt;hatena-bookmark-marker&lt;/code&gt;というclassが指定されたdivタグの中身がブックマークコメント一覧に置き換えられる様ですね。&lt;/p&gt;
-
-&lt;h3 id="オプション設定の変更"&gt;オプション設定の変更&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="http://developer.hatena.ne.jp/ja/documents/bookmark/misc/comment_blogparts"&gt;はてなブックマークコメント表示ブログパーツ&lt;/a&gt;というページを見ると、オプション一覧の解説とオプションの書き換え方法が記載されています。これらのオプションを使って挙動や見た目をカスタマイズするらしいですね。&lt;/p&gt;
-
-&lt;h2 id="問題点"&gt;問題点&lt;/h2&gt;
-
-&lt;p&gt;ここで結論から言ってしまうと、このjavascriptスクリプトのオプション指定方法には問題があり、オプションの指定が利きません。&lt;/p&gt;
-
-&lt;p&gt;解説します。&lt;/p&gt;
-
-&lt;h3 id="オプション用プロパティの宣言と上書き"&gt;オプション用プロパティの宣言と上書き&lt;/h3&gt;
-
-&lt;p&gt;このjavascriptコードは、オプション設定をグローバル変数&lt;code&gt;HBBlogParts&lt;/code&gt;というオブジェクトのプロパティを自分の好きな値で宣言することで指定できる様な形式にしています。&lt;/p&gt;
-
-&lt;p&gt;ここで、javascriptのコードを実際に読んでみましょう。&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="c1"&gt;//alert('start');
-&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'undefined'&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;_alreadyShown&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;shownPermalinks&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;catchCount&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;一番最初のコードがこれです。この後この&lt;code&gt;HBBlogParts&lt;/code&gt;というオブジェクトのプロパティに、実際にはてなブックマークコメントを取得してブログのDOMに追加していく処理を持った関数が宣言されていきます。次に後半のコードを見ます。&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Design&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;useUserCSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cssName&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'basic'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listPageCommentLimit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkCommentLimit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;hatenaRegexp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;RegExp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s1"&gt;'^https?://[^/]+.hatena.ne.jp/([^/]+)/'&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;hatenaRegexp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;userName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;hatenaRegexp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;isHatenaService&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;indexOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'g.hatena.ne.jp'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;commentInsertSelector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'div.section'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkCommentInsertSelector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'div.comment'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'div.section'&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
-        &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;commentInsertSelector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'div.section'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertPosition&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'after'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkSelector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'div.section h3 a'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkAttribute&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'href'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkPathRegexp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;RegExp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;userName&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/\\d{8}'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;useCanonicalizedURI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listPageCommentLimit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;permalinkCommentLimit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;9999&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt; &lt;span class="nx"&gt;HBBlogPartsFromBookmarklet&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'undefined'&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;register&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'From Bookmark let'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;HBBlogParts.register&lt;/code&gt;という関数が呼ばれていますね。この関数はページのDOMロード完了を監視して、完了した時点で&lt;code&gt;HBBlogParts.start&lt;/code&gt;という関数を呼びます。&lt;code&gt;HBBlogParts.start&lt;/code&gt;は実際にブックマークコメントを取得してDOMを書き換えるメインルーチンです。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;あれっちょっとまって…&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;これ、&lt;code&gt;HBBlogParts.register&lt;/code&gt;関数を呼ぶ直前に、各オプションをデフォルト値で上書きしてませんか？&lt;/p&gt;
-
-&lt;p&gt;実際に、&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listPageCommentLimit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;HBBlogParts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Design&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'t'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'s'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;とか指定しても、ブラウザのデベロッパーコンソールで&lt;code&gt;HBBlogParts&lt;/code&gt;のプロパティを見ると、やはりデフォルト値で上書きされてしまっています。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;HBBlogParts.permalinkURI&lt;/code&gt;や&lt;code&gt;HBBlogParts.permalinkPathRegexp&lt;/code&gt;といったブログパーツの動作に不可欠なオプションはさすがに上書きされていないようですが、&lt;code&gt;HBBlogParts.Design&lt;/code&gt;の様な、デフォルト値でもとりあえず動作するといったプロパティの多くがデフォルト値で上書きされています。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;オプション設定とはなんだったのか…&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;処理の流れからして、どうしてもオプション指定をしたい場合、「&lt;code&gt;HBBlogParts.register&lt;/code&gt;が呼ばれた後」かつ「ページのDOM読み込みが完了して実際に&lt;code&gt;HBBlogParts.start&lt;/code&gt;関数の処理が開始されてしまう前」といったピンポイントのタイミングで、非同期的にこれら&lt;code&gt;HBBlogParts&lt;/code&gt;オブジェクトのプロパティを書き換える必要があります。難易度高い…&lt;/p&gt;
-
-&lt;h2 id="こう改善してほしい"&gt;こう改善してほしい&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;オプションを問答無用でデフォルト値で上書きするのやめて…&lt;/li&gt;
-&lt;li&gt;どうせ表示したい位置にdivタグを設置するのだから、グローバル変数のプロパティを書き換えるのでなく、&lt;code&gt;data-*&lt;/code&gt;属性で各オプション設定を指定できるようにしてほしい
-
-&lt;ul&gt;
-&lt;li&gt;そうすれば&lt;code&gt;HBBlogParts&lt;/code&gt;という変数でグローバル汚染しなくてもよいのでは。よくわかんないけど。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ついでにこっちもminifyとかgzip配信とかやってほしい&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;はてなさんがやる気になってるっぽいですし、なんか直接報告しても反応ないという噂なので、便乗して公にしてブログパーツウィジェットのJSも改善してもらおうという記事でした。ブコメ一覧ウィジェット使いたいです。よろしくお願いします。&lt;/p&gt;
-
-&lt;p&gt;あと、私は普段Rubyばかり書いていてjavascriptにはあまり詳しくはないので、もし間違いがあれば訂正してお詫びします。という予防線を張っておきます。&lt;/p&gt;
 </content>
   </entry>
 </feed>
