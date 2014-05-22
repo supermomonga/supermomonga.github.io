@@ -5,10 +5,86 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-05-20T00:00:00+09:00</updated>
+  <updated>2014-05-22T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>TokyoVim #19 に行ってきた</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/tokyovim-19-report.html"/>
+    <id>http://blog.url.com/articles/vim/tokyovim-19-report.html</id>
+    <published>2014-05-22T00:00:00+09:00</published>
+    <updated>2014-05-22T20:52:49+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、173日目の記事になります。&lt;/p&gt;
+
+&lt;h2 id="tokyovim-#19-に行ってきた"&gt;TokyoVim #19 に行ってきた&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://tokyovim.connpass.com/event/6041/"&gt;TokyoVim #19&lt;/a&gt;に行ってきたので、そのレポート記事を書きたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-05-22-1.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;今回は神社が会場です嘘です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-05-22-2.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;会場ではない神社です。&lt;/p&gt;
+
+&lt;h2 id="到着"&gt;到着&lt;/h2&gt;
+
+&lt;p&gt;電車でNexus7見てたらなんか TokyoVim #20 の募集が開始されてたので登録した。その後到着。道に迷ったので10分ほど遅れました。&lt;/p&gt;
+
+&lt;p&gt;私「すみません、&lt;a href="http://vimclip.jp/"&gt;VimClip&lt;/a&gt;の勉強会の会場ってここで合ってますか？」&lt;/p&gt;
+
+&lt;p&gt;kanaさん「えっ、いや、あー、ちがいます。」&lt;/p&gt;
+
+&lt;p&gt;私「ちがうんですか…」&lt;/p&gt;
+
+&lt;p&gt;みたいな会話をしました。&lt;/p&gt;
+
+&lt;h2 id="もくもく会"&gt;もくもく会&lt;/h2&gt;
+
+&lt;p&gt;もくもくしました。今回は割と進捗が出せた気がします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ツイッターかなりはかどった（かなり）&lt;/li&gt;
+&lt;li&gt;VimShellのコードリーディングしていた&lt;/li&gt;
+&lt;li&gt;Unite.vimをプラグインのUIフレームワークとして使うことについて考えてた&lt;/li&gt;
+&lt;li&gt;Clojureの環境ちょっと整えた&lt;/li&gt;
+&lt;li&gt;新プラグインの名前考えてた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="kanaさんライブコーディング"&gt;kanaさんライブコーディング&lt;/h2&gt;
+
+&lt;p&gt;タイプしたキーを表示してくれる便利ソフトkeycastrがMarvericksでは動かないみたいな問題があって、どうしよみたいな感じになりました。そこで、私が最近知った便利サイトGoogleというのをみんなに教えてあげました。Googleというのは、知りたいことをキーボードで入力するだけでホームページを探してくれるホームページです便利。&lt;/p&gt;
+
+&lt;p&gt;無事keycastrが使えるようになりライブコーディング的なやつが開始されました。kanaさんは分割ウィンドウの移動にoptionキー（altキー）を多用しているみたいでなるほどーという感じがあった。&lt;/p&gt;
+
+&lt;h2 id="解散"&gt;解散&lt;/h2&gt;
+
+&lt;p&gt;という感じであっというまに終了時間になった。なんか今回ずっともくもくしていてさっちゃんさんとあんまりというか恐らく一言も会話できなかった感あるので次会ったらすごい話したい。&lt;/p&gt;
+
+&lt;h2 id="二次会"&gt;二次会&lt;/h2&gt;
+
+&lt;p&gt;二次会は私とあの人とあの人とかで行きました。ファミレスで丼を食べながらVimをやったりしました。面白い話を色々したきがするけどほとんど覚えてない。りんだんさんが食べてたやつがおいしそうだったけど、何食べてたのかは覚えてない。&lt;/p&gt;
+
+&lt;p&gt;だいたい21時か22時か23時くらいに解散しました（しました）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-05-22-3.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;丼です。&lt;/p&gt;
+
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;二ヶ月間くらい実家に帰っていて東京に居らず、そのため勉強会参加できていなかったので、久しぶりのVim勉強会でよかった。かなりたのしかった（かなり）。&lt;/p&gt;
+
+&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>プログラミングの生産性を上げるには</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/say-son-say.html"/>
@@ -240,24 +316,6 @@
 &lt;p&gt;大変楽しい一日を過ごせました。参加して下さった皆さんありがとうございます。&lt;/p&gt;
 
 &lt;p&gt;今後も定期的に momonga.vim を開催していきたいと思います。momonga.vim は初心者歓迎なので、この記事を読んで興味が沸いたという方は、ぜひ momonga.vim #4 への参加をご検討ください。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>hiはスポーツ</title>
-    <link rel="alternate" href="http://blog.url.com/articles/neta/hi-is-sports.html"/>
-    <id>http://blog.url.com/articles/neta/hi-is-sports.html</id>
-    <published>2014-04-01T00:00:00+09:00</published>
-    <updated>2014-04-01T14:03:36+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://lingr.com/room/momonga/archives/2014/03/30#message-18686883"&gt;http://lingr.com/room/momonga/archives/2014/03/30#message-18686883&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-04-01-hi_is_sports.png" /&gt;&lt;/p&gt;
 
 &lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
 
