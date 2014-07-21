@@ -1,13 +1,13 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible><title>Rails4のオレオレRailsComposer用のメモ書き - かなりすごいブログ</title><link href="/stylesheets/theme-0e5c450e.css" rel=stylesheet /><link href="/stylesheets/monokai-16825c43.css" rel=stylesheet /></head><body role=main><header><h1><a href="/">かなりすごいブログ</a></h1></header><div id=main><div class=entry><div class=entry-header><h1> Rails4のオレオレRailsComposer用のメモ書き </h1><div class=entry-tags><li class="default label"><i class=icon-tag></i><a href="/tags/ruby.html">Ruby</a></li><li class="default label"><i class=icon-tag></i><a href="/tags/rails.html">Rails</a></li></div><span class=entry-date>2014年06月07日</span></div><div class=entry-share><div class="share hatena"><a onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=530,width=510');return false;" href="//b.hatena.ne.jp/add?mode=confirm&amp;url=http://blog.supermomonga.com/articles/ruby/rails4-setup.html&amp;title=Rails4のオレオレRailsComposer用のメモ書き">はてブに追加</a></div><div class="share twitter"><a onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=230,width=600');return false;" href="//twitter.com/share?text=Rails4のオレオレRailsComposer用のメモ書き&amp;url=http://blog.supermomonga.com/articles/ruby/rails4-setup.html">この記事をツイート</a></div><div class="share feedly"><a target=_blank href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.supermomonga.com%2Ffeed.xml">Feedlyで購読</a></div></div><div class=entry-body><h1 id=init>Init</h1><pre class="highlight shell">rails new appname
+<!DOCTYPE html><html><head><meta charset=utf-8><meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible><title>Rails4のオレオレRailsComposer用のメモ書き - かなりすごいブログ</title><link href="/stylesheets/theme-0e5c450e.css" rel=stylesheet /><link href="/stylesheets/monokai-16825c43.css" rel=stylesheet /></head><body role=main><header><h1><a href="/">かなりすごいブログ</a></h1></header><div id=main><div class=entry><div class=entry-header><h1> Rails4のオレオレRailsComposer用のメモ書き </h1><div class=entry-tags><li class="default label"><i class=icon-tag></i><a href="/tags/ruby.html">Ruby</a></li><li class="default label"><i class=icon-tag></i><a href="/tags/rails.html">Rails</a></li></div><span class=entry-date>2014年06月07日</span></div><div class=entry-share><div class="share hatena"><a onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=530,width=510');return false;" href="//b.hatena.ne.jp/add?mode=confirm&amp;url=http://blog.supermomonga.com/articles/ruby/rails4-setup.html&amp;title=Rails4のオレオレRailsComposer用のメモ書き">はてブに追加</a></div><div class="share twitter"><a onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=230,width=600');return false;" href="//twitter.com/share?text=Rails4のオレオレRailsComposer用のメモ書き&amp;url=http://blog.supermomonga.com/articles/ruby/rails4-setup.html">この記事をツイート</a></div><div class="share feedly"><a target=_blank href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.supermomonga.com%2Ffeed.xml">Feedlyで購読</a></div></div><div class=entry-body><h2 id=init>Init</h2><pre class="highlight shell">rails new appname
 <span class="nb">cd</span> ./appname
-</pre><h1 id=initialize-git-repository>Initialize git repository</h1><pre class="highlight shell">git init
+</pre><h2 id=initialize-git-repository>Initialize git repository</h2><pre class="highlight shell">git init
 git add -A
 git commit -m <span class="s1">'initialize rails app'</span>
-</pre><h1 id=set-rbenv>Set rbenv</h1><pre class="highlight shell">rbenv <span class="nb">local </span>2.1.1
+</pre><h2 id=set-rbenv>Set rbenv</h2><pre class="highlight shell">rbenv <span class="nb">local </span>2.1.1
 <span class="nb">echo</span> <span class="s2">".ruby-version"</span> &gt;&gt; .gitignore
 git add .gitignore
 git commit -m <span class="s2">"add .ruby-version to .gitignore"</span>
-</pre><h1 id=gemfile>Gemfile</h1><pre class="highlight ruby"><span class="n">ruby</span> <span class="s1">'2.1.1'</span> <span class="c1"># for heroku</span>
+</pre><h2 id=gemfile>Gemfile</h2><pre class="highlight ruby"><span class="n">ruby</span> <span class="s1">'2.1.1'</span> <span class="c1">## for heroku</span>
 <span class="n">gem</span> <span class="s1">'therubyracer'</span><span class="p">,</span>  <span class="ss">platforms: :ruby</span>
 <span class="n">gem</span> <span class="s1">'slim-rails'</span>
 <span class="n">gem</span> <span class="s1">'unicorn'</span>
@@ -23,14 +23,14 @@ git commit -m <span class="s2">"add .ruby-version to .gitignore"</span>
   <span class="n">gem</span> <span class="s1">'html2slim'</span>
 <span class="k">end</span>
 <span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">'pg'</span> <span class="c1"># for heroku</span>
-  <span class="n">gem</span> <span class="s1">'rails_12factor'</span> <span class="c1"># for heroku</span>
+  <span class="n">gem</span> <span class="s1">'pg'</span> <span class="c1">## for heroku</span>
+  <span class="n">gem</span> <span class="s1">'rails_12factor'</span> <span class="c1">## for heroku</span>
 <span class="k">end</span>
 </pre><pre class="highlight shell">bundle install
 git add Gemfile
 git add Gemfile.lock
 git commit -m <span class="s1">'add some gems'</span>
-</pre><h1 id=setup-unicorn>setup unicorn</h1><p>create <code>config/unicorn.rb</code></p><pre class="highlight ruby"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">"WEB_CONCURRENCY"</span><span class="o">]</span> <span class="o">||</span> <span class="mi">1</span><span class="p">)</span>
+</pre><h2 id=setup-unicorn>setup unicorn</h2><p>create <code>config/unicorn.rb</code></p><pre class="highlight ruby"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">"WEB_CONCURRENCY"</span><span class="o">]</span> <span class="o">||</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">timeout</span> <span class="mi">15</span>
 <span class="n">preload_app</span> <span class="kp">true</span>
 
@@ -54,7 +54,7 @@ git commit -m <span class="s1">'add some gems'</span>
 <span class="k">end</span>
 </pre><pre class="highlight shell">git add config/unicorn.rb
 git commit -m <span class="s1">'add unicorn config file'</span>
-</pre><h1 id=setup-foreman-procfile>Setup foreman Procfile</h1><pre class="highlight plaintext">echo 'web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb' &gt;&gt; Procfile
+</pre><h2 id=setup-foreman-procfile>Setup foreman Procfile</h2><pre class="highlight plaintext">echo 'web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb' &gt;&gt; Procfile
 git add Procfile
 git commit -m 'add Procfile'
 </pre><pre class="highlight shell"><span class="nb">echo</span> <span class="s2">"RACK_ENV=development"</span> &gt;&gt; .env
@@ -63,7 +63,7 @@ git commit -m 'add Procfile'
 </pre><pre class="highlight shell"><span class="nb">echo</span> <span class="s2">".env"</span> &gt;&gt; .gitignore
 git add .gitignore
 git commit -m <span class="s2">"add .env to .gitignore"</span>
-</pre><h1 id=devise-generate>Devise generate</h1><pre class="highlight shell">rails generate devise:install
+</pre><h2 id=devise-generate>Devise generate</h2><pre class="highlight shell">rails generate devise:install
 rails generate devise User
 rake db:migrate
 git add -A
@@ -75,7 +75,7 @@ git commit -m <span class="s1">'set action mailer config'</span>
 erb2slim -d ./app/views/devise/
 git add -A
 git commit -m 'add devise views'
-</pre><h1 id=generate-layouts-and-devise-views>generate layouts and devise views</h1><pre class="highlight shell">rails g bootswatch:install flatly -f
+</pre><h2 id=generate-layouts-and-devise-views>generate layouts and devise views</h2><pre class="highlight shell">rails g bootswatch:install flatly -f
 rails g bootswatch:layout flatly -f
 <span class="nb">echo</span> <span class="s1">'Rails.application.config.assets.precompile += %w( flatly.css )'</span> &gt;&gt; config/initializers/assets.rb
 <span class="nb">echo</span> <span class="s1">'Rails.application.config.assets.precompile += %w( flatly.js )'</span> &gt;&gt; config/initializers/assets.rb

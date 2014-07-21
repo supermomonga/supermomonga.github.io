@@ -26,30 +26,30 @@
     <link rel="alternate" href="http://blog.url.com/articles/ruby/rails4-setup.html"/>
     <id>http://blog.url.com/articles/ruby/rails4-setup.html</id>
     <published>2014-06-07T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
+    <updated>2014-07-21T23:21:28+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;h1 id="init"&gt;Init&lt;/h1&gt;
+    <content type="html">&lt;h2 id="init"&gt;Init&lt;/h2&gt;
 &lt;pre class="highlight shell"&gt;rails new appname
 &lt;span class="nb"&gt;cd&lt;/span&gt; ./appname
 &lt;/pre&gt;
 
-&lt;h1 id="initialize-git-repository"&gt;Initialize git repository&lt;/h1&gt;
+&lt;h2 id="initialize-git-repository"&gt;Initialize git repository&lt;/h2&gt;
 &lt;pre class="highlight shell"&gt;git init
 git add -A
 git commit -m &lt;span class="s1"&gt;'initialize rails app'&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;h1 id="set-rbenv"&gt;Set rbenv&lt;/h1&gt;
+&lt;h2 id="set-rbenv"&gt;Set rbenv&lt;/h2&gt;
 &lt;pre class="highlight shell"&gt;rbenv &lt;span class="nb"&gt;local &lt;/span&gt;2.1.1
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;".ruby-version"&lt;/span&gt; &amp;gt;&amp;gt; .gitignore
 git add .gitignore
 git commit -m &lt;span class="s2"&gt;"add .ruby-version to .gitignore"&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;h1 id="gemfile"&gt;Gemfile&lt;/h1&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;ruby&lt;/span&gt; &lt;span class="s1"&gt;'2.1.1'&lt;/span&gt; &lt;span class="c1"&gt;# for heroku&lt;/span&gt;
+&lt;h2 id="gemfile"&gt;Gemfile&lt;/h2&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;ruby&lt;/span&gt; &lt;span class="s1"&gt;'2.1.1'&lt;/span&gt; &lt;span class="c1"&gt;## for heroku&lt;/span&gt;
 &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'therubyracer'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;platforms: :ruby&lt;/span&gt;
 &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'slim-rails'&lt;/span&gt;
 &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'unicorn'&lt;/span&gt;
@@ -65,8 +65,8 @@ git commit -m &lt;span class="s2"&gt;"add .ruby-version to .gitignore"&lt;/span&
   &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'html2slim'&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="ss"&gt;:production&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'pg'&lt;/span&gt; &lt;span class="c1"&gt;# for heroku&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'rails_12factor'&lt;/span&gt; &lt;span class="c1"&gt;# for heroku&lt;/span&gt;
+  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'pg'&lt;/span&gt; &lt;span class="c1"&gt;## for heroku&lt;/span&gt;
+  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'rails_12factor'&lt;/span&gt; &lt;span class="c1"&gt;## for heroku&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/pre&gt;
 &lt;pre class="highlight shell"&gt;bundle install
@@ -75,7 +75,7 @@ git add Gemfile.lock
 git commit -m &lt;span class="s1"&gt;'add some gems'&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;h1 id="setup-unicorn"&gt;setup unicorn&lt;/h1&gt;
+&lt;h2 id="setup-unicorn"&gt;setup unicorn&lt;/h2&gt;
 
 &lt;p&gt;create &lt;code&gt;config/unicorn.rb&lt;/code&gt;&lt;/p&gt;
 &lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;worker_processes&lt;/span&gt; &lt;span class="nb"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;ENV&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"WEB_CONCURRENCY"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -105,7 +105,7 @@ git commit -m &lt;span class="s1"&gt;'add some gems'&lt;/span&gt;
 git commit -m &lt;span class="s1"&gt;'add unicorn config file'&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;h1 id="setup-foreman-procfile"&gt;Setup foreman Procfile&lt;/h1&gt;
+&lt;h2 id="setup-foreman-procfile"&gt;Setup foreman Procfile&lt;/h2&gt;
 &lt;pre class="highlight plaintext"&gt;echo 'web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb' &amp;gt;&amp;gt; Procfile
 git add Procfile
 git commit -m 'add Procfile'
@@ -119,7 +119,7 @@ git add .gitignore
 git commit -m &lt;span class="s2"&gt;"add .env to .gitignore"&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;h1 id="devise-generate"&gt;Devise generate&lt;/h1&gt;
+&lt;h2 id="devise-generate"&gt;Devise generate&lt;/h2&gt;
 &lt;pre class="highlight shell"&gt;rails generate devise:install
 rails generate devise User
 rake db:migrate
@@ -139,7 +139,7 @@ git add -A
 git commit -m 'add devise views'
 &lt;/pre&gt;
 
-&lt;h1 id="generate-layouts-and-devise-views"&gt;generate layouts and devise views&lt;/h1&gt;
+&lt;h2 id="generate-layouts-and-devise-views"&gt;generate layouts and devise views&lt;/h2&gt;
 &lt;pre class="highlight shell"&gt;rails g bootswatch:install flatly -f
 rails g bootswatch:layout flatly -f
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'Rails.application.config.assets.precompile += %w( flatly.css )'&lt;/span&gt; &amp;gt;&amp;gt; config/initializers/assets.rb
