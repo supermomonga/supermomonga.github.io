@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-4-report.html"/>
     <id>http://blog.url.com/articles/vim/momongavim-4-report.html</id>
     <published>2014-06-09T00:00:00+09:00</published>
-    <updated>2014-06-09T23:59:12+09:00</updated>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -26,7 +26,7 @@
     <link rel="alternate" href="http://blog.url.com/articles/ruby/rails4-setup.html"/>
     <id>http://blog.url.com/articles/ruby/rails4-setup.html</id>
     <published>2014-06-07T00:00:00+09:00</published>
-    <updated>2014-06-08T02:01:33+09:00</updated>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -161,7 +161,7 @@ git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
     <link rel="alternate" href="http://blog.url.com/articles/vim/shaberu-vim-recursive.html"/>
     <id>http://blog.url.com/articles/vim/shaberu-vim-recursive.html</id>
     <published>2014-06-03T00:00:00+09:00</published>
-    <updated>2014-06-03T00:28:22+09:00</updated>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -197,7 +197,7 @@ git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
     <link rel="alternate" href="http://blog.url.com/articles/vim/tokyovim-19-report.html"/>
     <id>http://blog.url.com/articles/vim/tokyovim-19-report.html</id>
     <published>2014-05-22T00:00:00+09:00</published>
-    <updated>2014-05-22T20:52:49+09:00</updated>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -273,7 +273,7 @@ git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
     <link rel="alternate" href="http://blog.url.com/articles/vim/say-son-say.html"/>
     <id>http://blog.url.com/articles/vim/say-son-say.html</id>
     <published>2014-05-20T00:00:00+09:00</published>
-    <updated>2014-05-20T13:06:55+09:00</updated>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -301,7 +301,7 @@ git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
     <link rel="alternate" href="http://blog.url.com/articles/vim/qfreplace-benri.html"/>
     <id>http://blog.url.com/articles/vim/qfreplace-benri.html</id>
     <published>2014-05-14T00:00:00+09:00</published>
-    <updated>2014-05-20T12:03:59+09:00</updated>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
