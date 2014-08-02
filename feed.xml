@@ -5,10 +5,172 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-06-09T00:00:00+09:00</updated>
+  <updated>2014-08-03T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>momonga.vim #6 in ドワンゴを開催しました</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-6-report.html"/>
+    <id>http://blog.url.com/articles/vim/momongavim-6-report.html</id>
+    <published>2014-08-03T00:00:00+09:00</published>
+    <updated>2014-08-03T08:37:29+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://connpass.com/event/7360/"&gt;momonga.vim #6 in ドワンゴ（あきらかに）&lt;/a&gt;を開催しましたので、レポート記事を投稿します。&lt;/p&gt;
+
+&lt;h2 id="momonga.vim-#6-開催の経緯と概要"&gt;momonga.vim #6 開催の経緯と概要&lt;/h2&gt;
+
+&lt;p&gt;最初は数人で始めたmomonga.vimも、気付けば40人規模のイベントとなりました。今までは私の自宅や自宅近くにある市営の貸し会議室をお借りして開催していたのですが、今回は妖怪ハウスに遊びに行ったことがきっかけとなりお会いした&lt;a href="http://cpplover.blogspot.jp/"&gt;江添亮&lt;/a&gt;さんにお願いして&lt;a href="http://info.dwango.co.jp/"&gt;株式会社ドワンゴ&lt;/a&gt;さんの会議室をお借りすることができ、&lt;a href="http://connpass.com/event/7360/"&gt;momonga.vim #6 in ドワンゴ（あきらかに）&lt;/a&gt;の開催が実現したという経緯があります。&lt;/p&gt;
+
+&lt;p&gt;momonga.vimは、vimに関するタスクを各々が自由に作業するという趣旨のいわゆる「もくもく会」なのですが、40人規模のもくもく会というのも珍しいのではないかと思います。会場自体のキャパシティは最大100人程だったのですが、さすがに100人規模のもくもく会を上手く管理・進行させる自信もなく、とりあえず40人（それでも十分多いですが）でやってみようという事になりました。&lt;/p&gt;
+
+&lt;p&gt;ただ、いざconnpassで参加者を募集するとの40人はすぐ埋まってしまい、キャンセル待ちで登録して頂いた方も多く居ました。momonga.vimは不定期という体ではありますがおおよそ毎月開催していますので、今回来られなかった方も、またの機会に是非ご参加頂けると嬉しいです。&lt;/p&gt;
+
+&lt;p&gt;今回はC++界隈では有名な江添さんがいらっしゃるということや、暗黒美夢王ことShougoさんも参加しエディ歌を披露するという前情報もあり、開催前からやばそうな雰囲気は漂っていた様に感じます。&lt;/p&gt;
+
+&lt;h2 id="momonga.vim-#6-の様子"&gt;momonga.vim #6 の様子&lt;/h2&gt;
+
+&lt;p&gt;普段momonga.vimに参加して頂いている方も多かったのですが、今回は江添さんの影響もあってか初めて来られる方も多かったのではないかと思います。
+40人という人数でしたので、机の配置としては10人ずつの島が4つという形になりました。そのうちの1つは江添さんとC++er数人に加えShougoさんというメンツが固まっており、異様な雰囲気がありました。&lt;/p&gt;
+
+&lt;h3 id="オープニング"&gt;オープニング&lt;/h3&gt;
+
+&lt;p&gt;13:30の開場から続々と参加者が到着し、50分頃には大体30数人の方が集まったかと思います。40人規模での開催ということもあり、まず私がWiFiなどの設備や座席管理サービス&lt;a href="http://sekico.co/"&gt;sekicoco&lt;/a&gt;、Twitterハッシュタグ&lt;a href="https://twitter.com/search?f=realtime&amp;amp;q=MomongaVim%20OR%20momonga.vim&amp;amp;src=typd"&gt;#MomongaVim&lt;/a&gt;についての説明、またもくもく会の趣旨などについて説明を行いました。&lt;/p&gt;
+
+&lt;p&gt;その後、Shougoさんによるエディ歌の歌唱が行われました。もくもく会に参加されたことのない方のために補足すると、普通もくもく会では歌を歌います。本当ですよ。オープニング用楽曲として2曲が熱唱された後、Shougoさんによる歌詞の解説が行われました。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;もくもくといえば歌などと訳のわからないことを述べており (略 &lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt;&lt;/p&gt;&amp;mdash; ばしゅら (@basyura) &lt;a href="https://twitter.com/basyura/statuses/495430900033654785"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;もくもく会に来たらライブが始まった &lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt;&lt;/p&gt;&amp;mdash; Rust cat (@nekokawaee) &lt;a href="https://twitter.com/nekokawaee/statuses/495443100815208449"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;暗黒美夢王の熱唱がたまらなく骨に染みる &lt;a href="https://twitter.com/hashtag/momongavim?src=hash"&gt;#momongavim&lt;/a&gt;&lt;/p&gt;&amp;mdash; BRS (@xga) &lt;a href="https://twitter.com/xga/statuses/495443381930057729"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;完全にあぶない。&amp;#10; &lt;a href="https://twitter.com/hashtag/momongavim?src=hash"&gt;#momongavim&lt;/a&gt;&lt;/p&gt;&amp;mdash; ぱぶり・ら・てぃあきゃっと (@public_ai000ya) &lt;a href="https://twitter.com/public_ai000ya/statuses/495445011547172866"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;1曲終わるごとにその曲の解説が入る &lt;a href="https://twitter.com/hashtag/momongavim?src=hash"&gt;#momongavim&lt;/a&gt;&lt;/p&gt;&amp;mdash; りんだん [[deprecated]] (@Linda_pp) &lt;a href="https://twitter.com/Linda_pp/statuses/495444060379701248"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt; 歌詞の解説。Vimがもう一人の自分を作る。。。&lt;/p&gt;&amp;mdash; Shingo Kawamura (@blp1526) &lt;a href="https://twitter.com/blp1526/statuses/495444186980560896"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt; タグを読んでるけど勉強会の雰囲気全くない。こわい。&lt;/p&gt;&amp;mdash; mattn (@mattn_jp) &lt;a href="https://twitter.com/mattn_jp/statuses/495470135684001793"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h3 id="もくもく"&gt;もくもく&lt;/h3&gt;
+
+&lt;p&gt;その後、会の趣旨であるもくもくが行われました。もくもく会はその名の通りもくもくと作業を進めるものですが、Vimについての雑談や、Vimの設定やVim scriptプログラミングに関しての質問を気軽に行えるというのもまた1つの醍醐味です。せっかく多くの人が同じ場所に集まったのですから、Vimmer同士の交流も楽しみたいですよね。とはいえ、今回は初めて参加される方も多く居ました。中々話しかけづらいというのもあるかと思い、「この人コミュニケーションすごいできる」の通り名を持つ私としては、ここはひとつ皆さんにアドバイスをしてあげようと思い、コミュニケーションを円滑に進めるための魔法の言葉「進捗どうですか」を皆さんに教えてあげました。女の子とのデートする時や就職活動など、様々なシーンで使える便利ワードなので、みなさんも是非ご活用くださいね。&lt;/p&gt;
+
+&lt;p&gt;島を4つに分けたのが功を奏したのか、もくもく会自体はそこそこ上手く進められたかなと思います。私の進捗としては、Vim pluginのドキュメント生成に関する補助プラグインを作ろうと思い、それで使用するエンジンはgolangで書こうと思い、golangを書くためにVimにgolangのプラグインを導入しようと試み、その過程で昔作った&lt;a href="https://github.com/supermomonga/vimshell-inline-history.vim"&gt;vimshell-inline-history.vim&lt;/a&gt;というプラグインに不具合があることが発覚し、それの修正をしました。よくよく考えたら今までもくもく会でYak Shaving以外の事やってない気がする。&lt;/p&gt;
+
+&lt;p&gt;あと、少し前から把握していて修正を試みていたVimShellのバグについて、自分だけでは分からなかった点をShougoさんに話を聞こうと思ったら、「それ先週直しましたよ」と言われ、アッハイ、でした。&lt;/p&gt;
+
+&lt;h3 id="vim-script-テクニックバイブル"&gt;Vim script テクニックバイブル&lt;/h3&gt;
+
+&lt;p&gt;また、今月6日に発売の「&lt;a href="http://www.amazon.co.jp/gp/product/4774166340/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=4774166340&amp;linkCode=as2&amp;tag=supermomonga-22"&gt;Vim script テクニックバイブル ~Vim使いの魔法の杖&lt;/a&gt;&lt;img src="http://ir-jp.amazon-adsystem.com/e/ir?t=supermomonga-22&amp;l=as2&amp;o=9&amp;a=4774166340" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;」という書籍があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.amazon.co.jp/gp/product/4774166340/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=4774166340&amp;linkCode=as2&amp;tag=supermomonga-22"&gt;&lt;img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4774166340&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=supermomonga-22" &gt;&lt;/a&gt;&lt;img src="http://ir-jp.amazon-adsystem.com/e/ir?t=supermomonga-22&amp;l=as2&amp;o=9&amp;a=4774166340" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらの書籍を書店でいち早くゲットされて来たmittanさん(&lt;a href="https://twitter.com/modsound"&gt;@modsound&lt;/a&gt;)が、著者の一人であるShougoさんにサインをしてもらっていました。うらやましい。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-08-03-1.jpg" class="full" /&gt;&lt;/p&gt;
+
+&lt;p&gt;記念撮影。&lt;/p&gt;
+
+&lt;h3 id="休憩タイム"&gt;休憩タイム&lt;/h3&gt;
+
+&lt;p&gt;途中で30分ほど休憩タイムを取りました。自分が座っている席から離れいろんな人と話す人や、アイスとか買いに行ったりするマンボウや、ひたすらもくもくする方や、「進捗どうですか」しまくるももんがとかが居ました。&lt;/p&gt;
+
+&lt;p&gt;その後、またもくもく再開。&lt;/p&gt;
+
+&lt;h3 id="もくもく"&gt;もくもく&lt;/h3&gt;
+
+&lt;p&gt;EmacsのEvil使いの方がいらっしゃったので、後半のもくもくタイムではその方にEmacsで困ってることについて質問していました。これが結構難題で、結局解決できず。&lt;/p&gt;
+
+&lt;p&gt;ずっと一緒に解決策を調べてくれたkinoさん(&lt;a href="https://twitter.com/arte_nut"&gt;@arte_nut&lt;/a&gt;)、ありがとうございました！&lt;/p&gt;
+
+&lt;h3 id="進捗報告会"&gt;進捗報告会&lt;/h3&gt;
+
+&lt;p&gt;そうこうしているうちに終了45分前になり、進捗報告会となりました。作ったプラグインなどの成果報告を行いたい方が、プロジェクタなどに映しながら報告をしたり、それに質問をしたりする会です。プラグインの紹介が2つ、ウェブサービスの紹介が1つありました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;りんだんさん(&lt;a href="https://twitter.com/linda_pp"&gt;@Linda_pp&lt;/a&gt;)の、英文法をチェックするプラグインの経過報告（そのうち正式リリースされると思います）&lt;/li&gt;
+&lt;li&gt;うさぎさん(&lt;a href="https://twitter.com/rbtnn"&gt;@rbtnn&lt;/a&gt;)の、某ぷよぷ◯よのVim script実装&lt;a href="https://github.com/rbtnn/puyo.vim"&gt;puyo.vim&lt;/a&gt;の紹介と、開発中の某スーパーマ◯リオブラザーズのVim script実装の経過報告&lt;/li&gt;
+&lt;li&gt;cocoponさん(&lt;a href="https://twitter.com/cocopon"&gt;@cocopon&lt;/a&gt;)の、&lt;a href="http://cocopon.me/app/vim-color-gallery/"&gt;Vim Colorscheme Gallery&lt;/a&gt;新機能の紹介&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;puyo.vimとmario.vim!! &lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt; &lt;a href="http://t.co/2Ch9w7fysa"&gt;pic.twitter.com/2Ch9w7fysa&lt;/a&gt;&lt;/p&gt;&amp;mdash; mittan (@modsound) &lt;a href="https://twitter.com/modsound/statuses/495501795502731264"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;mario.vim、スクロール／ジャンプ／移動は実装できた。まだ、クリボーが動かない。&amp;#10;&lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt; &lt;a href="http://t.co/rG5zaSbY6z"&gt;pic.twitter.com/rG5zaSbY6z&lt;/a&gt;&lt;/p&gt;&amp;mdash; Vimうさぎさん(C++力ないよー) (@rbtnn) &lt;a href="https://twitter.com/rbtnn/statuses/495487348797235200"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;既にマリ◯オがジャンプしてました。すごい。Vimはマルチプラットフォームのゲームコンソールだったのだ！&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;Vimうさぎさん「Vimでマリオ実装した」&amp;#10;会場（ざわ…）&amp;#10;暗黒美無王「Excel で実装できるのだから VimScript でできないはずがない」&amp;#10;会場（ざわ…ざわ…） &lt;a href="https://twitter.com/hashtag/momongavim?src=hash"&gt;#momongavim&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kuniwak (@orga_chem) &lt;a href="https://twitter.com/orga_chem/statuses/495501317024927744"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h3 id="エンディング"&gt;エンディング&lt;/h3&gt;
+
+&lt;p&gt;というわけでShougoさんがエンディング曲を2曲歌います。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;暗黒美夢王によるエンディングテーマキター &lt;a href="https://twitter.com/hashtag/momongavim?src=hash"&gt;#momongavim&lt;/a&gt;&lt;/p&gt;&amp;mdash; Naoyuki Kanezawa (@nkzawa) &lt;a href="https://twitter.com/nkzawa/statuses/495505732947554304"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;例によって歌詞の解説が入りました。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;光のVimmerと闇のVimmerが出会うと復活する &lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt;&lt;/p&gt;&amp;mdash; sys9kdr (@sys9kdr) &lt;a href="https://twitter.com/sys9kdr/statuses/495508213354074112"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;VimとVimmerの悲しい過去。 Vimすら破壊しない力。完全体として復活してしまった。 &lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt;&lt;/p&gt;&amp;mdash; sys9kdr (@sys9kdr) &lt;a href="https://twitter.com/sys9kdr/statuses/495508472239104002"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;暗黒的だ…。&amp;#10;&lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt;&lt;/p&gt;&amp;mdash; 今をときめくあいや氏 (@aiya_000) &lt;a href="https://twitter.com/aiya_000/statuses/495509039220932608"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;っていうかもくもく会で歌とかどう考えても完全に頭おかしいですね。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;なんなんだmomongavim&lt;/p&gt;&amp;mdash; Akira, M. (@ka9e) &lt;a href="https://twitter.com/ka9e/statuses/495508635506589696"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h2 id="解散"&gt;解散&lt;/h2&gt;
+
+&lt;p&gt;そんな感じでお片付けして解散しました。&lt;/p&gt;
+
+&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;というわけで、参加して下さった皆さん、ありがとうございました。みなさんのレポート記事楽しみにしています。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;おはようございます。ところで参加レポート記事をブログに投稿するまでがmomonga.vimですよ。 &lt;a href="https://twitter.com/hashtag/MomongaVim?src=hash"&gt;#MomongaVim&lt;/a&gt;&lt;/p&gt;&amp;mdash; ももんが（あきらかに） (@supermomonga) &lt;a href="https://twitter.com/supermomonga/statuses/495678571835183104"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;また、今回開場を提供して頂いたドワンゴさん、会場提供のセッティングを行って頂きましたドワンゴの江添さん並びにmesoさん、ありがとうございました。&lt;/p&gt;
+
+&lt;p&gt;ところでそれとは全く関係ない話なのですが、最近私が使っている「&lt;a href="http://www.nicovideo.jp/"&gt;ニコニコ動画&lt;/a&gt;」という便利な動画投稿サイトがありますので、よろしければ利用してみてくださいね。また、&lt;a href="http://info.nicovideo.jp/lp/pc_note/"&gt;プレミアム会員になれば、月々たった540円で様々な特典が受けられます&lt;/a&gt;。要チェックですね！&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;それでは、また次回のmomonga.vimでお会いしましょう！&lt;/p&gt;
+
+&lt;h2 id="the-next-momonga.vim-is..."&gt;The next momonga.vim is...&lt;/h2&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/supermomonga"&gt;@supermomonga&lt;/a&gt; 弊社 @渋谷 、会場提供できますので、なにかあったらご相談くださいー&lt;/p&gt;&amp;mdash; Kuniwak (@orga_chem) &lt;a href="https://twitter.com/orga_chem/statuses/495511094861905920"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/supermomonga"&gt;@supermomonga&lt;/a&gt; 会場参考記事です&lt;a href="http://t.co/XjFshOEW5S"&gt;http://t.co/XjFshOEW5S&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kuniwak (@orga_chem) &lt;a href="https://twitter.com/orga_chem/statuses/495515031748874240"&gt;2014, 8月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style="font-size: 150%;font-weight:bold;"&gt;
+&lt;em&gt;次回はmixi開催…！？&lt;/em&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+</content>
+  </entry>
   <entry>
     <title>momonga.vim #4 に行ってきた</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-4-report.html"/>
@@ -290,76 +452,6 @@ git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;私なりの考えを記事にしてみました。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Vimで離れた複数の行に対する一括操作を行う</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/qfreplace-benri.html"/>
-    <id>http://blog.url.com/articles/vim/qfreplace-benri.html</id>
-    <published>2014-05-14T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、165日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="離れた複数の行に一括操作を行いたい"&gt;離れた複数の行に一括操作を行いたい&lt;/h2&gt;
-
-&lt;p&gt;と言ってもなんのことか全く伝わらないと思うので例を挙げたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/deris/vim-rengbang"&gt;vim-rengbang&lt;/a&gt;というプラグインが存在します。これはVimで連番を扱うためのプラグインで、機能の一つとして、選択した範囲の数字を連番として書きなおしてくれるコマンドがあります。&lt;/p&gt;
-&lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;こういったhtmlがあったとして、&lt;code&gt;data-sugoi-id&lt;/code&gt;の値が全て0になっている部分を0,1,2...という連番数字に書き換えたいとします。&lt;/p&gt;
-
-&lt;p&gt;この時、&lt;code&gt;data-sugoi-id&lt;/code&gt;の数字を含む行を選択し&lt;code&gt;:&amp;#39;&amp;lt;,&amp;#39;&amp;gt;RengBang&lt;/code&gt;を実行すると、プラグインが意図通りに書き換えを行ってくれます。大変便利ですね。&lt;/p&gt;
-
-&lt;p&gt;しかし、次のような例はどうでしょうか。&lt;/p&gt;
-&lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-kanari-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（とても）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-kanari-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（とても）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-sugoi-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（かなり）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;data-kanari-id=&lt;/span&gt;&lt;span class="s"&gt;"0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;（とても）&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;このhtmlを、先ほどと同じように&lt;code&gt;data-sugoi-id&lt;/code&gt;の数字を連番に書き換えたい、ただし&lt;code&gt;data-kanari-id&lt;/code&gt;の値はそのままにしておきたい、という場合はどうでしょうか。&lt;/p&gt;
-
-&lt;p&gt;先ほどとおなじように&lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;から&lt;code&gt;&amp;lt;/ul&amp;gt;&lt;/code&gt;までの行を選択して&lt;code&gt;:&amp;#39;&amp;lt;,&amp;#39;&amp;gt;RengBang&lt;/code&gt;した場合は、意図しない&lt;code&gt;data-kanari-id&lt;/code&gt;の部分まで書き換えられてしまいます。実はvim-rengbangの標準機能でこういった例にも対応はできるのですが、ここはvim-rengbangに限らず、「連続していない複数の行に対して一度でまとめて処理を行いたい」といった場面で汎用的に使えるテクニックがあると便利そうです。&lt;/p&gt;
-
-&lt;h2 id="qfreplace便利"&gt;qfreplace便利&lt;/h2&gt;
-
-&lt;p&gt;そこで&lt;a href="https://github.com/thinca/vim-qfreplace"&gt;vim-qfreplace&lt;/a&gt;の出番です。これは&lt;code&gt;:grep&lt;/code&gt;の結果を用いて置換用のUIを提供してくれる便利プラグインです。&lt;/p&gt;
-
-&lt;p&gt;qfreplaceを導入することで、上記の様な場面での汎用的な解決方法が得られます。&lt;/p&gt;
-
-&lt;p&gt;まず、&lt;code&gt;:vimgrep /data-sugoi-id/ %&lt;/code&gt;として、現在開いているhtmlのバッファを対象に、&lt;code&gt;data-sugoi-id&lt;/code&gt;という文字列を含む行のみを対象とした検索を行います。その後&lt;code&gt;:copen&lt;/code&gt;を実行しQuickFixバッファを開きましょう、QuickFixバッファに移動したら、&lt;code&gt;:Qfreplace&lt;/code&gt;コマンドを実行します。すると、検索にヒットした行のみがリストアップされたバッファが作成されますので、行を全て選択し&lt;code&gt;:&amp;#39;&amp;lt;,&amp;#39;&amp;gt;RengBang&lt;/code&gt;を実行しましょう。その後&lt;code&gt;:wq&lt;/code&gt;を実行すると、元のhtmlバッファに変更が反映されます。&lt;/p&gt;
-
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;単純な置換を行いたい場合は標準の置換コマンドやマクロなどを利用するのが簡単ではありますが、vim-rengbangの様に、「複数の行に対して処理を行う」かつ「処理の内容が他の行に行った処理の内容に依存する」といった処理を行いたい場合、このテクニックが有効です。&lt;/p&gt;
-
-&lt;p&gt;ちなみにこのtipsは私がおしょーさんに相談しておしょーさんが考えてくれたものです。おしょーさんすごい。&lt;/p&gt;
 
 &lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
 
