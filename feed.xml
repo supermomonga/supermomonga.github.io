@@ -5,10 +5,66 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-08-03T00:00:00+09:00</updated>
+  <updated>2014-08-10T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>momonga.vim #5 に行ってきた</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-5-report.html"/>
+    <id>http://blog.url.com/articles/vim/momongavim-5-report.html</id>
+    <published>2014-08-10T00:00:00+09:00</published>
+    <updated>2014-08-10T06:02:12+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;去る7月26日、&lt;a href="http://connpass.com/event/7231/"&gt;momonga.vim #5&lt;/a&gt;が開催されました。遅くなりましたが、参加レポート記事を書きたいと思います。記憶が大分曖昧ですががんばって書きます。&lt;/p&gt;
+
+&lt;h2 id="集合"&gt;集合&lt;/h2&gt;
+
+&lt;p&gt;なんか午前のどこかでだれかが何人か集まって昼食をなんかアレした記憶があります。&lt;/p&gt;
+
+&lt;h2 id="開催"&gt;開催&lt;/h2&gt;
+
+&lt;p&gt;昼ごろに無事開催されました。私はなんかVimに関する事、もしくは関さないことをやっていた様に記憶しています。犬さんは「クゥ〜ン」とか言ってた。&lt;/p&gt;
+
+&lt;h2 id="二次会"&gt;二次会&lt;/h2&gt;
+
+&lt;p&gt;二次会はももんが邸に何人かがアレして、終電前ごろまでVimとかをやったと思います。&lt;/p&gt;
+
+&lt;h2 id="三次会"&gt;三次会&lt;/h2&gt;
+
+&lt;p&gt;三次会はマンボウの人が徹夜でなんかガンガン進めておりました。&lt;/p&gt;
+
+&lt;h2 id="カレー"&gt;カレー&lt;/h2&gt;
+
+&lt;p&gt;朝にCoCo壱番屋のカレーのトッピングを割としました。&lt;/p&gt;
+
+&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;おわり&lt;/p&gt;
+
+&lt;p&gt;意外と覚えてるものですね。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Emacsでのescapeキーへのキーバインド割り当て方法について</title>
+    <link rel="alternate" href="http://blog.url.com/articles/emacs/emacs-escape-keybinding.html"/>
+    <id>http://blog.url.com/articles/emacs/emacs-escape-keybinding.html</id>
+    <published>2014-08-04T00:00:00+09:00</published>
+    <updated>2014-08-04T07:27:19+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h2 id="xemacsでのキー検出について"&gt;XEmacsでのキー検出について&lt;/h2&gt;
+
+&lt;p&gt;XEmacsでは、&lt;code&gt;escキー&lt;/code&gt;を打鍵した際には&lt;code&gt;[escape]&lt;/code&gt;が、&lt;code&gt;C-[&lt;/code&gt;を打鍵した際には&lt;code&gt;^[&lt;/code&gt;が送出される。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;[escape]&lt;/code&gt;は&lt;code&gt;(kbd &amp;quot;&amp;lt;escape&amp;gt;&amp;quot;)&lt;/code&gt;の返り値、&lt;code&gt;^[&lt;/code&gt;は&lt;code&gt;(kbd &amp;quot;ESC&amp;quot;)&lt;/code&gt;の返り値として取得できる。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;code&gt;function-keymap&lt;/code&gt;により、&lt;code&gt;[escape]M-&lt;/code&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>momonga.vim #6 in ドワンゴ 開催レポート記事</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-6-report.html"/>
@@ -348,110 +404,6 @@ git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
 &lt;p&gt;久しぶりに風邪で38度超えたし、咳で喉が完全に終了して呼吸するだけで咳がでるみたいな感じになってかなりつらかった。&lt;/p&gt;
 
 &lt;p&gt;これを書いている今現在も微熱あるし喉は終了しています。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>TokyoVim #19 に行ってきた</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/tokyovim-19-report.html"/>
-    <id>http://blog.url.com/articles/vim/tokyovim-19-report.html</id>
-    <published>2014-05-22T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、173日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="tokyovim-#19-に行ってきた"&gt;TokyoVim #19 に行ってきた&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://tokyovim.connpass.com/event/6041/"&gt;TokyoVim #19&lt;/a&gt;に行ってきたので、そのレポート記事を書きたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-05-22-1.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;今回は神社が会場です嘘です。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-05-22-2.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;会場ではない神社です。&lt;/p&gt;
-
-&lt;h2 id="到着"&gt;到着&lt;/h2&gt;
-
-&lt;p&gt;電車でNexus7見てたらなんか TokyoVim #20 の募集が開始されてたので登録した。その後到着。道に迷ったので10分ほど遅れました。&lt;/p&gt;
-
-&lt;p&gt;私「すみません、&lt;a href="http://vimclip.jp/"&gt;VimClip&lt;/a&gt;の勉強会の会場ってここで合ってますか？」&lt;/p&gt;
-
-&lt;p&gt;kanaさん「えっ、いや、あー、ちがいます。」&lt;/p&gt;
-
-&lt;p&gt;私「ちがうんですか…」&lt;/p&gt;
-
-&lt;p&gt;みたいな会話をしました。&lt;/p&gt;
-
-&lt;h2 id="もくもく会"&gt;もくもく会&lt;/h2&gt;
-
-&lt;p&gt;もくもくしました。今回は割と進捗が出せた気がします。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ツイッターかなりはかどった（かなり）&lt;/li&gt;
-&lt;li&gt;VimShellのコードリーディングしていた&lt;/li&gt;
-&lt;li&gt;Unite.vimをプラグインのUIフレームワークとして使うことについて考えてた&lt;/li&gt;
-&lt;li&gt;Clojureの環境ちょっと整えた&lt;/li&gt;
-&lt;li&gt;新プラグインの名前考えてた&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="kanaさんライブコーディング"&gt;kanaさんライブコーディング&lt;/h2&gt;
-
-&lt;p&gt;タイプしたキーを表示してくれる便利ソフトkeycastrがMarvericksでは動かないみたいな問題があって、どうしよみたいな感じになりました。そこで、私が最近知った便利サイトGoogleというのをみんなに教えてあげました。Googleというのは、知りたいことをキーボードで入力するだけでホームページを探してくれるホームページです便利。&lt;/p&gt;
-
-&lt;p&gt;無事keycastrが使えるようになりライブコーディング的なやつが開始されました。kanaさんは分割ウィンドウの移動にoptionキー（altキー）を多用しているみたいでなるほどーという感じがあった。&lt;/p&gt;
-
-&lt;h2 id="解散"&gt;解散&lt;/h2&gt;
-
-&lt;p&gt;という感じであっというまに終了時間になった。なんか今回ずっともくもくしていてさっちゃんさんとあんまりというか恐らく一言も会話できなかった感あるので次会ったらすごい話したい。&lt;/p&gt;
-
-&lt;h2 id="二次会"&gt;二次会&lt;/h2&gt;
-
-&lt;p&gt;二次会は私とあの人とあの人とかで行きました。ファミレスで丼を食べながらVimをやったりしました。面白い話を色々したきがするけどほとんど覚えてない。りんだんさんが食べてたやつがおいしそうだったけど、何食べてたのかは覚えてない。&lt;/p&gt;
-
-&lt;p&gt;だいたい21時か22時か23時くらいに解散しました（しました）。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/uploads/2014-05-22-3.jpg" class="full" /&gt;&lt;/p&gt;
-
-&lt;p&gt;丼です。&lt;/p&gt;
-
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;二ヶ月間くらい実家に帰っていて東京に居らず、そのため勉強会参加できていなかったので、久しぶりのVim勉強会でよかった。かなりたのしかった（かなり）。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>プログラミングの生産性を上げるには</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/say-son-say.html"/>
-    <id>http://blog.url.com/articles/vim/say-son-say.html</id>
-    <published>2014-05-20T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/uploads/2014-05-20-vim.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://cside.hatenablog.com/entry/2014/05/19/021253"&gt;プログラミングの生産性を上げるには - Cside::Private&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;他の人の考えも聞きたい。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;私なりの考えを記事にしてみました。&lt;/p&gt;
 
 &lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
 
