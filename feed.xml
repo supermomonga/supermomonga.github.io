@@ -5,10 +5,30 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-08-10T00:00:00+09:00</updated>
+  <updated>2014-10-01T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>実践Vimのkindle版が285円で買える</title>
+    <link rel="alternate" href="http://blog.url.com/articles/vim/jissenvim-sugoiyasui.html"/>
+    <id>http://blog.url.com/articles/vim/jissenvim-sugoiyasui.html</id>
+    <published>2014-10-01T00:00:00+09:00</published>
+    <updated>2014-10-01T05:01:26+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;株式会社KADOKAWAと株式会社ドワンゴの経営統合記念で、kindleで技術書のセールやってるっぽい。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/uploads/2014-10-01-1.png" class="" /&gt;&lt;/p&gt;
+
+&lt;div style="text-align: center; padding: 70px 0;"&gt;
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=webreferrer11-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00HWLJI3U" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a target="_blank" href="http://www.amazon.co.jp/s/?_encoding=UTF8&amp;camp=247&amp;creative=7399&amp;keywords=%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E6%9B%B8%E7%B1%8D&amp;linkCode=ur2&amp;qid=1412106603&amp;rh=n%3A2250738051%2Cn%3A2275256051%2Cn%3A2291657051%2Ck%3A%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E6%9B%B8%E7%B1%8D%2Cp_lbr_publishers_browse-bin%3AKADOKAWA%2F%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%BB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%2Cp_36%3A28500-28500&amp;sort=popularity-rank&amp;tag=webreferrer11-22"&gt;その他285円セール中の技術書が割と一杯ある&lt;/a&gt;ので、色々買った。Dart本とかRedis本とかが285円になってて便利すぎる…&lt;img src="https://ir-jp.amazon-adsystem.com/e/ir?t=webreferrer11-22&amp;l=ur2&amp;o=9" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>momonga.vim #5 に行ってきた</title>
     <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-5-report.html"/>
@@ -372,42 +392,6 @@ git commit -m &lt;span class="s1"&gt;'setup bootswatch'&lt;/span&gt;
 &lt;pre class="highlight shell"&gt;git add app/controllers/application_controller.rb
 git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
 &lt;/pre&gt;
-</content>
-  </entry>
-  <entry>
-    <title>風邪で喉が終了したのでVimで会話していた</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/shaberu-vim-recursive.html"/>
-    <id>http://blog.url.com/articles/vim/shaberu-vim-recursive.html</id>
-    <published>2014-06-03T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、185日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
-
-&lt;p&gt;風邪でめっちゃ熱あるし咳で喉がやばいみたいな感じになっていたら知人の美少女エンジニアが心配してご飯作りに来てくれたんですが、喉が完全に終了していてしまっており会話ができないのでこれはどうするかと考えた結果ずっと拙&lt;a href="https://github.com/supermomonga/shaberu.vim"&gt;Shaberu.vim&lt;/a&gt;で会話していました。&lt;/p&gt;
-
-&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
-
-&lt;p&gt;ただ連続して&lt;code&gt;:ShaberuSay&lt;/code&gt;って打つのだるいなみたいになって、熱で朦朧としながら新しく&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;および&lt;code&gt;:ShaberuSayRecursive&lt;/code&gt;というコマンドを実装しました。&lt;/p&gt;
-
-&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;は、対話的にスピーチするテキストを入力するコマンドです。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;:ShaberuSayRecursive&lt;/code&gt;は、キャンセル（&lt;code&gt;ESC&lt;/code&gt;を打鍵など）されるまで&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;を再帰的に延々と呼び出すコマンドです。これにより連続してスムーズにVimに喋らせ続けることができるようになりました。&lt;/p&gt;
-
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;久しぶりに風邪で38度超えたし、咳で喉が完全に終了して呼吸するだけで咳がでるみたいな感じになってかなりつらかった。&lt;/p&gt;
-
-&lt;p&gt;これを書いている今現在も微熱あるし喉は終了しています。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
 </content>
   </entry>
 </feed>
