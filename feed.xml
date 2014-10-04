@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog Name</title>
-  <subtitle>Blog subtitle</subtitle>
-  <id>http://blog.url.com/</id>
-  <link href="http://blog.url.com/"/>
-  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <title>かなりすごいブログ</title>
+  <subtitle>かなりすごい（かなり）</subtitle>
+  <id>http://blog.supermomonga.com/</id>
+  <link href="http://blog.supermomonga.com/"/>
+  <link href="http://blog.supermomonga.com/feed.xml" rel="self"/>
   <updated>2014-10-01T00:00:00+09:00</updated>
   <author>
-    <name>Blog Author</name>
+    <name>supermomonga</name>
   </author>
   <entry>
     <title>実践Vimのkindle版が285円で買える</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/jissenvim-sugoiyasui.html"/>
-    <id>http://blog.url.com/articles/vim/jissenvim-sugoiyasui.html</id>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/jissenvim-sugoiyasui.html"/>
+    <id>http://blog.supermomonga.com/articles/vim/jissenvim-sugoiyasui.html</id>
     <published>2014-10-01T00:00:00+09:00</published>
     <updated>2014-10-01T08:04:29+09:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>supermomonga</name>
     </author>
     <content type="html">&lt;p&gt;&lt;em&gt;追記：値付けミスだった様で、現在は約半額の1,120円になっています&lt;/em&gt;&lt;/p&gt;
 
@@ -33,12 +33,12 @@
   </entry>
   <entry>
     <title>momonga.vim #5 に行ってきた</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-5-report.html"/>
-    <id>http://blog.url.com/articles/vim/momongavim-5-report.html</id>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/momongavim-5-report.html"/>
+    <id>http://blog.supermomonga.com/articles/vim/momongavim-5-report.html</id>
     <published>2014-08-10T00:00:00+09:00</published>
     <updated>2014-08-10T06:02:12+09:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>supermomonga</name>
     </author>
     <content type="html">&lt;p&gt;去る7月26日、&lt;a href="http://connpass.com/event/7231/"&gt;momonga.vim #5&lt;/a&gt;が開催されました。遅くなりましたが、参加レポート記事を書きたいと思います。記憶が大分曖昧ですががんばって書きます。&lt;/p&gt;
 
@@ -71,12 +71,12 @@
   </entry>
   <entry>
     <title>Emacsでのescapeキーへのキーバインド割り当て方法について</title>
-    <link rel="alternate" href="http://blog.url.com/articles/emacs/emacs-escape-keybinding.html"/>
-    <id>http://blog.url.com/articles/emacs/emacs-escape-keybinding.html</id>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/emacs/emacs-escape-keybinding.html"/>
+    <id>http://blog.supermomonga.com/articles/emacs/emacs-escape-keybinding.html</id>
     <published>2014-08-04T00:00:00+09:00</published>
     <updated>2014-08-04T07:27:19+09:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>supermomonga</name>
     </author>
     <content type="html">&lt;h2 id="xemacsでのキー検出について"&gt;XEmacsでのキー検出について&lt;/h2&gt;
 
@@ -89,12 +89,12 @@
   </entry>
   <entry>
     <title>momonga.vim #6 in ドワンゴ 開催レポート記事</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-6-report.html"/>
-    <id>http://blog.url.com/articles/vim/momongavim-6-report.html</id>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/momongavim-6-report.html"/>
+    <id>http://blog.supermomonga.com/articles/vim/momongavim-6-report.html</id>
     <published>2014-08-03T00:00:00+09:00</published>
     <updated>2014-08-03T08:42:18+09:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>supermomonga</name>
     </author>
     <content type="html">&lt;p&gt;&lt;a href="http://connpass.com/event/7360/"&gt;momonga.vim #6 in ドワンゴ（あきらかに）&lt;/a&gt;を開催しましたので、レポート記事を投稿します。&lt;/p&gt;
 
@@ -251,24 +251,24 @@
   </entry>
   <entry>
     <title>momonga.vim #4 に行ってきた</title>
-    <link rel="alternate" href="http://blog.url.com/articles/vim/momongavim-4-report.html"/>
-    <id>http://blog.url.com/articles/vim/momongavim-4-report.html</id>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/momongavim-4-report.html"/>
+    <id>http://blog.supermomonga.com/articles/vim/momongavim-4-report.html</id>
     <published>2014-06-09T00:00:00+09:00</published>
     <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>supermomonga</name>
     </author>
     <content type="html">&lt;p&gt;そして MacBook Air が寿命で壊れました&lt;/p&gt;
 </content>
   </entry>
   <entry>
     <title>Rails4のオレオレRailsComposer用のメモ書き</title>
-    <link rel="alternate" href="http://blog.url.com/articles/ruby/rails4-setup.html"/>
-    <id>http://blog.url.com/articles/ruby/rails4-setup.html</id>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/rails4-setup.html"/>
+    <id>http://blog.supermomonga.com/articles/ruby/rails4-setup.html</id>
     <published>2014-06-07T00:00:00+09:00</published>
     <updated>2014-07-21T23:21:28+09:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>supermomonga</name>
     </author>
     <content type="html">&lt;h2 id="init"&gt;Init&lt;/h2&gt;
 &lt;pre class="highlight shell"&gt;rails new appname
