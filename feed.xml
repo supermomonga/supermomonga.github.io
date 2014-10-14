@@ -5,10 +5,52 @@
   <id>http://blog.supermomonga.com/</id>
   <link href="http://blog.supermomonga.com/"/>
   <link href="http://blog.supermomonga.com/feed.xml" rel="self"/>
-  <updated>2014-10-01T00:00:00+09:00</updated>
+  <updated>2014-10-15T00:00:00+09:00</updated>
   <author>
     <name>supermomonga</name>
   </author>
+  <entry>
+    <title>糖質制限ダイエットしてる</title>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/others/diet.html"/>
+    <id>http://blog.supermomonga.com/articles/others/diet.html</id>
+    <published>2014-10-15T00:00:00+09:00</published>
+    <updated>2014-10-15T01:16:34+09:00</updated>
+    <author>
+      <name>supermomonga</name>
+    </author>
+    <content type="html">&lt;h2 id="糖質制限ダイエットしてる"&gt;糖質制限ダイエットしてる&lt;/h2&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=webreferrer11-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00BQ3EAVA" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;糖質制限ダイエットについては基本的にはこの本を読めばよくて、簡単にいえば糖質以外好きなだけ食べいいみたいな感じになる。&lt;/p&gt;
+
+&lt;p&gt;ただし、この方法論で言うところ、量食う人にとっての「好きなだけ」というのを舐めており、そうすると毎日鶏肉だけ1kg以上食べるということになり結果プラスマイナスゼロで変わらないみたいなことになった。&lt;/p&gt;
+
+&lt;p&gt;それだけ鶏肉食べてプラスマイナスゼロに収まったのは糖質制限ダイエットが効いているということではある。&lt;/p&gt;
+
+&lt;p&gt;それを踏まえて今は以下のルールを追加している。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;基本的に野菜を食べる。野菜なら好きなだけ食べていい。&lt;/li&gt;
+&lt;li&gt;サラダに入ってるものは糖質が多少あっても食べていい。&lt;/li&gt;
+&lt;li&gt;鶏ささみ・鶏もも（皮なし）は少しなら食べていい。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;肉1kgよりは野菜1kg食べたほうがカロリー少ないし健康的だろという方針です。&lt;/p&gt;
+
+&lt;p&gt;コンビニでサラダを買いまくって食べてます。&lt;/p&gt;
+
+&lt;p&gt;サラダパスタはNGですよ。麺が糖質なので。&lt;/p&gt;
+
+&lt;p&gt;コンビニのサラダは種類が色々ある上に作るのがだるくなくてよいので、同じものばっか食べて飽きることがないし、食べたいと思った時にすぐ食べられるので良い。&lt;/p&gt;
+
+&lt;p&gt;長く続けるにあたって、おなかすいた時にすぐ食べられる・作るのがだるくない（もしくは作らなくて良い）というのが重要。&lt;/p&gt;
+
+&lt;p&gt;コストとしてはそもそも野菜が高い上にコンビニの商品なのでより高くなる。安く済ませたいなら自分で野菜買ってきて料理作ってもいいけど、面倒なのが続かない人はコンビニが良い。&lt;/p&gt;
+
+&lt;p&gt;本当はサラダバーがあるファミレスが最強なんだけど、そう近くにあるものでもない。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>実践Vimのkindle版が285円で買える</title>
     <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/jissenvim-sugoiyasui.html"/>
@@ -67,24 +109,6 @@
 &lt;p&gt;おわり&lt;/p&gt;
 
 &lt;p&gt;意外と覚えてるものですね。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Emacsでのescapeキーへのキーバインド割り当て方法について</title>
-    <link rel="alternate" href="http://blog.supermomonga.com/articles/emacs/emacs-escape-keybinding.html"/>
-    <id>http://blog.supermomonga.com/articles/emacs/emacs-escape-keybinding.html</id>
-    <published>2014-08-04T00:00:00+09:00</published>
-    <updated>2014-08-04T07:27:19+09:00</updated>
-    <author>
-      <name>supermomonga</name>
-    </author>
-    <content type="html">&lt;h2 id="xemacsでのキー検出について"&gt;XEmacsでのキー検出について&lt;/h2&gt;
-
-&lt;p&gt;XEmacsでは、&lt;code&gt;escキー&lt;/code&gt;を打鍵した際には&lt;code&gt;[escape]&lt;/code&gt;が、&lt;code&gt;C-[&lt;/code&gt;を打鍵した際には&lt;code&gt;^[&lt;/code&gt;が送出される。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;[escape]&lt;/code&gt;は&lt;code&gt;(kbd &amp;quot;&amp;lt;escape&amp;gt;&amp;quot;)&lt;/code&gt;の返り値、&lt;code&gt;^[&lt;/code&gt;は&lt;code&gt;(kbd &amp;quot;ESC&amp;quot;)&lt;/code&gt;の返り値として取得できる。&lt;/p&gt;
-
-&lt;p&gt;また、&lt;code&gt;function-keymap&lt;/code&gt;により、&lt;code&gt;[escape]M-&lt;/code&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -262,138 +286,39 @@
 </content>
   </entry>
   <entry>
-    <title>Rails4のオレオレRailsComposer用のメモ書き</title>
-    <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/rails4-setup.html"/>
-    <id>http://blog.supermomonga.com/articles/ruby/rails4-setup.html</id>
-    <published>2014-06-07T00:00:00+09:00</published>
-    <updated>2014-07-21T23:21:28+09:00</updated>
+    <title>風邪で喉が終了したのでVimで会話していた</title>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/shaberu-vim-recursive.html"/>
+    <id>http://blog.supermomonga.com/articles/vim/shaberu-vim-recursive.html</id>
+    <published>2014-06-03T00:00:00+09:00</published>
+    <updated>2014-06-12T08:22:45+09:00</updated>
     <author>
       <name>supermomonga</name>
     </author>
-    <content type="html">&lt;h2 id="init"&gt;Init&lt;/h2&gt;
-&lt;pre class="highlight shell"&gt;rails new appname
-&lt;span class="nb"&gt;cd&lt;/span&gt; ./appname
-&lt;/pre&gt;
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、185日目の記事になります。&lt;/p&gt;
 
-&lt;h2 id="initialize-git-repository"&gt;Initialize git repository&lt;/h2&gt;
-&lt;pre class="highlight shell"&gt;git init
-git add -A
-git commit -m &lt;span class="s1"&gt;'initialize rails app'&lt;/span&gt;
-&lt;/pre&gt;
+&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
 
-&lt;h2 id="set-rbenv"&gt;Set rbenv&lt;/h2&gt;
-&lt;pre class="highlight shell"&gt;rbenv &lt;span class="nb"&gt;local &lt;/span&gt;2.1.1
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;".ruby-version"&lt;/span&gt; &amp;gt;&amp;gt; .gitignore
-git add .gitignore
-git commit -m &lt;span class="s2"&gt;"add .ruby-version to .gitignore"&lt;/span&gt;
-&lt;/pre&gt;
+&lt;p&gt;風邪でめっちゃ熱あるし咳で喉がやばいみたいな感じになっていたら知人の美少女エンジニアが心配してご飯作りに来てくれたんですが、喉が完全に終了していてしまっており会話ができないのでこれはどうするかと考えた結果ずっと拙&lt;a href="https://github.com/supermomonga/shaberu.vim"&gt;Shaberu.vim&lt;/a&gt;で会話していました。&lt;/p&gt;
 
-&lt;h2 id="gemfile"&gt;Gemfile&lt;/h2&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;ruby&lt;/span&gt; &lt;span class="s1"&gt;'2.1.1'&lt;/span&gt; &lt;span class="c1"&gt;## for heroku&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'therubyracer'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;platforms: :ruby&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'slim-rails'&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'unicorn'&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'cancancan'&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'devise'&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'activeadmin'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;github: &lt;/span&gt;&lt;span class="s1"&gt;'gregbell/active_admin'&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'twitter-bootswatch-rails'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'~&amp;gt; 3.1.1'&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'twitter-bootswatch-rails-helpers'&lt;/span&gt;
-&lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="ss"&gt;:development&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'better_errors'&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'binding_of_caller'&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'foreman'&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'html2slim'&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="ss"&gt;:production&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'pg'&lt;/span&gt; &lt;span class="c1"&gt;## for heroku&lt;/span&gt;
-  &lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'rails_12factor'&lt;/span&gt; &lt;span class="c1"&gt;## for heroku&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;pre class="highlight shell"&gt;bundle install
-git add Gemfile
-git add Gemfile.lock
-git commit -m &lt;span class="s1"&gt;'add some gems'&lt;/span&gt;
-&lt;/pre&gt;
+&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
 
-&lt;h2 id="setup-unicorn"&gt;setup unicorn&lt;/h2&gt;
+&lt;p&gt;ただ連続して&lt;code&gt;:ShaberuSay&lt;/code&gt;って打つのだるいなみたいになって、熱で朦朧としながら新しく&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;および&lt;code&gt;:ShaberuSayRecursive&lt;/code&gt;というコマンドを実装しました。&lt;/p&gt;
 
-&lt;p&gt;create &lt;code&gt;config/unicorn.rb&lt;/code&gt;&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;worker_processes&lt;/span&gt; &lt;span class="nb"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;ENV&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"WEB_CONCURRENCY"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;timeout&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;
-&lt;span class="n"&gt;preload_app&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
+&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
 
-&lt;span class="n"&gt;before_fork&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;worker&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-  &lt;span class="no"&gt;Signal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;trap&lt;/span&gt; &lt;span class="s1"&gt;'TERM'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-    &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s1"&gt;'Unicorn master intercepting TERM and sending myself QUIT instead'&lt;/span&gt;
-    &lt;span class="no"&gt;Process&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;kill&lt;/span&gt; &lt;span class="s1"&gt;'QUIT'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;Process&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;pid&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;p&gt;&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;は、対話的にスピーチするテキストを入力するコマンドです。&lt;/p&gt;
 
-  &lt;span class="n"&gt;defined?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt;
-    &lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;connection&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;disconnect!&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;p&gt;&lt;code&gt;:ShaberuSayRecursive&lt;/code&gt;は、キャンセル（&lt;code&gt;ESC&lt;/code&gt;を打鍵など）されるまで&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;を再帰的に延々と呼び出すコマンドです。これにより連続してスムーズにVimに喋らせ続けることができるようになりました。&lt;/p&gt;
 
-&lt;span class="n"&gt;after_fork&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;worker&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-  &lt;span class="no"&gt;Signal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;trap&lt;/span&gt; &lt;span class="s1"&gt;'TERM'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-    &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s1"&gt;'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 
-  &lt;span class="n"&gt;defined?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt;
-    &lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;establish_connection&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;pre class="highlight shell"&gt;git add config/unicorn.rb
-git commit -m &lt;span class="s1"&gt;'add unicorn config file'&lt;/span&gt;
-&lt;/pre&gt;
+&lt;p&gt;久しぶりに風邪で38度超えたし、咳で喉が完全に終了して呼吸するだけで咳がでるみたいな感じになってかなりつらかった。&lt;/p&gt;
 
-&lt;h2 id="setup-foreman-procfile"&gt;Setup foreman Procfile&lt;/h2&gt;
-&lt;pre class="highlight plaintext"&gt;echo 'web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb' &amp;gt;&amp;gt; Procfile
-git add Procfile
-git commit -m 'add Procfile'
-&lt;/pre&gt;
-&lt;pre class="highlight shell"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"RACK_ENV=development"&lt;/span&gt; &amp;gt;&amp;gt; .env
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"RAILS_ENV=development"&lt;/span&gt; &amp;gt;&amp;gt; .env
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"PORT=3000"&lt;/span&gt; &amp;gt;&amp;gt; .env
-&lt;/pre&gt;
-&lt;pre class="highlight shell"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;".env"&lt;/span&gt; &amp;gt;&amp;gt; .gitignore
-git add .gitignore
-git commit -m &lt;span class="s2"&gt;"add .env to .gitignore"&lt;/span&gt;
-&lt;/pre&gt;
+&lt;p&gt;これを書いている今現在も微熱あるし喉は終了しています。&lt;/p&gt;
 
-&lt;h2 id="devise-generate"&gt;Devise generate&lt;/h2&gt;
-&lt;pre class="highlight shell"&gt;rails generate devise:install
-rails generate devise User
-rake db:migrate
-git add -A
-git commit -m &lt;span class="s1"&gt;'setup devise'&lt;/span&gt;
-&lt;/pre&gt;
+&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
 
-&lt;p&gt;add following line to &lt;code&gt;config/environments/development.rb&lt;/code&gt;&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;action_mailer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;default_url_options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="ss"&gt;host: &lt;/span&gt;&lt;span class="s1"&gt;'localhost'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;port: &lt;/span&gt;&lt;span class="mi"&gt;3000&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;pre class="highlight shell"&gt;git add config/environments/development.rb
-git commit -m &lt;span class="s1"&gt;'set action mailer config'&lt;/span&gt;
-&lt;/pre&gt;
-&lt;pre class="highlight plaintext"&gt;rails g devise:views -f
-erb2slim -d ./app/views/devise/
-git add -A
-git commit -m 'add devise views'
-&lt;/pre&gt;
-
-&lt;h2 id="generate-layouts-and-devise-views"&gt;generate layouts and devise views&lt;/h2&gt;
-&lt;pre class="highlight shell"&gt;rails g bootswatch:install flatly -f
-rails g bootswatch:layout flatly -f
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'Rails.application.config.assets.precompile += %w( flatly.css )'&lt;/span&gt; &amp;gt;&amp;gt; config/initializers/assets.rb
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'Rails.application.config.assets.precompile += %w( flatly.js )'&lt;/span&gt; &amp;gt;&amp;gt; config/initializers/assets.rb
-git add -A
-git commit -m &lt;span class="s1"&gt;'setup bootswatch'&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;edit application_controller.rb&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;layout&lt;/span&gt; &lt;span class="s1"&gt;'flatly'&lt;/span&gt;
-&lt;/pre&gt;
-&lt;pre class="highlight shell"&gt;git add app/controllers/application_controller.rb
-git commit -m &lt;span class="s1"&gt;'set layoyt'&lt;/span&gt;
-&lt;/pre&gt;
+&lt;p&gt;おわり&lt;/p&gt;
 </content>
   </entry>
 </feed>
