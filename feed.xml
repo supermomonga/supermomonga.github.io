@@ -5,10 +5,116 @@
   <id>http://blog.supermomonga.com/</id>
   <link href="http://blog.supermomonga.com/"/>
   <link href="http://blog.supermomonga.com/feed.xml" rel="self"/>
-  <updated>2014-10-15T00:00:00+09:00</updated>
+  <updated>2014-12-01T00:00:00+09:00</updated>
   <author>
     <name>supermomonga</name>
   </author>
+  <entry>
+    <title>資本主義の崩壊とEmacs Evilの勃興について</title>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/emacs-evil/evil-advent-calendar.html"/>
+    <id>http://blog.supermomonga.com/articles/emacs-evil/evil-advent-calendar.html</id>
+    <published>2014-12-01T00:00:00+09:00</published>
+    <updated>2014-12-01T06:03:51+09:00</updated>
+    <author>
+      <name>supermomonga</name>
+    </author>
+    <content type="html">&lt;h2 id="evil-advent-calendar-1日目"&gt;Evil Advent Calendar 1日目&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://qiita.com/advent-calendar/2014/evil" rel="nofollow"&gt;Evil Advent Calendar 2014&lt;/a&gt;1日目の記事になります。&lt;/p&gt;
+
+&lt;p&gt;明日の執筆者は未定です。というか私含めて2人しかエントリーしていません。Evil使いもっと増えて欲しい（もっと）。&lt;/p&gt;
+
+&lt;p&gt;1日目ということで、今日はポエムです。あとタイトルは考えるのが面倒だったので&lt;a href="http://pha22.net/hotentry/title/r?word=Evil" rel="nofollow"&gt;ホッテントリメーカー&lt;/a&gt;で作りました。&lt;/p&gt;
+
+&lt;h2 id="資本主義の崩壊とemacs-evilの勃興について"&gt;資本主義の崩壊とEmacs Evilの勃興について&lt;/h2&gt;
+
+&lt;h3 id="1."&gt;1.&lt;/h3&gt;
+
+&lt;p&gt;Emacsは単なるテキストエディタではなく、アプリケーション実行環境です。その表現力の高さから、ウェブブラウザやメーラー、IRCクライアントに始まりTwitterクライアントまで、様々なアプリケーションが動作し、それらは基本的に全てキーボードで操作を完結させることができます。それを指しEmacsはテキストエディタではなくOSだと言われることがありますが、まさにその通りだと私は思います。というのも、単なるテキストエディタに画像を表示する機能なんて要らないでしょうし、ましてや&lt;a href="http://www.emacswiki.org/emacs/EmacsXWidgets"&gt;GTKウィジェットを表示できるようにしようという試み&lt;/a&gt;も起こらないでしょう。私は、Emacsが目指しているのはテキストエディタではなくアプリケーション実行環境であるということを明確に感じます。&lt;/p&gt;
+
+&lt;p&gt;そんなEmacsで動くVim風テキストエディタがリリースされたのは自然な流れだと言えます。Emacsデフォルトのテキスト編集機能はVimのそれに遠く及びません。Emacsには様々なアプリケーションを構築するための土台があるのですから、無ければ作ってしまえ、ということなのでしょう。&lt;/p&gt;
+
+&lt;p&gt;そして、この様にEmacsをアプリケーション実行環境として捉え、かつVimに親しみのある私がEmacsにEvilを導入したのは当然の成り行きでした。&lt;/p&gt;
+
+&lt;h3 id="2."&gt;2.&lt;/h3&gt;
+
+&lt;p&gt;Evilは私の想像以上の完成度でした。非常に高いレベルでVimのパラダイムが実現されており、かつEmacs Lispにて容易にその挙動をカスタマイズできる様に設計されていました。Emacs Lispを書くことができる人であれば、Vim scriptを書きVim用のプラグインを作るのと同じ感覚で、Evil用のプラグインを作る事も容易いでしょう。実際に、いくつかの有名なVimプラグインは既にEvil版として移植されています。&lt;/p&gt;
+
+&lt;p&gt;私はEvilに夢中になりました。Vimから本格的にEmacsへ移行しようかとも悩んだほどです。&lt;/p&gt;
+
+&lt;h3 id="3."&gt;3.&lt;/h3&gt;
+
+&lt;p&gt;Evilを使い始めてすぐ、私はその違和感に気づきました。Evilでは、Emacs元々の用語とバッティングしないように、Vimで言うところ&lt;code&gt;モード&lt;/code&gt;を&lt;code&gt;ステート&lt;/code&gt;と読んでいます。&lt;code&gt;挿入ステート&lt;/code&gt;、&lt;code&gt;ビジュアルステート&lt;/code&gt;といった具合です。更に、Vimには（当然）存在しない、元々のEmacsのキーバインドに戻るという、&lt;code&gt;Emacsステート&lt;/code&gt;が存在します。そして、Evilには&lt;code&gt;evil-emacs-state-modes&lt;/code&gt;という設定変数があり、ここに設定したモードでは、自動的にEvilが&lt;code&gt;Emacsステート&lt;/code&gt;に切り替わります。デフォルトで、この変数には多くのモードが設定されています。この機能により、Evilはいわゆるアプリケーション実行環境であるEmacsにおいて、「テキストを編集する時はVimの操作感」を、「テキスト編集時以外はEmacs元々の操作感」を実現しています。&lt;/p&gt;
+
+&lt;p&gt;これは言うなれば、丁度あなたがお使いのOSと同じ様な感覚です。WindowsでもLinuxでもMac OS Xでも何でもよいのですが、Vimを使っている時の操作方法と、その他アプリケーションを使っている時の操作方法は基本的に全く異なるはずです。EmacsにEvilを導入することで、私は「Evilから出て他の操作をEmacs内で行う」時、「Vimから出て他の操作をOS内で行う」のと同じ感覚に駆られました。&lt;/p&gt;
+
+&lt;p&gt;本来なら、EvilがEmacs本来の機能や資産を損なわないように上手に実装されていると褒める所でしょうが、私はこの点について大きな違和感を感じました。&lt;/p&gt;
+
+&lt;h3 id="4."&gt;4.&lt;/h3&gt;
+
+&lt;p&gt;それもそのはずでした。私は、Vimに多くのプラグインを導入し、Vimを単なるテキストエディタとしてでなく、ターミナルに始まり、メーラー、Twitterクライアント、チャットサービスクライアントといった様々な目的で利用していたのです。私は、&lt;code&gt;evil-emacs-state-modes&lt;/code&gt;によって、Vimの世界から突然素のEmacsの世界に引き戻されてしまうことに、非常にストレスを感じていたのです。&lt;/p&gt;
+
+&lt;p&gt;また、例えばVimでは&lt;code&gt;gt&lt;/code&gt;, &lt;code&gt;gT&lt;/code&gt;にてタブの切り替えを行えますが、Evilでこれを行うと、&lt;code&gt;Emacsステート&lt;/code&gt;のタブに移動した瞬間、&lt;code&gt;gt&lt;/code&gt;, &lt;code&gt;gT&lt;/code&gt;での操作ができなくなり、意図しないタイミングでVimの世界から追い出されてしまうといった様な弊害もありました。&lt;/p&gt;
+
+&lt;p&gt;私はEmacsの世界とVimの世界を行き来することにすっかり辟易してしまいました。Emacsで動く全てのアプリケーションをVimライクに操作したい、そう思った私は、思い切って&lt;code&gt;evil-emacs-state-modes&lt;/code&gt;に&lt;code&gt;nil&lt;/code&gt;を設定しました。&lt;/p&gt;
+
+&lt;h3 id="5."&gt;5.&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;evil-emacs-state-modes&lt;/code&gt;に&lt;code&gt;nil&lt;/code&gt;を設定することで、Emacsで動く各アプリケーションがほぼ全て、まともに動作しなくなりました。アプリケーションごとに独自に&lt;code&gt;Emacsステート&lt;/code&gt;用のキーバインドが設定されており、それを全て無効にしてしまったのですから当然です。&lt;/p&gt;
+
+&lt;p&gt;私を待っていたのは、Emacsで動く全てのモード用に、Vim風のEvilキーバインドを1から割り当てていくという地道な作業でした。更に、Evilによって導入されるステートという独特の概念により、キーバインドの設定をするだけでは上手く動かないアプリケーションも存在します。たとえば、Emacs Lispで実装されたEmacsで動くターミナルエミュレータであるeshellがあります。eshellでは、通常&lt;code&gt;Emacsステート&lt;/code&gt;においてはプロンプト上にカーソルが移動できないようになっていますが、Evilの&lt;code&gt;ノーマルステート&lt;/code&gt;に入る事によってカーソルをプロンプト上に移動することができるようになってしまいます。その状態で&lt;code&gt;x&lt;/code&gt;を打鍵したり、&lt;code&gt;i&lt;/code&gt;を打鍵するなどして&lt;code&gt;挿入ステート&lt;/code&gt;に入ってしまうと、プロンプトを書き換えることができてしまい、eshellの動作に良からぬ影響を及ぼしてしまいます。これを防ぐため、「&lt;code&gt;挿入ステート&lt;/code&gt;に入った後、プロンプトと被らない適切な場所にカーソルを移動する」という関数をEmacs Lispで定義し、eshellモードの&lt;code&gt;ノーマルステート&lt;/code&gt;における&lt;code&gt;i&lt;/code&gt;や&lt;code&gt;a&lt;/code&gt;へのマッピングとして割り当てることが必要でした。その他、私がVimで愛用しているVimShellと同じ操作感を実現するため、多数の独自関数・キーバインドを設定することが必要でした。（余談ですが、私はこうして出来上がったEvil用にカスタマイズされたeshellを、eshellとVimShellにちなんでEvilShellと呼んでいます。）&lt;/p&gt;
+
+&lt;p&gt;この様に、Emacsで動く全てのモードに関して、キーバインドの再定義や動作補助用の関数定義を行うといったことが必要でした。これはとても体力の要る、地道な作業です。「Vimのパラダイムと完全に協調する理想のEmacs」を求め、茨の道へ歩き出してしまったのです。&lt;/p&gt;
+
+&lt;h3 id="6."&gt;6.&lt;/h3&gt;
+
+&lt;p&gt;2014年12月1日現在でも、これらの設定を終えることはできていません。設定を終えた後は、Emacs Lispを習得し、普段愛用しているVimプラグイン達をEvil用に移植していく必要もあります。&lt;/p&gt;
+
+&lt;p&gt;理想のEmacsを手に入れるまでの道のりは長そうですが、私のEmacsが着実に私の理想に近づいていっていることだけは分かります。そして、地道に理想の環境を作リ上げていくのはなんと楽しい事でしょうか。&lt;/p&gt;
+
+&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
+
+&lt;p&gt;以上になります。&lt;/p&gt;
+
+&lt;p&gt;Evil、設定に苦労するけど超便利なのでみなさん使っていきましょう。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>homebrewとrbenvでrubyインストールする時のオプション</title>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/ruby-rbenv-homebrew.html"/>
+    <id>http://blog.supermomonga.com/articles/ruby/ruby-rbenv-homebrew.html</id>
+    <published>2014-10-22T00:00:00+09:00</published>
+    <updated>2014-10-22T06:40:02+09:00</updated>
+    <author>
+      <name>supermomonga</name>
+    </author>
+    <content type="html">&lt;h2 id="homebrewとrbenvでrubyインストールする時のオプション"&gt;homebrewとrbenvでrubyインストールする時のオプション&lt;/h2&gt;
+
+&lt;p&gt;適切にオプション指定しないといけないみたいなのがある&lt;/p&gt;
+
+&lt;h3 id="rbenv導入"&gt;rbenv導入&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;brew install rbenv ruby-build&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id="依存ライブラリ導入"&gt;依存ライブラリ導入&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;brew install readline openssl libiconv&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id="オプションの設定"&gt;オプションの設定&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;RUBY_CONFIGURE_OPTS=&amp;quot;--with-readline-dir=&lt;/code&gt;brew --prefix readline&lt;code&gt;--with-openssl-dir=&lt;/code&gt;brew --prefix openssl&lt;code&gt;--with-iconv-dir=&lt;/code&gt;brew --prefix libiconv&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id="インストール"&gt;インストール&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv install -l&lt;/code&gt;でインストール可能なrubyの候補が出るので好きなものをインストール&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv install 2.1.3&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id="おわり"&gt;おわり&lt;/h3&gt;
+
+&lt;p&gt;お　わ　り&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>糖質制限ダイエットしてる</title>
     <link rel="alternate" href="http://blog.supermomonga.com/articles/others/diet.html"/>
@@ -273,54 +379,6 @@
 &lt;/span&gt;&lt;/p&gt;
 
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-</content>
-  </entry>
-  <entry>
-    <title>momonga.vim #4 に行ってきた</title>
-    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/momongavim-4-report.html"/>
-    <id>http://blog.supermomonga.com/articles/vim/momongavim-4-report.html</id>
-    <published>2014-06-09T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
-    <author>
-      <name>supermomonga</name>
-    </author>
-    <content type="html">&lt;p&gt;そして MacBook Air が寿命で壊れました&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>風邪で喉が終了したのでVimで会話していた</title>
-    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/shaberu-vim-recursive.html"/>
-    <id>http://blog.supermomonga.com/articles/vim/shaberu-vim-recursive.html</id>
-    <published>2014-06-03T00:00:00+09:00</published>
-    <updated>2014-06-12T08:22:45+09:00</updated>
-    <author>
-      <name>supermomonga</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45072"&gt;Vim Advent Calendar 2013&lt;/a&gt;、185日目の記事になります。&lt;/p&gt;
-
-&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
-
-&lt;p&gt;風邪でめっちゃ熱あるし咳で喉がやばいみたいな感じになっていたら知人の美少女エンジニアが心配してご飯作りに来てくれたんですが、喉が完全に終了していてしまっており会話ができないのでこれはどうするかと考えた結果ずっと拙&lt;a href="https://github.com/supermomonga/shaberu.vim"&gt;Shaberu.vim&lt;/a&gt;で会話していました。&lt;/p&gt;
-
-&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
-
-&lt;p&gt;ただ連続して&lt;code&gt;:ShaberuSay&lt;/code&gt;って打つのだるいなみたいになって、熱で朦朧としながら新しく&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;および&lt;code&gt;:ShaberuSayRecursive&lt;/code&gt;というコマンドを実装しました。&lt;/p&gt;
-
-&lt;h2 id="風邪"&gt;風邪&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;は、対話的にスピーチするテキストを入力するコマンドです。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;:ShaberuSayRecursive&lt;/code&gt;は、キャンセル（&lt;code&gt;ESC&lt;/code&gt;を打鍵など）されるまで&lt;code&gt;:ShaberuSayInteractive&lt;/code&gt;を再帰的に延々と呼び出すコマンドです。これにより連続してスムーズにVimに喋らせ続けることができるようになりました。&lt;/p&gt;
-
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;久しぶりに風邪で38度超えたし、咳で喉が完全に終了して呼吸するだけで咳がでるみたいな感じになってかなりつらかった。&lt;/p&gt;
-
-&lt;p&gt;これを書いている今現在も微熱あるし喉は終了しています。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
 </content>
   </entry>
 </feed>
