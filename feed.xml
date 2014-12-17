@@ -14,13 +14,13 @@
     <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/mechanize-multiple-ipaddress.html"/>
     <id>http://blog.supermomonga.com/articles/ruby/mechanize-multiple-ipaddress.html</id>
     <published>2014-12-17T00:00:00+09:00</published>
-    <updated>2014-12-17T09:58:55+09:00</updated>
+    <updated>2014-12-17T10:00:56+09:00</updated>
     <author>
       <name>supermomonga</name>
     </author>
     <content type="html">&lt;h2 id="ruby-advent-calendar-2014-17日目"&gt;Ruby Advent Calendar 2014 17日目&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="http://qiita.com/advent-calendar/2014/ruby" rel="nofollow"&gt;Evil Advent Calendar 2014&lt;/a&gt;17日目の記事になります。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://qiita.com/advent-calendar/2014/ruby" rel="nofollow"&gt;Ruby Advent Calendar 2014&lt;/a&gt;、17日目の記事になります。&lt;/p&gt;
 
 &lt;h2 id="スクレイピング時にアクセス元のipアドレスを分散させたい"&gt;スクレイピング時にアクセス元のIPアドレスを分散させたい&lt;/h2&gt;
 
