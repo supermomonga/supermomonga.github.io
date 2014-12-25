@@ -5,10 +5,37 @@
   <id>http://blog.supermomonga.com/</id>
   <link href="http://blog.supermomonga.com/"/>
   <link href="http://blog.supermomonga.com/feed.xml" rel="self"/>
-  <updated>2014-12-17T00:00:00+09:00</updated>
+  <updated>2014-12-25T00:00:00+09:00</updated>
   <author>
     <name>supermomonga</name>
   </author>
+  <entry>
+    <title>Rubyで不適切なFizzBuzz書いた</title>
+    <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/fizzbuzz-ruby.html"/>
+    <id>http://blog.supermomonga.com/articles/ruby/fizzbuzz-ruby.html</id>
+    <published>2014-12-25T00:00:00+09:00</published>
+    <updated>2014-12-25T15:14:41+09:00</updated>
+    <author>
+      <name>supermomonga</name>
+    </author>
+    <content type="html">&lt;pre class="highlight ruby"&gt;&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;Kernel&lt;/span&gt;
+  &lt;span class="n"&gt;define_method&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;__&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="ss"&gt;:Fizz&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:Buzz&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:FizzBuzz&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;method_missing&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;___&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;
+  &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;__&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;to_s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;to_i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;__&lt;/span&gt;&lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;each_with_index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;sort_by&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;|[&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]*-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;first&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;send&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;to_s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="k"&gt;unless&lt;/span&gt; &lt;span class="n"&gt;__&lt;/span&gt;
+  &lt;span class="n"&gt;___&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:to_s&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nb"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:send&lt;/span&gt;&lt;span class="p"&gt;)).&lt;/span&gt;&lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ss"&gt;:to_s&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nb"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:puts&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;h1 id="おわり"&gt;おわり&lt;/h1&gt;
+
+&lt;p&gt;感じ感じ&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Mechanizeでのスクレイピング時、アクセス元IPアドレスを分散させる</title>
     <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/mechanize-multiple-ipaddress.html"/>
@@ -271,44 +298,6 @@
 &lt;/div&gt;
 
 &lt;p&gt;&lt;a target="_blank" href="http://www.amazon.co.jp/s/?_encoding=UTF8&amp;camp=247&amp;creative=7399&amp;keywords=%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E6%9B%B8%E7%B1%8D&amp;linkCode=ur2&amp;qid=1412106603&amp;rh=n%3A2250738051%2Cn%3A2275256051%2Cn%3A2291657051%2Ck%3A%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E6%9B%B8%E7%B1%8D%2Cp_lbr_publishers_browse-bin%3AKADOKAWA%2F%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%BB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%2Cp_36%3A28500-28500&amp;sort=popularity-rank&amp;tag=webreferrer11-22"&gt;その他285円セール中の技術書が割と一杯ある&lt;/a&gt;ので、色々買った。Dart本とかRedis本とかが285円になってて便利すぎる…&lt;img src="https://ir-jp.amazon-adsystem.com/e/ir?t=webreferrer11-22&amp;l=ur2&amp;o=9" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>momonga.vim #5 に行ってきた</title>
-    <link rel="alternate" href="http://blog.supermomonga.com/articles/vim/momongavim-5-report.html"/>
-    <id>http://blog.supermomonga.com/articles/vim/momongavim-5-report.html</id>
-    <published>2014-08-10T00:00:00+09:00</published>
-    <updated>2014-08-10T06:02:12+09:00</updated>
-    <author>
-      <name>supermomonga</name>
-    </author>
-    <content type="html">&lt;p&gt;去る7月26日、&lt;a href="http://connpass.com/event/7231/"&gt;momonga.vim #5&lt;/a&gt;が開催されました。遅くなりましたが、参加レポート記事を書きたいと思います。記憶が大分曖昧ですががんばって書きます。&lt;/p&gt;
-
-&lt;h2 id="集合"&gt;集合&lt;/h2&gt;
-
-&lt;p&gt;なんか午前のどこかでだれかが何人か集まって昼食をなんかアレした記憶があります。&lt;/p&gt;
-
-&lt;h2 id="開催"&gt;開催&lt;/h2&gt;
-
-&lt;p&gt;昼ごろに無事開催されました。私はなんかVimに関する事、もしくは関さないことをやっていた様に記憶しています。犬さんは「クゥ〜ン」とか言ってた。&lt;/p&gt;
-
-&lt;h2 id="二次会"&gt;二次会&lt;/h2&gt;
-
-&lt;p&gt;二次会はももんが邸に何人かがアレして、終電前ごろまでVimとかをやったと思います。&lt;/p&gt;
-
-&lt;h2 id="三次会"&gt;三次会&lt;/h2&gt;
-
-&lt;p&gt;三次会はマンボウの人が徹夜でなんかガンガン進めておりました。&lt;/p&gt;
-
-&lt;h2 id="カレー"&gt;カレー&lt;/h2&gt;
-
-&lt;p&gt;朝にCoCo壱番屋のカレーのトッピングを割としました。&lt;/p&gt;
-
-&lt;h2 id="おわり"&gt;おわり&lt;/h2&gt;
-
-&lt;p&gt;おわり&lt;/p&gt;
-
-&lt;p&gt;意外と覚えてるものですね。&lt;/p&gt;
 </content>
   </entry>
 </feed>
