@@ -200,7 +200,7 @@
     <link rel="alternate" href="http://blog.supermomonga.com/articles/ruby/ruby-rbenv-homebrew.html"/>
     <id>http://blog.supermomonga.com/articles/ruby/ruby-rbenv-homebrew.html</id>
     <published>2014-10-22T00:00:00+09:00</published>
-    <updated>2014-10-22T06:40:02+09:00</updated>
+    <updated>2015-01-20T18:00:02+09:00</updated>
     <author>
       <name>supermomonga</name>
     </author>
@@ -217,8 +217,8 @@
 &lt;p&gt;&lt;code&gt;brew install readline openssl libiconv&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id="オプションの設定"&gt;オプションの設定&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;RUBY_CONFIGURE_OPTS=&amp;quot;--with-readline-dir=&lt;/code&gt;brew --prefix readline&lt;code&gt;--with-openssl-dir=&lt;/code&gt;brew --prefix openssl&lt;code&gt;--with-iconv-dir=&lt;/code&gt;brew --prefix libiconv&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="nv"&gt;RUBY_CONFIGURE_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"--with-readline-dir=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;brew --prefix readline&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="s2"&gt; --with-openssl-dir=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;brew --prefix openssl&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="s2"&gt; --with-iconv-dir=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;brew --prefix libiconv&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;/pre&gt;
 
 &lt;h3 id="インストール"&gt;インストール&lt;/h3&gt;
 
